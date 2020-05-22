@@ -1,1 +1,1 @@
-# My sturies works
+# My studies works
