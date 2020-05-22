@@ -1,0 +1,417 @@
+// Файл обнуляющих стилей
+@import "nullstyle.scss";
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
+
+body{
+	font-family: Lato;
+}
+
+.wrapper {
+	margin: 0px auto;
+	max-width: 1920px;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+// Верстаем binary
+
+.content {
+	flex-direction: column;
+	flex: 1 0 auto;	
+}
+.binary {
+	// &__back {
+	// 	position: absolute;
+	// 	z-index: -1;
+	// 	left:50%;
+	// 	margin-left: -960px;
+	// }
+	margin: 0px auto;
+	background:  url("../img/binary/header.png") center/auto auto no-repeat;
+	height: 100%;
+	&__row {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__subtitle {
+		font-size: 26px;
+		color: #f5f5f5;	
+		letter-spacing: 5px;
+	}
+	&__logo {
+		margin: 165px 0 150px 0;
+	}
+	&__slogan {
+		text-align: center;
+		line-height: 40px;
+	}
+	&__slogan:after{
+		content:"";
+		display:block;
+		width: 105px;
+		height: 2px;
+		background-color: #fff;
+		margin: 45px auto 227px;
+	}
+	&__title {
+		text-transform: uppercase;
+		font-size: 34px;
+		font-weight: 900;
+		color: #fff;
+		margin-bottom: 6px;
+		letter-spacing: 6px;
+	}
+	&__more {
+		color: #fff;
+		border: 1px solid #fff;
+	}
+	&__arrow {
+		margin: 75px auto 50px;
+	}
+}
+.container {
+	max-width: 1100px;
+	margin: 0px auto;
+}
+.more {
+	display:inline-block;
+	padding: 16px 40px;
+	font-size: 16px;
+	word-spacing: 6px;
+	text-transform: uppercase;
+}
+
+//Верстаем навигационное меню 
+
+.menu {
+	&__line {
+		margin: 0px auto;
+		max-width: 1920px;
+		border-bottom: 1px solid #ada074;
+	}
+	&__cover {
+		max-width:422px;
+		margin: 0px auto;
+	}
+	&__row {
+		display:flex;
+		justify-content: space-between;
+		padding: 23px 0px;
+	}
+	&__nav {
+		white-space: nowrap;
+	}
+	&__nav:first-child {
+		color: #ada074;
+	}
+}
+.nav {
+	color: #000;
+	font-size: 15px;
+	text-transform: uppercase;
+}
+
+//About company
+
+.about {
+	&__row {
+		margin: 125px auto 95px;
+		max-width: 900px;
+		display:flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__title:after {
+		content: '';
+		display: block;
+		width: 82px;
+		height: 1px;
+		background-color: #000;
+		margin: 32px auto 34px;
+	}
+	&__description {
+		margin-bottom: 50px;
+		text-align: center;
+		color: #868585;
+		line-height: 26px;
+		font-weight: 300;
+	}
+	&__branches {
+		display: flex;
+		justify-content: center;
+		padding: 0 28px 0 50px;
+	}
+}
+.title {
+	color: #000000;
+	font-size: 34px;
+	text-transform: uppercase;
+	font-weight: 900;
+	letter-spacing: 6px;
+}
+.branches {
+	&__card {
+		margin-right: 15px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__card:first-child {
+		margin-right: 70px;
+	}	
+	&__card:last-child {
+		margin-right: 0px;
+	}
+	&__icon {
+		margin-bottom: 42px;
+	}
+	&__label {
+		margin-bottom: 25px;
+		letter-spacing: 5px;
+		font-size: 22px;
+
+	}
+	&__label>span {
+		text-transform: uppercase;
+	}
+	&__description {
+		text-align: center;
+		color: #868585;
+		line-height: 26px;
+		font-weight: 300;
+	}
+}
+.icon {
+	&__one {
+		background:  url('../img/about/01.png') center no-repeat;
+	}
+	&__two {
+		background:  url('../img/about/02.png') center no-repeat;
+	}
+	&__three {
+		background:  url('../img/about/03.png') 31px 31px no-repeat;
+	}
+}
+
+//Portfolio 
+
+.portfolio {
+	background-color: #f3f3f3;
+	padding: 107px 0 62px;
+	&__row {
+		display: flex;
+		flex-direction: column;
+		align-items:center;
+	}
+	&__title:after {
+		content: '';
+		display: block;
+		width: 82px;
+		height: 1px;
+		background-color: #000;
+		margin: 41px auto 50px;
+	}
+	&__menu {
+		width: 295px;
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 137px;
+	}
+
+	&__nav:first-child {
+		color: #ada074;
+	}
+
+	&__works {
+		display: flex;
+	}
+	&__more {
+		color: black;
+		border: 1px solid black;
+	}
+}
+.works {
+	&__row {
+		display: flex;
+		flex-direction: column;
+		margin: 0 28px 65px 0;
+	}
+	&__row:last-child {
+		margin-right: 0;
+	}
+	&__card {
+		margin-bottom: 18px;
+	}
+	&__card:last-child {
+		margin: 0;
+	}
+}
+
+//Section partners
+
+.partners {
+	background:  url('../img/partners/partners_bg.png') center no-repeat;
+	&__row {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 101px 0 104px;
+	}
+	&__title {
+		font-size: 30px;
+		color: #fff;
+		font-weight: 300;
+		margin-bottom: 94px;
+	}
+	&__logo {
+		display: flex;
+		align-items: center;
+	}
+	&__logo>img {
+		margin-right: 110px;
+
+	}
+	&__logo>img:last-child {
+		margin-right: 0px;
+	}	
+
+}
+
+//Section contact
+
+.contact {
+	&__row {
+		max-width: 900px;
+		margin: 0px auto;
+		padding: 183px 0 102px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__title:after {
+		content:'';
+		display: block;
+		width: 82px;
+		height: 1px;
+		background-color: #000;
+		margin: 43px auto 120px;
+	}
+	&__cover {
+		align-self: flex-start;
+		display: flex;
+	}
+	&__form {
+		display: flex;
+		flex-direction: column;
+	}
+	&__info {}
+}
+
+.form {
+	margin-right: 80px;
+	&__data {
+		display: flex;
+		margin-bottom: 76px;
+	}
+	&__name {
+		margin-right: 61px;
+	}
+	&__info {
+		color: #000;
+		word-spacing: 1px;
+		font-weight: 900;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		margin-bottom: 20px;
+	}
+	&__email {}
+	&__text {
+		background-color: #f8f7f7;
+		width: 160px ;
+		height: 36px;
+		border-top: 1px solid #000;
+	}
+	&__message>textarea {
+		width: 381px;
+		height: 120px;
+		resize: none;
+	}
+	&__button {
+		margin-top: 43px;
+		align-self: flex-end;
+	}
+	&__button>button {
+		background-color: #fff;
+		color: #000;
+		font-weight: 900;
+		text-transform: uppercase;
+	}
+
+}
+.info {
+	max-width: 245px;
+	&__text {
+		font-weight: 300;
+		line-height: 26px;
+	}
+	&__name {
+		font-weight: 900;
+		margin: 42px 0 25px;
+	}
+	&__social {
+		margin-bottom: 14px;
+	}
+	&__social>a {
+		padding: 5px 5px 5px 7px;
+		display: inline-block;
+		border: 2px solid #000;
+		width: 30px;
+		height: 30px;
+		border-radius: 100%;
+		margin-right: 13px;
+	}
+	&__social>a:last-child {
+		margin-right: 0px;
+	}
+	&__mail {
+	}
+	&__span {
+		font-weight: 900;		
+	}
+}
+
+
+// Footer
+
+.footer {
+	background-color: #3c3c3c;
+	&__cover {
+		max-width: 280px;
+		margin: 0px auto;		
+	}
+	&__row {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__logo {
+		margin: 48px 0 41px 0;
+	}
+	&__ref {
+
+	}
+	&__ref>a {
+		margin-right: 15px; 
+		color: #a4a4a4;
+	}
+	&__ref:last-child {
+		margin-right: 0px;
+	}
+	&__copyright {
+		margin: 34px 0 49px 0;
+		color: #6c6c6c;
+	}
+}
