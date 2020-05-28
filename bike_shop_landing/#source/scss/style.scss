@@ -1,0 +1,377 @@
+// Файл обнуляющих стилей
+@import "nullstyle.scss";
+//Добавление шрифтов
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
+
+//Подключение фалов стилей/страниц/элементов
+@import "ui.scss";
+@import "header.scss";
+@import "footer.scss";
+//Оболочка
+.wrapper {
+	overflow: hidden;
+	min-height: 100%;
+}
+//Ограничение ширины контента в футере
+.container {
+	max-width: 1130px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.page {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+}
+.main-screen {
+	flex: 1 0 100%;
+	position: relative;
+	&__bg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+}
+
+//Первый блок
+.content {
+}
+
+
+.generation {
+	padding: 120px 0;
+	background-color: #f7f7f7;
+	&__block {}
+	@media (max-width: 900px) {
+		padding: 80px 0;
+	}
+	@media (max-width: 600px) {
+		padding: 30px 0;
+	}
+}
+
+.container {
+}
+
+.block {
+	text-align: center;
+	&__icon {
+		margin: 0px 0px 30px 0px;
+	}
+	&__title {
+		color: #353738;
+		font-size: 18px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 3.6px;
+		margin: 0px 0px 18px 0px;
+	}
+	&__text {
+		color: #848789;
+		font-size: 18px;
+		line-height: 34px;
+		&_j {
+			text-align: justify;
+			font-size: 16px;
+			line-height: 30px;
+			&:after{
+				content: '';
+				display: block;
+				margin: 35px auto 0px auto;
+				width: 50px;
+				height: 1px;
+				background-color: #ebebeb;
+			}
+		}
+	}
+	@media (max-width: 1500px){
+		&__text {
+			&_j {
+				&:after{
+					content: '';
+					margin: 15px auto 0px auto;
+				}
+			}
+		}
+	}
+}
+
+//Второй блок
+.brands {
+	&_rev {
+		.brands__column {
+			order: 1;
+			&_b {
+				order: 2;
+				@media (max-width: 1500px){
+					order: 1;
+				}
+			}
+		}
+	}
+	&__row {
+		display: flex;
+	}
+	&__column {
+		flex: 0 1 33.333%;
+		&_b {
+			flex: 0 1 66.667%;
+		}
+	}
+	&__item {}
+	&__content {
+		padding: 70px 65px 55px 65px;
+		position: relative;
+		&:after{
+			content: '';
+			position: absolute;
+			bottom: -10px;
+			left: 50%;
+			margin: 0px 0px 0px -10px;
+			width: 0;
+			height: 0;
+			border-left: 10px solid transparent;
+			border-right: 10px solid transparent;
+			border-top: 10px solid #fff;
+			z-index: 1;
+		}
+	}
+	&__image {
+		padding: 0px 0px 37.5% 0px;
+	}
+	@media (max-width: 1500px){
+		&__content {
+			padding: 40px 35px 30px 35px;
+		}
+	}
+	@media (max-width: 1100px){
+		&__row {flex-direction: column;}
+
+	}
+}
+
+.item {
+	height: 100%;
+	display: block;
+	position: relative;
+	&__logo {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		display: flex;
+		flex-direction: column;
+		transition-duration: 0.5s;
+		justify-content: center;
+		align-items: center;
+		background-color: rgba(100, 194, 158, 0.5);
+		z-index: 1;
+		opacity: 0;
+		visibility: hidden;
+		span{
+			margin: 10px 0 0 0 ;
+			font-size: 14px;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 2.8px;
+			color: #fff;
+		}
+	}
+	&__image {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+	&:hover{
+		.item__logo{
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	@media (max-width: 1100px){
+		height: auto;
+		padding: 0px 0px 60% 0px;
+
+	}
+}
+
+
+//Слайдер
+
+.slider {
+	background-color: #f7f7f7;
+	padding: 120px 0 60px 0;
+	&__body {}
+	&__item {
+		text-align: center;
+	}
+	&__icon {
+		margin: 0px 0px 35px 0px;
+	}
+	&__title {
+		color: #353738;
+		font-weight: 700;
+		font-size: 18px;
+		margin: 0px 0px 35px 0px;
+		span {
+			font-weight: 300;
+			font-style: italic;
+		}
+	}
+	&__text {
+		text-align: center;
+		color: #848789;
+		font-size: 24px;
+		font-style: italic;
+		line-height: 34px;
+	}
+}
+
+//Shop now & footer
+
+.shop {
+	&__body {
+		display: flex;
+	}
+	&__column {
+		flex: 0 1 16.666%;
+		&_b {
+			flex: 0 1 33.333%;
+		}
+	}
+	&__block {}
+	&__footer {
+		padding: 75px 0;
+		background-color: #282f35;
+		text-align: center;
+	}
+	&__btn {
+		display: inline-block;
+		text-align: center;
+		height: 50%;
+		line-height: 48px;
+		letter-spacing: 2.8px;
+		color: #fff;
+		padding: 0px 60px;
+		font-size: 14px;
+		font-weight: 700;
+		text-transform: uppercase;
+		border: 1px solid rgba(255, 255, 255, 0.5);
+	}
+
+	@media (max-width: 1100px){
+		&__body {
+			flex-wrap: wrap;
+		}
+		&__column {
+			flex: 0 1 50%;
+
+			&:first-child{
+				flex: 1 1 100%;
+			}
+			&:last-child{
+				flex: 1 1 100%;
+			}
+		}
+		&__btn {
+			padding: 0px 30px;
+		}
+		&__footer {
+			padding: 50px 0;
+		}			
+	}
+}
+.block-shop {
+	height: 100%;
+	&__row {
+		display: flex;
+	}
+	&__column {
+		flex: 0 1 50%;
+	}
+	&__item {
+		height: auto;
+		padding: 0 0 50% 0;
+		&_b{
+			padding: 0 0 200.5% 0;
+		}
+		&_l{
+			padding: 0 0 100% 0;
+		}
+	}
+}
+
+//Блок с формой
+
+.subscribe {
+	&__body {
+		padding: 110px 0;
+		max-width: 534px;
+		margin: 0px auto;
+		text-align: center;
+	}
+	&__logo {
+		margin: 0px 0px 39px 0px;
+	}
+	&__label {
+		color: #848789;
+		font-size: 24px;
+		font-style: italic;
+		margin: 0px 0px 35px 0px;
+	}
+	&__form {
+		display: flex;
+	}
+	&__input {
+		flex: 1 1 auto;
+		padding: 0px 8px 0px 0px;
+		.input {
+			width: 100%;
+			height: 69px;
+			border: 1px solid #d3d7d9;
+			background-color: #fff;
+			padding: 0px 28px;
+			color: #929292;
+			font-size: 20px;
+			font-style: italic;
+		}
+	}
+	&__button {
+		flex: 0 0 126px;
+	}
+	&__btn {
+		width: 100%;
+		height: 69px;
+		background-color: #64c29e;
+		color: #fff;
+		text-transform: uppercase;
+		font-size: 24px;
+		font-weight: 300;
+	}
+	@media (max-width: 750px){
+		&__body {
+		padding: 50px 0;
+		}
+	}
+	@media (max-width: 500px) {
+		&__form {
+			display: block;
+		}
+		&__input {
+			padding: 0px 0px 8px 0px;
+		}
+	}
+}
+
+
+
