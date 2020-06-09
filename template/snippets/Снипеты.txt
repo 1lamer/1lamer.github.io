@@ -1,0 +1,131 @@
+{
+	// Custom snippets definitions, as per https://github.com/emmetio/emmet/blob/master/snippets.json
+	"snippets": {
+		 "html": {
+		 	"abbreviations": {
+		 		
+		 	},
+		 	"snippets": {
+		 		"c":"${1:содержимое тега}",
+		 		"pop": "<div class=\"popup-bg\"></div>\n<div class=\"popup\">\n\t<div class=\"popup-close\"></div>\n\t${child}\n</div>",
+		 		"cnt":"<div class='container'>\n\t|\n</div>",
+		 		"bcnt":"<div class='bigcontainer'></div>",
+		 		"inp":"<input autocomplete=\"off\" type=\"text\" name=\"form[]\" data-value=\"\" class=\"input\" />",
+		 		"inpt":"<input autocomplete=\"off\" type=\"tel\" name=\"form[]\" data-value=\"Телефон\" class=\"input phone\" />",
+		 		"sel":"<select name=\"form[]\" class=\"catalog-header__select\">\n\t<option value=\"1\" selected=\"selected\">Пункт №1</option>\n\t<option value=\"2\">Пункт №2</option>\n\t<option value=\"3\">Пункт №3</option>\n\t<option value=\"4\">Пункт №4</option>\n</select>",
+		 		"sel2":"<div class='select content-filter__select'>\n\t<div class='select-title'>\n\t\t<div class='select-title__arrow'></div>\n\t\t<div class='select-title__value'>Доллар США, USD</div>\n\t</div>\n\t<div class='select-options'>\n\t\t<div class='select-options-inside'>\n\t\t\t<div class='select-options__value'>Цена</div>\n\t\t\t<div class='select-options__value'>Название</div>\n\t\t</div>\n\t\t<input type='hidden' name='form[]'>\n\t</div>\n</div>",
+		 		"opt":"<div class=\"options\">\n\t<div class=\"option active\">Новинки!<input type=\"radio\" value=\"1\" name=\"form[type]\" /></div>\n</div>",
+		 		"opt2":"<div class='options'>\n\t<input value='1' type='hidden' name='form[]' />\n\t<div data-value='1' class='option active'>Text #1</div>\n\t<div data-value='2' class='option'>Text #2</div>\n</div>",
+		 		"chk":"<div class=\"check\">Text<input type=\"checkbox\" value=\"1\" name=\"form[]\" /></div>",
+		 		"btn":"<button type=\"submit\" class=\"form__btn btn\">Задать вопрос</button>",
+		 		"str":"<div class=\"${1:block}\">\n\t<div class='container'>\n\t\t<div class=\"${1:block}__title\"></div>\n\t\t<div class=\"${1:block}-body\">\n\t\t\t<div class=\"${1:block}-table table\">\n\t\t\t\t<div class=\"${1:block}-column\">\n\t\t\t\t\t<div class=\"${1:block}-item\">\n\t\t\t\t\t\t|\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>",
+		 		"menu":"<div class=\"header-menu__icon\">\n\t<span></span>\n\t<span></span>\n\t<span></span>\n</div>\n<nav class=\"header-menu\">\n\t<ul class=\"header-menu-list\">\n\t\t<li><a href=\"\" class=\"header-menu__link\"></a></li>\n\t</ul>\n</nav>",
+		 		"logo":"<a href=\"\" class=\"header__logo\"><img src=\"img/logo.png\" alt=\"\" /></a>",
+		 		"img": "<img src=\"../img/|\" alt=\"\" />",
+		 		//"img": "<img src=\"\" alt=\"\" />",
+		 	}
+		 },
+		 "css": {
+		 	"abbreviations": {
+		 		"pp": "padding: 0px 0px 0px 0px;",
+		 		"ppp": "padding: 0px |px;",
+		 		"ppt": "padding: |px 0px 0px 0px;",
+		 		"ppb": "padding: 0px 0px |px 0px;",
+		 		"ppl": "padding: 0px 0px 0px |px;",
+		 		"ppr": "padding: 0px |px 0px 0px;",
+		 		"mm": "margin: 0px 0px 0px 0px;",
+		 		"mmm": "margin: 0px |px;",
+		 		"mmt": "margin: |px 0px 0px 0px;",
+		 		"mmb": "margin: 0px 0px |px 0px;",
+		 		"mml": "margin: 0px 0px 0px |px;",
+		 		"mmr": "margin: 0px |px 0px 0px;",
+		 		"mu": "margin: 0px auto;",
+		 		"mc": "margin:auto;",
+		 		"mwn": "max-width: none;",
+		 		"ffr": "font-family:'Roboto';",
+		 		"ffo": "font-family:'Open Sans';",
+		 		"ffn": "font-family:'Noto Sans';",
+		 		"ffm": "font-family:'MyriadPro';",
+		 		"ffg": "font-family:'Gotham';",
+		 		"ffp": "font-family:'ProximaNova';",
+		 		"ffu": "font-family:'Ubuntu';",
+		 		"ffn": "font-family: 'Neucha';",
+		 		"ps": "position: absolute;width: 100%;height: 100%;top: 0;left: 0;",
+		 		"art":"width: 0;height: 0;border-left: 50px solid transparent;border-right: 50px solid transparent;border-bottom: 100px solid red;",
+		 		"arb":"width: 0;height: 0;border-left: 50px solid transparent;border-right: 50px solid transparent;border-top: 100px solid red;",
+		 		"arl":"width: 0;height: 0;border-top: 50px solid transparent;border-right: 100px solid red;border-bottom: 50px solid transparent;",
+		 		"arr":"width: 0;height: 0;border-top: 50px solid transparent;border-left: 100px solid red;border-bottom: 50px solid transparent;",
+		 		"hb":"body.he{\n\t|\n}",
+		 		"drt":"direction: rtl;",
+		 		"br5":"border-radius: 50%;",
+		 		"bs":"box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);",
+		 		"bgco":"background-color:rgba(0,0,0,0.5);",
+		 	},
+		 	"snippets": {
+		 		"cl":"color:#F2E9DB;",
+		 		"cm":"color:#9B8B84;",
+		 		"cm2":"color:#574842;",
+		 		"cd":"color:#602752;",
+		 		"c0":"color:#000;",
+		 		"c1":"color:#fff;",
+		 		"aa":"@include anim(0.3s,0s);",
+		 		"ar":"@include rotate(-${1:180}deg);",
+		 		"as":"@include scale(${1:1});",
+		 		"at":"@include tr(0px,0px,0px);",
+		 		"ex":"@extend .${1:};",
+		 		"ic":"&:before{background-image: url('../img/');position: absolute;top: 0px;left: 0px;width: 10px;height: 10px;content: '';}",
+		 		"is":"img{max-width: 100%;}",
+		 		"lc": "&:last-child{\n\t|\n}",
+		 		"fc": "&:first-child{\n\t|\n}",
+		 		"nc": "&:nth-child(|){}",
+		 		"af": "&:after{\n\tcontent:'';\n\t|\n}",
+		 		"bf": "&:before{\n\tcontent:'';\n\t|\n}",
+		 		"hv": "&:hover{\n\t|\n}",
+		 		"ac": "&.active{\n\t|\n}",
+		 		"bg+": "background: url('../../img/|') 0 0 no-repeat;",
+		 		"md": "@media (max-width:|px){\n\t\n}",
+		 		"md1":"@media (max-width:\\$md1+px){\n\t|\n}",
+		 		"md2":"@media (max-width:\\$md2+px){\n\t|\n}",
+		 		"md3":"@media (max-width:\\$md3+px){\n\t|\n}",
+		 		"md4":"@media (max-width:\\$md4+px){\n\t|\n}",
+				"mdh":"@media screen and (max-width: \\$md2+px) , screen and (max-height: 700px) {\n\t|\n}",
+		 		"fb": "@include flexbox();",
+		 		"fbo":"@include flexorder(|);",
+		 		"fbs":"justify-content:${1:space-between};",
+		 		"fbai":"align-items:${1:center};",
+		 		"fbw":"flex-wrap: wrap;",
+		 		"fbd":"flex-direction: column;",
+		 		"fbg":"flex: 1 1 100%;",
+		 		"fbga":"flex: 1 1 auto;",
+		 		"fbgh":"flex: 0 0 50%;",
+		 		"fbgt":"flex: 0 0 33.333%;",
+		 		"fbp":"flex: 0 0 |px;",
+		 		"fbc":"justify-content:center;align-items: center;",
+		 		"lcm":"&:last-child{margin:0px 0px 0px 0px;}",
+		 		"hvu":"&:hover{text-decoration: underline;}",
+		 		"hvn":"&:hover{text-decoration: none;}",
+		 		"sa":".slick-arrow{\n\t&.slick-prev{}\n\t&.slick-next{}\n}",
+		 		"bt":"body.touch &{\n\t|\n}",
+		 		"par":"&:before{content:'';width:10px;height:10px;@include rotate(-45deg);position:absolute;left:50%;border-right:1px solid #c5d2d8;border-top:1px solid #c5d2d8;background-color:#fff;top:0;margin:-6px 0px 0px -5px;}"
+		 	}
+		 }
+	},
+
+	// Emmet preferences
+	// List of all available preferences:
+	// http://docs.emmet.io/customization/preferences/
+	"preferences": {
+		// "css.valueSeparator": ": ",
+		// "css.propertyEnd": ";"
+	},
+
+	// Output profiles for syntaxes
+	// http://docs.emmet.io/customization/syntax-profiles/
+	"syntaxProfiles": {
+		// Enable XHTML dialect for HTML syntax
+		 "html": "xhtml"
+		// 
+		// Write chained CSS abbreviations on single line:
+		// "css": "css_line"
+	}
+}
