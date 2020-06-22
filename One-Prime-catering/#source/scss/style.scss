@@ -1,42 +1,139 @@
-// Файл обнуляющих стилей
-@import "nullstyle.scss";
+//<МИКСИНЫ>===============================================================================================
+@import "mixins.scss";
+//</МИКСИНЫ>===============================================================================================
 
-//Добавление шрифтов
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Sans&display=swap');
+//<ШРИФТЫ>===============================================================================================
+
+//<Подключаем шрифты>=======================================================================================
+//PT SANS
+@import url('https://../fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+//AkzidenzGroteskPro-BoldCnd
 @font-face {
-	font-family: 'AkzidenzGrotesk';
-	src: url('../fonts/AkzidenzGrotesk-Regular.eot');
-	src: local('☺'), url('fonts/AkzidenzGrotesk-Regular.woff') format('woff'), url('fonts/AkzidenzGrotesk-Regular.ttf') format('truetype'), url('fonts/AkzidenzGrotesk-Regular.svg') format('svg');
-	font-weight: normal;
+	font-family: 'AkzidenzGroteskPro';
+	src: url('../fonts/AkzidenzGroteskPro-BoldCn.eot');
+	src: local('☺'), url('../fonts/AkzidenzGroteskPro-BoldCn.woff') format('woff'), url('../fonts/AkzidenzGroteskPro-BoldCn.ttf') format('truetype'), url('../fonts/AkzidenzGroteskPro-BoldCn.svg') format('svg');
+	font-weight: 700;
 	font-style: normal;
 }
 
+//Bebas
+@font-face {
+    font-family: 'Bebas Neue';
+    src: local('Bebas Neue Thin'), local('BebasNeue-Thin'), url('bebasneuethin.woff2') format('woff2'), url('bebasneuethin.woff') format('woff'), url('bebasneuethin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Bebas Neue';
+    src: local('Bebas Neue Light'), local('BebasNeue-Light'), url('bebasneuelight.woff2') format('woff2'), url('bebasneuelight.woff') format('woff'), url('bebasneuelight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Bebas Neue';
+    src: local('Bebas Neue Book'), local('BebasNeueBook'), url('bebasneuebook.woff2') format('woff2'), url('bebasneuebook.woff') format('woff'), url('bebasneuebook.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Bebas Neue';
+    src: local('Bebas Neue Regular'), local('BebasNeueRegular'), url('bebasneueregular.woff2') format('woff2'), url('bebasneueregular.woff') format('woff'), url('bebasneueregular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Bebas Neue';
+    src: local('Bebas Neue Bold'), local('BebasNeueBold'), url('bebasneuebold.woff2') format('woff2'), url('bebasneuebold.woff') format('woff'), url('bebasneuebold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
 
-//Подключение фалов стилей/страниц/элементов
+//</Подключаем шрифты>=======================================================================================
+
+//<Иконочные шрифты>==========================================================================================
+
+//</Иконочные шрифты>==========================================================================================
+
+//<Шрифт по умолчанию>==========================================================================================
+$fontfamily: "";
+//</Шрифт по умолчанию>==========================================================================================
+
+//</ШРИФТЫ>=======================================================================================================
+
+//<ПЕРЕМЕННЫЕ>===========================================================================================================
+$minwidth: 320px;
+$mw: 906;
+$md1: $mw + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+//</ПЕРЕМЕННЫЕ>===========================================================================================================
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+@import "null.scss";
+body {
+	color: #000;
+	font-size: 14px;
+	&.lock {
+		overflow: hidden;
+	}
+}
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+
+//<ОБОЛОЧКА>===========================================================================================================
+.wrapper {
+	padding: 34px 0;
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	font-family: 'PT Sans', sans-serif;
+	font-weight: 400;
+	&.loaded {
+	}
+}
+//</ОБОЛОЧКА>===========================================================================================================
+
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+.container {
+	max-width: $mw + px;
+	margin: 0 auto;
+	width: 100%;
+	padding: 0 20px;
+	@media (max-width: $md1+px) {
+		max-width: 970px;
+	}
+	@media (max-width: $md2+px) {
+		max-width: 750px;
+	}
+	@media (max-width: $md3+px) {
+		max-width: none;
+		padding: 0 10px;
+	}
+}
+//</ОСНОВНАЯ СЕТКА>===========================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+@import "forms.scss";
 @import "ui.scss";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+//@import "../../js/fancybox/jquery.fancybox.scss";
+//@import "datepicker.scss";
+//@import "fontawesome.scss";
+//@import "popover.min.scss";
+//@import "baguetteBox.scss";
+//@import "pagging.scss";
+//@import "icons.scss";
+@import "popup.scss";
 @import "header.scss";
 @import "footer.scss";
-//Оболочка
-.wrapper {
-	overflow: hidden;
-	min-height: 100%;
-	font-family: "PT Sans";
-}
+@import "home.scss";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 
-.container {
-	max-width: 810px;
-	padding: 0px 22px;
-	margin: 0px auto;
-}
+//<ОСНОВНОЙ БЛОК>====================================================================================================
 
-//Стили шрифтов
+//====================================================================================================
 
-.title {
-	font-family: "AkzidenzGrotesk";
-	text-transform: uppercase;
-	color: #000;
-	font-size: 15px;
-
-}
-
-
+//</ОСНОВНОЙ БЛОК>====================================================================================================

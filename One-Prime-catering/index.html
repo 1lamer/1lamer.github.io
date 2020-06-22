@@ -1,52 +1,102 @@
-<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
 <!DOCTYPE html>
-<!-- Оболочка документа, указываем язык содержимого -->
 <html lang="ru">
-	<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
 	<head>
-		<!-- Заголовок страницы в браузере -->
-		<title>AOD</title>
-		<!-- Подключаем CSS -->
-		<link rel="stylesheet" href="css/style.css" />
-		<!-- Кодировка страницы -->
+		<title>Главная</title>
 		<meta charset="UTF-8">
-		<!-- Адаптив -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=0">
-		<!-- Отключение набора номера -->
 		<meta name="format-detection" content="telephone=no">
-		<!-- подключение скрипта -->
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="shortcut icon" href="favicon.ico">
+		<!-- <meta name="robots" content="noindex, nofollow"> -->
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
-	<!-- Отображаемое тело страницы -->
 	<body>
 		<div class="wrapper">
-			
 <header class="header">
 	<div class="container">
 		<div class="header__column">
-			<div class="header__func">
-				<div class="header__language button">
-					<span>EN</span>
-					<span>RU</span>
-					<span>ESP</span>
+			<!-- 
+				html меню с иконкой бургера
+				<div class="header__menu menu">
+					<div class="menu__icon icon-menu">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li><a href="" class="menu__link"></a></li>
+						</ul>
+					</nav>
 				</div>
-				<div class="header__oder button">Online ordering</div>
+			 -->
+			<div class="header__func">
+				<div class="header__language">
+					<a href="">EN</a>
+					<a href="">RU</a>
+					<a href="">ESP</a>
+				</div>
+				<div class="header__order">
+					<a href="">Online Ordering</a>
+				</div>
 			</div>
-			<div class="header__menu">
-				<a href="#" class="header__nsv title">ABOUT</a>
-				<a href="#" class="header__nsv title">Menus</a>
-				<a href="#" class="header__nsv title">Service Info</a>
-				<a href="#" class="header__nsv title">Gallery</a>
-				<a href="#" class="header__nsv title">Friends</a>
-				<a href="#" class="header__nsv title">Contact</a>
-			</div>
+		 	<div class="header__nav">
+ 			 	<a href="" class="">about</a>
+ 			 	<a href="" class="">menus</a>
+ 			 	<a href="" class="">service info</a>
+ 			 	<a href="" class="">gallery</a>
+ 			 	<a href="" class="">friends</a>
+ 			 	<a href="" class="">contact</a>
+ 			</div>
+ 		 	<div class="header__logo">
+ 		 		<img src="img/header/logo.png" alt="" />
+ 		 	</div>
 		</div>
 	</div>
 </header>
+<footer class="footer">
+	<div class='container'>
+		<div class="footer__row">
+			
 		</div>
-		<!-- /wrapper -->
-		<!-- Подключение jQuery -->
-		<script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
-		<!-- Подключение js скриптов -->
-		<script src="js/main.js"></script>
+	</div>
+</footer>		</div>
+<div class="popup">
+	<div class="popup-table table">
+		<div class="cell">
+			<div class="popup-content">
+				<div class="popup-close"></div>
+				<div class="popup__title"></div>
+				<div class="popup__txt"></div>
+				<form action="#" class="popup-form form">
+					<div class="form-input">
+						<input autocomplete="off" type="text" name="form[]" data-value="" class="input" />
+					</div>
+					<div class="form-input">
+						<input autocomplete="off" type="text" name="form[]" data-value="" class="input req email" />
+					</div>
+					<div class="form-input">
+						<input autocomplete="off" type="text" name="form[]" data-value="" class="input req" />
+					</div>
+					<div class="form-button">
+						<button type="submit" class="form__btn btn fw"></button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="popup popup-video">
+	<div class="popup-table table">
+		<div class="cell">
+			<div class="popup-close"></div>
+			<div class="popup-video__value video"></div>
+		</div>
+	</div>
+</div><script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-migrate-3.0.1.min.js"></script> -->
+<script src="js/vendors.js"></script>
+<script src="js/main.js"></script>
+<script src="js/custom.js" ></script>
 	</body>
 </html>

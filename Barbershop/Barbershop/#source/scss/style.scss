@@ -1,0 +1,132 @@
+//Подключение шрифтов
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
+
+//
+
+//Обнуление стилей
+
+@import url(null.css);
+
+//
+
+//Стили по умолчанию
+
+body {
+	margin: 0;
+	padding: 0;
+
+	font-family: "PT Sans Narrow", Arial, sans-serif;
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: 700;
+	color: #ffffff;
+	text-transform: uppercase;
+
+	background-color: #000000;
+	background-image: url("../../img/background.jpg");
+	background-position: top center;
+	background-repeat: no-repeat;
+}
+
+//
+
+
+.header {
+	&__logo {}
+	&__nav {}
+	&__user {}
+}
+.nav {
+	&__list {}
+	&__item {}
+}
+.user {
+	&__func {}
+}
+.main {
+}
+.container {
+}
+.visually-hidden {
+}
+.features {
+	&__list {}
+}
+.feature {
+	&__describe {}
+}
+.describe {
+	&__title {}
+	&__text {}
+}
+.news {
+	&__title {}
+	&__list {}
+	&__item {}
+	&__text {}
+	&__button {}
+}
+.title {
+}
+.button {
+}
+.gallery {
+	&__title {}
+	&__content {}
+	&__button {}
+}
+.gellery {
+	&__button {
+		&__back {}
+		&__next {}
+	}
+}
+.contacts {
+	&__title {}
+	&__info {}
+	&__button {}
+}
+.appointment {
+	&__title {}
+	&__describe {}
+	&__form {}
+}
+.appointmen {
+	&__item {}
+	&__label {}
+	&__button {}
+}
+.footer {
+	&__info {}
+	&__social {}
+	&__developer {}
+	&__button {}
+}
+.social {
+	&__list {}
+	&__item {}
+}
+.modal {
+	&__close {}
+}
+.login {
+	&__form {}
+	&__item {}
+	&__remember {}
+	&__checkbox {}
+	&__indicator {}
+	&__restore {}
+	&__button {}
+}
+.modal-login {
+}
+.login-log-icon {
+}
+.login-pass-icon {
+}
+.map {
+	&__item {}
+}
+.modal-map {
+}
