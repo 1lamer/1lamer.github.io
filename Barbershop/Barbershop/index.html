@@ -4,183 +4,274 @@
 	<meta charset="UTF-8" />
 	<title>Barbershop</title>
 	<link rel="stylesheet" href="css/style.css" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width">
 </head>
 
 <body>	
-	<header class="header">
-		<a href="#" class="header__logo">
-			<img src="img/index/index-logo.svg" alt="Логотип барбершопа 'Бородинский' "/>
-		</a>
-		<nav class="header__nav nav">
-			<ui class="nav__list">
-				<li class="nav__item"><a href="#" class="">Информация</a></li>
-				<li class="nav__item"><a href="#" class="">Новости</a></li>
-				<li class="nav__item"><a href="#" class="">Прайс-лист</a></li>
-				<li class="nav__item"><a href="#" class="">Магазин</a></li>
-				<li class="nav__item"><a href="#" class="">Контакты</a></li>
-			</ui>
-			<ui class="header__user user">
-				<li class="user__func">
-					<a href="#">Вход</a>
-				</li>
-			</ui>	
-		</nav>
-	</header>
+	<div class="wrapper">
 
-	<main class="main">
-		<div class="container">
-			<h1 class="visually-hidden">Барбершоп 'Бородинский'</h1>
+		<h1 class="visually-hidden">Главная страница барбершопа "Бородинский"</h1>
 
-			<section class="features">
-				<h2 class="visually-hidden">Преимущества</h2>
-				<ul class="features__list">
-					<li class="feature__describe describe">
-						<h3 class="describe__title">Быстро</h3>
-						<p class="describe__text">
-							МЫ ДЕЛАЕМ СВОЮ РАБОТУ БЫСТРО! ДВА ЧАСА ПРОЛЕТЯТ НЕЗАМЕТНО И ВЫ — СЧАСТЛИВЫЙ ОБЛАДАТЕЛЬ СТИЛЬНОЙ СТРИЖКИ-МИНУТКИ!
-						</p>
-					</li>
-					<li class="feature__describe">
-						<h3 class="describe__title">Круто</h3>
-						<p class="describe__text">
-							МЫ ДЕЛАЕМ СВОЮ РАБОТУ БЫСТРО! ДВА ЧАСА ПРОЛЕТЯТ НЕЗАМЕТНО И ВЫ — СЧАСТЛИВЫЙ ОБЛАДАТЕЛЬ СТИЛЬНОЙ СТРИЖКИ-МИНУТКИ!
-						</p>
-					</li>
-					<li class="feature__describe">
-						<h3 class="describe__title">Дорого</h3>
-						<p class="describe__text">
-							НАШИ МАСТЕРА — ПРОФЕССИОНАЛЫ СВОЕГО ДЕЛА И НЕ МОГУТ СТОИТЬ ДЕШЕВО. К ТОМУ ЖЕ, РАЗВЕ ЦЕНА НЕ ДАЕТ ОПРЕДЕЛЕНЫЙ СТАТУС?
-						</p>
-					</li>
-				</ul>
-			</section>
+		<header class="header">
 
-			<section class="news">
-				<h2 class="news__title title">Новости</h2>
-				<ul class="news__list">
-					<li class="news__item">
-						<p class="news__text">НАМ НАКОНЕЦ ЗАВЕЗЛИ ЯГЕРМАЙСТЕР! ТЕПЕРЬ ВЫ МОЖЕТЕ ПРОПУСТИТЬ СТАКАНЧИК ВО ВРЕМЯ СТРИЖКИ</p>
-						<time datetime="2020-01-11">11 января></time>
-					</li>
-					<li class="news__item">
-						<p class="news__text">В НАШЕЙ КОМАНДЕ ПОПОЛНЕНИЕ, БОРИС «БРИТВА» СТРИГУНЕЦ, ОБЛАДAТЕЛЬ МНОЖЕСТВА ТИТУЛОВ И НАГРАД ПОПОЛНИЛ НАШИ СТРОЙНЫЕ РЯДЫ</p>
-						<time datetime="2020-01-18">18 января</time>
-					</li>
-				</ul>
-				<a href="#" class="news__button button">Все новости</a>
-			</section>
+			<div class="header__container container">
 
-			<section class="gallery">
-				<h2 class="gallery__title title">Фотогалрея</h2>
-				<figure class="gallery__content">
-					<a href="#">
-						<img src="img/index/gallery.jpg" alt="Интерьер"/>
-					</a>
-				</figure>
-				<button class="gallery__button gellery__button__back button">Назад</button>
-				<button  class="gallery__button gellery__button__next button">Вперёд</button>
-			</section>
+				<div class="header__logo">
+					<img src="img/index/index-logo.svg" alt="Логотип барбершопа 'Бородинский'" />
+				</div>
 
-			<section class="contacts">
-				<h2 class="contacts__title title">Контактная информация</h2>
-				<p class="contacts__info">
-					БАРБЕРШОП «БОРОДИНСКИЙ»<br />
-					АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, Б. КОНЮШЕННАЯ, Д. 19/8<br />
-					ТЕЛЕФОН: +7 (495) 666-02-66
+				<section class="header__nav nav">
+
+					<h2 class="visually-hidden">Навигационное меню</h2>
+					
+					<div class="nav__row">
+						<ul class="nav__menu">
+							<li class="nav__item">
+								<a href="#">Информация</a>
+							</li>
+							<li class="nav__item">
+								<a href="#">Новости</a>
+							</li>
+							<li class="nav__item">
+								<a href="#">Прайс-лист</a>
+							</li>
+							<li class="nav__item">
+								<a href="#">Магазин</a>
+							</li>
+							<li class="nav__item">
+								<a href="#">Контакты</a>
+							</li>
+						</ul>
+						<ul class="nav__user-login">
+							<li class="nav__login">
+								<a href="#">Вход</a>
+							</li>
+						</ul>			
+					</div>
+				</section>
+				
+				<section class="header__features features">
+
+					<h2 class="visually-hidden">Преимущества</h2>
+
+					<ul class="features__list">
+						<li class="features__item">
+							<h3 class="features__title title">Быстро</h3>
+							<p class="features__description">
+								МЫ ДЕЛАЕМ СВОЮ РАБОТУ БЫСТРО! ДВА ЧАСА ПРОЛЕТЯТ НЕЗАМЕТНО И ВЫ — СЧАСТЛИВЫЙ ОБЛАДАТЕЛЬ СТИЛЬНОЙ СТРИЖКИ-МИНУТКИ!
+							</p>
+						</li>
+						<li class="features__item">
+							<h3 class="features__title title">Круто</h3>
+							<p class="features__description">
+								ЗАБУДЬТЕ, КАК ВЫ СТРИГЛИСЬ РАНЬШЕ. <br />
+								МЫ СДЕЛАЕМ ИЗ ВАС ЗВЕЗДУ ФУТБОЛА ИЛИ КИНО! <br />
+								ВО ВСЯКОМ СЛУЧАЕ ВНЕШНЕ.
+							</p>
+						</li>
+						<li class="features__item">
+							<h3 class="features__title title">Дорого</h3>
+							<p class="features__description">
+								НАШИ МАСТЕРА — ПРОФЕССИОНАЛЫ СВОЕГО ДЕЛА И НЕ МОГУТ СТОИТЬ ДЕШЕВО. К ТОМУ ЖЕ, РАЗВЕ ЦЕНА НЕ ДАЕТ ОПРЕДЕЛЕНЫЙ СТАТУС?
+							</p>
+						</li>
+					</ul>
+				</section>				
+			</div>
+			<!-- /container -->
+		</header>
+		
+		<main class="main">
+			<div class="main__container container">
+
+				<div class="main__column">
+
+					<div class="main__row">
+
+						<section class="news">
+							
+							<h2 class="news__title title">Новости</h2>
+
+							<ul class="news__list">
+								<li class="news__item">
+									<p class="news__text">
+										НАМ НАКОНЕЦ ЗАВЕЗЛИ ЯГЕРМАЙСТЕР! ТЕПЕРЬ ВЫ МОЖЕТЕ ПРОПУСТИТЬ СТАКАНЧИК ВО ВРЕМЯ СТРИЖКИ
+									</p>
+									<time datetime="2020-01-11">11 <span>января</span></time>
+								</li>
+								<li class="news__item">
+									<p class="news__text">
+										В НАШЕЙ КОМАНДЕ ПОПОЛНЕНИЕ, БОРИС «БРИТВА» СТРИГУНЕЦ, ОБЛАДAТЕЛЬ МНОЖЕСТВА ТИТУЛОВ И НАГРАД ПОПОЛНИЛ НАШИ СТРОЙНЫЕ РЯДЫ
+									</p>
+									<time datetime="2020-01-18">18 <span>января</span></time>
+								</li>
+							</ul>
+
+							<a href="#" class="news__button button">Все новости</a>
+
+						</section>
+
+						<section class="gallery">
+							
+							<h2 class="gallery__title title">Фотогалерея</h2>
+
+							<figure class="gallery__content">
+								<a href="" class="gallery__image">
+									<img src="img/index/gallery.jpg" alt="Интерьер"/>
+								</a>
+							</figure>
+							<div class="gallery__switch">
+								<button class="gallery__button button">Назад</button>
+								<button class="gallery__button button">Вперед</button>
+							</div>
+						</section>						
+					</div>
+					<!-- /main__row -->
+					<div class="main__row">
+
+						<section class="information">
+							
+							<h2 class="information__title title">Контактная информация</h2>
+
+							<div class="information__text">
+								<p class="information__address">
+									БАРБЕРШОП «БОРОДИНСКИЙ» <br />
+									АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, Б. КОНЮШЕННАЯ, Д. 19/8 <br />
+									ТЕЛЕФОН: +7 (495) 666-02-66
+								</p>
+								<p class="information__schedule">
+									ВРЕМЯ РАБОТЫ: <br />
+									ПН—ПТ: С 10:00 ДО 22:00 <br />
+									СБ—ВС: С 10:00 ДО 19:00
+								</p>
+							</div>
+							<div class="information__connect">
+								<a href="" class="information__button button">Как проехать</a>
+								<a href="" class="information__button button">Обратная свзяь</a>
+							</div>
+
+						</section>	
+
+						<section class="appointment">
+							
+							<h2 class="appointment__title title">Записаться</h2>
+
+							<p class="appointment__info">
+								УКАЖИТЕ ЖЕЛАЕМУЮ ДАТУ И ВРЕМЯ И МЫ СВЯЖЕМСЯ С ВАМИ ДЛЯ ПОДТВЕРЖДЕНИЯ БРОНИ
+							</p>
+
+							<form action="#" class="appointment__form form" method="post">
+
+								<div class="form__item">
+									<label for="form-date" class="form__data">Дата</label>
+									<input id="form-date" type="text" name="data" class="form__field" value="" placeholder="06.23.2020" />
+								</div>
+
+								<div class="form__item">
+									<label for="form-time" class="form__data">Время</label>
+									<input id="form-time" type="text" name="time" class="form__field" value="" placeholder="15:00" />
+								</div>
+
+								<div class="form__item">
+									<label for="form-name" class="form__data">Ваше имя</label>
+									<input id="form-name" type="text" name="name" class="form__field" value="" placeholder="Джонни" />
+								</div>
+
+								<div class="form__item">
+									<label for="form-phone" class="form__data">Телефон</label>
+									<input id="form-phone" type="tel" name="phone" class="form__field" value="" placeholder="+7 912 456-78-90" />
+								</div>
+
+								<button class="form__button button" type="submit">Отправить</button>
+							</form>
+						</section>
+					</div>
+					<!-- /main__row -->
+				</div>
+				<!-- /main__column -->
+			</div>
+			<!-- /main__container -->
+		</main>
+
+		<footer class="footer">
+			<div class="footer__container container">
+				<p class="footer__info">
+					БАРБЕРШОП «БОРОДИНСКИЙ» <br />
+					АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, УЛ. Б. КОНЮШЕННАЯ, Д. 19/8 <br />
+					КАК НАС НАЙТИ? <br />
+					ТЕЛЕФОН: +7 (495) 666-02-66 <br />
 				</p>
-				<p class="contacts__info">
-					ВРЕМЯ РАБОТЫ: <br />
-					ПН—ПТ: С 10:00 ДО 22:00 <br />
-					СБ—ВС: С 10:00 ДО 19:00
-				</p>
-				<a href="#" class="contacts__button button">Как проехать</a>
-				<a href="#" class="contacts__button button">Обратная связь</a>	
-			</section>
+				<div class="footer__social">
+					<span>Давайте дружить!</span>
+					<ul class="footer__icons">
+						<li class="footer__item">
+							<a class="footer__link"href="#">
+								<span class="visually-hidden">Вконтакте</span>
+								<svg xmlns="http://www.w3.org/2000/svg" width="27" height="15" viewBox="0 0 26.14 14.91"><path d="M26 13.47l-.09-.17a13.55 13.55 0 0 0-2.6-3q-.87-.83-1.1-1.12A1 1 0 0 1 22 8a10.27 10.27 0 0 1 1.22-1.78l.88-1.16q2.35-3.13 2-4L26 .94a.8.8 0 0 0-.4-.22 2.14 2.14 0 0 0-.87 0h-3.92a.51.51 0 0 0-.27 0h-.3a.6.6 0 0 0-.15.14.93.93 0 0 0-.14.24 22.22 22.22 0 0 1-1.46 3.06q-.5.84-.93 1.46a7 7 0 0 1-.71.91 4.94 4.94 0 0 1-.52.47q-.23.18-.35.15l-.23-.05a.9.9 0 0 1-.31-.33 1.49 1.49 0 0 1-.16-.53V1.6a3.14 3.14 0 0 0 0-.62 2.12 2.12 0 0 0-.14-.44.73.73 0 0 0-.28-.33 1.57 1.57 0 0 0-.46-.18A9 9 0 0 0 12.57 0a8.93 8.93 0 0 0-3.25.33 1.83 1.83 0 0 0-.52.41q-.25.3-.07.33a1.67 1.67 0 0 1 1.16.59l.08.16a2.6 2.6 0 0 1 .19.63 6.32 6.32 0 0 1 .12 1 10.59 10.59 0 0 1 0 1.7q-.07.71-.13 1.1a2.21 2.21 0 0 1-.18.64 2.69 2.69 0 0 1-.16.3l-.07.07a1 1 0 0 1-.37.07.86.86 0 0 1-.46-.19 3.27 3.27 0 0 1-.56-.52 7 7 0 0 1-.66-.93q-.37-.6-.76-1.42l-.22-.39q-.2-.38-.56-1.11t-.62-1.43A.9.9 0 0 0 5.2.9h-.07a.93.93 0 0 0-.22-.16A1.44 1.44 0 0 0 4.6.65L.87.68A1 1 0 0 0 .1.94L0 1a.44.44 0 0 0 0 .22 1.08 1.08 0 0 0 .08.37Q.9 3.53 1.86 5.31t1.66 2.87Q4.23 9.27 5 10.24t1 1.24l.37.41.34.33a8.06 8.06 0 0 0 1 .78 16.34 16.34 0 0 0 1.4.9 7.6 7.6 0 0 0 1.79.72 6.19 6.19 0 0 0 2 .22h1.57a1.08 1.08 0 0 0 .72-.3l.05-.07a.9.9 0 0 0 .1-.25 1.38 1.38 0 0 0 0-.37 4.48 4.48 0 0 1 .09-1.05 2.77 2.77 0 0 1 .23-.71 1.74 1.74 0 0 1 .29-.4 1.19 1.19 0 0 1 .23-.2h.11a.86.86 0 0 1 .77.21 4.52 4.52 0 0 1 .83.79q.39.47.93 1.05a6.41 6.41 0 0 0 1 .87l.27.16a3.31 3.31 0 0 0 .71.3 1.53 1.53 0 0 0 .76.07l3.48-.05a1.58 1.58 0 0 0 .8-.17.68.68 0 0 0 .34-.37 1.06 1.06 0 0 0 0-.46 1.71 1.71 0 0 0-.1-.36z" fill="#fff"/></svg>
+							</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link"href="#">
+								<span class="visually-hidden">Фейсбук</span>
+								<svg xmlns="http://www.w3.org/2000/svg" width="19" height="22" viewBox="0 0 10.15 21.74"><path d="M3.34 1.12A4.77 4.77 0 0 1 6.53 0h3.61v3.81H7.81a1.07 1.07 0 0 0-1.09.83v2.55h3.42c-.08 1.23-.24 2.45-.41 3.67h-3v10.87H2.21V10.86H0V7.21h2.19V3.66a3.83 3.83 0 0 1 1.15-2.54z" fill="#fff"/></svg>
+							</a>
+						</li>
+						<li class="footer__item">
+							<a class="footer__link"href="#">
+								<span class="visually-hidden">Инстаграм</span>
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M18 0H2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm-8 6a4 4 0 1 1-4 4 4 4 0 0 1 4-4zM2.5 18a.47.47 0 0 1-.5-.5V9h2.1a3.4 3.4 0 0 0-.1 1 6 6 0 1 0 12 0 3.4 3.4 0 0 0-.1-1H18v8.5a.47.47 0 0 1-.5.5zM18 4.5a.47.47 0 0 1-.5.5h-2a.47.47 0 0 1-.5-.5v-2a.47.47 0 0 1 .5-.5h2a.47.47 0 0 1 .5.5z" fill="#fff"/></svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__developer">
+					<span>Разработано:</span>
+					<a href="#" class="footer__button button">HTML Academy</a>
+				</div>				
+			</div>
+		</footer>
+	</div>
+	<!-- /wrapper -->
 
-			<section class="appointment">
-				<h2 class="appointment__title title">Записаться</h2>
-				<p class="appointment__describe">УКАЖИТЕ ЖЕЛАЕМУЮ ДАТУ И ВРЕМЯ И МЫ СВЯЖЕМСЯ С ВАМИ ДЛЯ ПОДТВЕРЖДЕНИЯ БРОНИ</p>
-				<form action="#" class="appointment__form" method="post">
-					<div class="appointmen__item">
-						<label for="appointment-date" class="appointmen__label">Дата</label>
-						<input id="appointment-date" type="text" name="date" value="" placeholder="08.10.2020" />
-					</div>
-					<div class="appointmen__item">
-						<label for="appointment-time" class="appointmen__label">Время</label>
-						<input id="appointment-time" type="text" name="time" value="" placeholder="10:00" />
-					</div>
-					<div class="appointmen__item">
-						<label for="appointment-name" class="appointmen__label">Ваше имя</label>
-						<input id="appointment-name" type="text" name="name" value="" placeholder="Кекс" />
-					</div>
-					<div class="appointmen__item">
-						<label for="appointment-phone" class="appointmen__label">Телефон</label>
-						<input id="appointment-phone" type="tel" name="phone" value="" placeholder="+7 123 456-78-90" />
-					</div>
-					<button class="appointmen__button button" type="submit">Отправить</button>
-				</form>
-			</section>
-		</div>
-	</main>
+	<section class="popup popup__sign-in sign-in">
 
-	<footer class="footer">
-		<p class="footer__info">
-			БАРБЕРШОП «БОРОДИНСКИЙ» <br />
-			АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, УЛ. Б. КОНЮШЕННАЯ, Д. 19/8 <br />
-			КАК НАС НАЙТИ? <br />
-			ТЕЛЕФОН: +7 (495) 666-02-66
-		</p>
-		<div class="footer__social social">
-			<p>Давайте дружить!</p>
-			<ul class="social__list">
-				<li class="social__item">
-					<a href="#"><img src="img/icons/vk.svg" alt="Вконтакте" /></a>
-				</li>
-				<li class="social__item">
-					<a href="#"><img src="img/icons/facebook.svg" alt="Фейсбук" /></a>
-				</li>
-				<li class="social__item">
-					<a href="#"><img src="img/icons/instagram.svg" alt="Инстаграм" /></a>
-				</li>
-			</ul>
-		</div>
-		<div class="footer__developer">
-			<p>Разработано:</p>
-			<a href="#" class="footer__button button">HTML Academy</a>
-		</div>
-	</footer>
-	
-	<section class="modal login modal-login ">
-		<h2>Личный кабинет</h2>
-		<p>Введите пожалуйста свой логин и пароль</p>
-		<form action="#" class="login__form" method="post">
-			<div class="login__item">
-				<label class="visually-hidden" for="login-log">Логин</label>
-				<input class="login-log-icon" id="login-log" type="text" name="login" placeholder="Логин"/>
+		<h2 class="sign-in__title title">Личный кабинет</h2>
+
+		<p class="sign-in__invite">ВВедите пожалуйста свой логин и пароль</p>
+
+		<form action="#" class="sign-in__input input" method="post">
+
+			<div class="input__data">
+				<label for="input-login" class="visually-hidden">Логин</label>
+				<input id="input-login" type="text" class="input__field" value="" placeholder="ЛОГИН" />
 			</div>
-			<div class="login__item">
-				<label class="visually-hidden" for="login-pass" >Пароль</label>
-				<input class="login-pass-icon" id="login-pass" type="password" name="password" placeholder="Пароль"/>
+
+			<div class="input__data">
+				<label for="input-password" class="visually-hidden">Пароль</label>
+				<input id="popup-password" type="password" class="input__field" value="" placeholder="ПАРОЛЬ" />
+			</div>			
+			
+			<div class="input__function">
+				<div class="input__remember remember">
+					<input id="remember-checkbox" type="checkbox" name="checkbox" class="visually-hidden" />
+					<label for="remember-checkbox" class="remember__cross">Запомните меня</label>
+				</div>
+				<a href="#" class="input__forget">Я забыл пароль!</a>
 			</div>
-			<div class="login__remember">
-                <label class="login__checkbox">
-                    <input type="checkbox" name="remember" class="visually-hidden">
-                    <span class="login__indicator">Запомните меня</span>                  
-                </label>
-                <a class="login__restore" href="#">Я забыл пароль!</a>
-			</div>
-			<button class="login__button button" type="submit">Войти</button>
+
+			<button class="input__button button" type="submit">Войти</button>
 		</form>
-		<button class="modal__close" type="button">Закрыть</button>
+		<button class="popup__button" type="button">Закрыть</button>
 	</section>
+	<!-- /popup__sign-in -->
 
-    <section class="modal map modal-map">
-        <h2 class="visually-hidden">Как до нас добраться</h2>
-        <div class="map__item">
-            <img src="img/index/map.png" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
-        </div class="map__item">
-        <button class="modal__close" type="button">Закрыть</button>
-    </section>
+	<section class="popup popup__map map">
+		<h2 class="visually-hidden">Как до нас добраться</h2>
+		<div class="map__image">
+			<img src="img/index/map.png" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+		</div>
+		<button class="popup__button" type="button">Закрыть</button>
+	</section>
+	<!-- /popup__map -->
 </body>
 </html>
