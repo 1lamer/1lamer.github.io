@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap");
+@import url(normalize.css);
+*,
+*:before,
+*:after,
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  font-family: "PT Sans Narrow", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #f7f4f1;
+  text-transform: uppercase;
+  background-color: #282828;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+ul li {
+  list-style: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.title {
+  display: inline-block;
+  font-size: 30px;
+  margin: 0px 0px 25px 0px;
+}
+
+button {
+  text-transform: uppercase;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 35px;
+  font: inherit;
+  color: #fff;
+  background-color: #000;
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+  background-color: #663d15;
+}
+
+.header__row {
+  padding: 0px 0px 0px 20px;
+  max-width: 940px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+.header__nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  font-size: 16px;
+}
+.header__nav:before {
+  content: "";
+  position: absolute;
+  background-color: #000;
+  height: 100%;
+  width: 100%;
+}
+
+.nav__logo {
+  max-width: 111px;
+  max-height: 24px;
+  margin: 0px 20px 0px 0px;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+.nav__row {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 1 auto;
+}
+.nav__menu {
+  display: flex;
+}
+.nav__item > a {
+  display: block;
+  padding: 25px 20px;
+  white-space: nowrap;
+}
+.nav__login {
+  max-width: 140px;
+}
+.nav__login > a {
+  padding: 27px 20px 27px 50px;
+  position: relative;
+}
+.nav__login > a:before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 21px;
+  background: url("../img/icons/login.svg") 0 0 no-repeat;
+  width: 16px;
+  height: 16px;
+  opacity: 0.3;
+}
+.nav__login > a:hover, .nav__login > a:focus, .nav__item > a:hover, .nav__item > a:focus {
+  background-color: #242424;
+}
+.nav__login > a:hover::before, .nav__login > a:focus::before, .nav__login > a:active::before {
+  opacity: 1;
+}
+
+.main {
+  padding: 130px 0px 50px 0px;
+  background-color: #f8f5f2;
+  background-image: url("../img/texture.jpg");
+  color: #000;
+}
+.main__title {
+  font-size: 30px;
+}
+.main__path {
+  margin: 0px 0px 50px 0px;
+}
+
+.path__row {
+  display: flex;
+}
+.path__row a {
+  color: #000;
+}
+.path__row li:not(:first-child) a {
+  padding: 0px 0px 0px 40px;
+  position: relative;
+}
+.path__row li:not(:first-child) a::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  transform: rotate(45deg);
+  background-color: #000;
+  top: 50%;
+  left: 16px;
+  margin: -4px 0px 0px 0px;
+}
+.path__current > a {
+  color: #aba9a7;
+}
+
+.product__row {
+  display: flex;
+  justify-content: space-between;
+}
+.product__info {
+  max-width: 390px;
+}
+.product__article {
+  color: #aeaeae;
+}
+.product__text {
+  margin: 0px 0px 35px 0px;
+}
+.product__price {
+  display: flex;
+  justify-content: center;
+  max-width: 187px;
+  margin: 0px 0px 35px 0px;
+}
+.product__price > a {
+  padding: 10px 17px 10px 20px;
+}
+.product__price > b {
+  padding: 10px 0px 0px 0px;
+  flex: 1 1 auto;
+  text-align: center;
+  background-color: #e5e5e5;
+}
+
+.photos__full {
+  margin: 0px 0px 14px 0px;
+}
+.photos__preview {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info__row {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 0px 30px 0px;
+}
+.info h3 {
+  display: inline-block;
+  margin: 0px 0px 30px 0px;
+  font-size: 24px;
+}
+.info ul > li {
+  padding: 0px 0px 0px 20px;
+  position: relative;
+}
+.info ul > li::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  transform: rotate(45deg);
+  background-color: #000;
+  top: 50%;
+  left: 0px;
+  margin: -4px 0px 0px 0px;
+}
+
+.footer {
+  padding: 60px 0px 35px 0px;
+  background-color: #1f1f1f;
+}
+.footer__container {
+  display: flex;
+}
+.footer__info {
+  margin: 0px 100px 0px 0px;
+  white-space: nowrap;
+}
+.footer__social {
+  margin: 0px 250px 0px 0px;
+  text-align: center;
+}
+.footer__social > span {
+  display: block;
+  margin: 0px 0px 15px 0px;
+}
+.footer__icons {
+  display: flex;
+  justify-content: space-between;
+  width: 141px;
+}
+.footer__link {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  background-color: #000;
+}
+.footer__link:hover, .footer__link:focus, .footer__link:active {
+  background-color: #fff;
+}
+.footer__link:hover path, .footer__link:focus path, .footer__link:active path {
+  fill: #000;
+}
+.footer__developer {
+  text-align: center;
+  white-space: nowrap;
+}
+.footer__developer > span {
+  display: block;
+  margin: 0px 0px 15px 0px;
+}

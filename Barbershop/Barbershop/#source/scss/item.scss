@@ -1,0 +1,403 @@
+//////////////Подключение шрифтов/////////////////
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
+
+/////////////////////////////
+
+
+////////Подключение Normalize///////
+
+@import url(normalize.css);
+
+////////////////////////
+
+/////////Стили по умолчанию/////////
+
+*,
+*:before,
+*:after, 
+fieldset {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+body {
+	// //Фуллскрин
+	// height: 100%;
+	// //
+	width: 100%;
+	font-family: "PT Sans Narrow", Arial, sans-serif;
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: 700;
+	color: #f7f4f1;
+	text-transform: uppercase;
+
+	background-color: #282828;
+}
+
+.wrapper {
+	// //Фуллскрин
+	// min-height: 100vh;
+	// display: flex;
+	// flex-direction: column;
+	// //
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+ul li {
+	list-style: none;
+}
+
+.visually-hidden {
+	position: absolute;
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+}
+
+.container {
+	max-width: 980px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+
+.title {
+	display: inline-block;
+	font-size: 30px;
+
+	margin: 0px 0px 25px 0px;
+}
+
+button {
+	text-transform: uppercase;
+}
+.button {
+	display: inline-block;
+	padding: 10px 35px;
+	
+	
+	font: inherit;
+	color: #fff;
+	background-color: #000;
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+  background-color: #663d15;
+}
+////////////////
+
+//////////Стилизация блока header//////////////////
+.header {
+	
+	&__row {
+		padding: 0px 0px 0px 20px;
+		max-width: 940px;
+		margin: 0 auto;
+
+		display: flex;
+		align-items: center;
+	}
+	&__nav {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 100;
+
+		width: 100%;
+
+		font-size: 16px;
+	}
+	&__nav:before {
+		content: '';
+		position: absolute;
+
+		background-color: #000;
+		height: 100%;
+		width: 100%;
+
+	}
+}
+
+.nav {
+
+	&__logo {
+		max-width: 111px;
+		max-height: 24px;
+		margin: 0px 20px 0px 0px;
+
+		display: inline-block;
+
+		position: relative;
+		z-index: 1;
+
+	}
+	&__row {
+		position: relative;
+		z-index: 1;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex: 1 1 auto;
+	}
+
+	&__menu {
+		display: flex;
+	}
+	&__item>a {
+		display: block;
+		padding: 25px 20px;
+		white-space: nowrap;
+	}
+	&__user-login {
+	}
+	&__login {
+		max-width: 140px;
+	}
+	&__login>a {
+		padding: 27px 20px 27px 50px;
+
+		position: relative;
+	}
+	&__login>a:before {
+		content: '';
+		position: absolute;
+		top: 30px;
+		left: 21px;
+
+		background: url('../img/icons/login.svg') 0 0 no-repeat;
+		width: 16px;
+		height: 16px;
+
+		opacity: 0.3;
+	}
+
+	&__login>a:hover,
+	&__login>a:focus,
+	&__item>a:hover,
+	&__item>a:focus {
+		background-color: #242424;
+	}
+
+	&__login>a:hover::before,
+	&__login>a:focus::before,
+	&__login>a:active::before {
+		opacity: 1;
+	}
+}
+
+////////////////////////////////////////////////////
+
+/////////////Стилизация блока main///////////////////
+
+.main {
+		padding: 130px 0px 50px 0px;
+
+		background-color: #f8f5f2;
+		background-image: url('../img/texture.jpg');
+
+		color: #000;
+	&__container {
+	}
+	&__title {
+		font-size: 30px;
+	}
+	&__path {
+		margin: 0px 0px 50px 0px;
+	}
+}
+
+.path {
+	&__row {
+		display: flex;
+	}
+	&__row a {
+		color: #000;	
+	}
+	&__row li:not(:first-child) {
+			a {
+				padding: 0px 0px 0px 40px;
+				position: relative;
+			}
+			a::before {
+				content: '';
+				position: absolute;
+				width: 8px;
+				height: 8px;
+				transform: rotate(45deg);
+				background-color: #000;
+				top: 50%;
+				left: 16px;
+				margin: -4px 0px 0px 0px;
+				
+				// margin: 0px 0px 0px -20px;
+			}	
+	}
+	&__current>a {
+		color: #aba9a7;
+	}
+}
+.product {
+	&__row {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__photos {
+	}
+	&__info {
+		max-width: 390px;
+	}
+	&__availability {
+	}
+	&__article {
+		color: #aeaeae;
+	}
+	&__text {
+		margin: 0px 0px 35px 0px;
+	}
+	&__price {
+		display: flex;
+		justify-content: center;
+
+		max-width: 187px;
+		margin: 0px 0px 35px 0px;
+	}
+	&__price>a {
+		padding: 10px 17px 10px 20px;
+
+	}
+	&__price>b {
+		padding: 10px 0px 0px 0px;
+		flex: 1 1 auto;
+		text-align: center;
+		// padding: 14px 35px;
+		
+		background-color: #e5e5e5;
+	}
+}
+.photos {
+	&__full {
+		margin: 0px 0px 14px 0px;
+	}
+	&__preview {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.info {
+	&__row {
+		display: flex;
+		justify-content: space-between;
+
+		margin: 0px 0px 30px 0px;
+	}
+	h3 {
+		display: inline-block;
+
+		margin: 0px 0px 30px 0px;
+
+		font-size: 24px;
+	}
+	ul>li {
+		padding: 0px 0px 0px 20px;
+		position: relative;
+	}
+	ul>li::before {
+		content: '';
+		position: absolute;
+		width: 8px;
+		height: 8px;
+		transform: rotate(45deg);
+		background-color: #000;
+		top: 50%;
+		left: 0px;
+		margin: -4px 0px 0px 0px;
+	}
+}
+
+
+
+/////////////////////////////////////////////////
+
+////////Стилизация блока footer//////////////////
+
+.footer {
+	padding: 60px 0px 35px 0px;
+	background-color: #1f1f1f;
+	&__container {
+		display: flex;
+	}
+	&__info {
+		margin: 0px 100px 0px 0px;
+		white-space: nowrap;
+	}
+	&__social {
+		margin: 0px 250px 0px 0px;
+
+		text-align: center;
+	}
+	&__social>span {
+		display: block;
+		margin: 0px 0px 15px 0px;
+	}
+	&__icons {
+		display: flex;
+		justify-content: space-between;
+
+		width: 141px;
+	}
+	&__item {
+		
+	}
+	&__link {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		
+		width: 42px;
+		height: 42px;
+		background-color: #000;
+	}
+
+	&__link:hover,
+	&__link:focus,
+	&__link:active {
+		background-color: #fff;
+	}
+
+	&__link:hover path,
+	&__link:focus path,
+	&__link:active path {
+		fill: #000;
+	}
+
+	&__developer {
+		text-align: center;
+		white-space: nowrap;
+	}
+	&__developer>span {
+		display: block;
+		margin: 0px 0px 15px 0px;
+	}
+	&__button {}
+}
+.container {
+}
+
+.button {
+}
+
+////////////////////////////////////////////////

@@ -177,7 +177,7 @@ button {
 		top: 30px;
 		left: 21px;
 
-		background: url('../../img/icons/login.svg') 0 0 no-repeat;
+		background: url('../img/icons/login.svg') 0 0 no-repeat;
 		width: 16px;
 		height: 16px;
 
@@ -207,7 +207,7 @@ button {
 		padding: 130px 0px 50px 0px;
 
 		background-color: #f8f5f2;
-		background-image: url('../../img/texture.jpg');
+		background-image: url('../img/texture.jpg');
 
 		color: #000;
 	&__container {
@@ -256,6 +256,7 @@ button {
 }
 
 .filter {
+	max-width: 220px;
 	legend {
 		font-size: 24px;
 		margin: 0px 0px 30px 0px;
@@ -267,42 +268,88 @@ button {
 		margin: 0px 0px 45px 0px;
 	}
 	&__form {}
+
+	&__option {
+		position: relative;
+		padding: 0px 10px 0px 45px;
+	}
 	&__option:not(:last-child) {
 		margin: 0px 0px 12px 0px;
 	}
-	&__option>label {
-		position: relative;
-		display: inline-block;
-		padding: 0px 0px 0px 43px;
-		margin: 2px 0px 0px 0px;
+	&__option>label:hover {
+		color: #663d15;
 	}
-	&__option>label::before {
-		content: '';
+	// &__option>label::before {
+	// 	content: '';
+	// 	position: absolute;
+	// 	left: 0;
+	// 	width: 20px;
+	// 	height: 20px;
+	// 	border: 2px solid #000;
+	// }
+	// fieldset:nth-child(2){
+
+	// 	label::before {
+	// 		content: '';
+	// 		position: absolute;
+	// 		left: 0;
+	// 		width: 20px;
+	// 		height: 20px;
+	// 		border: 2px solid #000;
+	// 		border-radius: 50%;
+	// 	}
+	// }
+	&__select {
+
+		cursor: pointer;
+	}
+
+	&__option input[type='checkbox'] + .filter__cross,
+	&__option input[type='radio'] + .filter__circle {
 		position: absolute;
+		top: 0;
 		left: 0;
-		width: 20px;
-		height: 20px;
+
+		width: 21px;
+		height: 21px;
 		border: 2px solid #000;
 	}
-	fieldset:nth-child(2){
+	&__option input[type='radio'] + .filter__circle{
+		border-radius: 50%;
+	}
+	&__option input[type='checkbox']:hover + .filter__cross,
+	&__option input[type='radio']:hover + .filter__circle {
+		border-color: #663d15;
+	}
+	&__option input[type='checkbox']:checked + .filter__cross::before,
+	&__option input[type='radio']:checked + .filter__circle::before,
+	&__option input[type='checkbox']:checked + .filter__cross::after,
+	&__option input[type='radio']:checked + .filter__circle::after {
+		content: '';
 
-		label::before {
-			content: '';
-			position: absolute;
-			left: 0;
-			width: 20px;
-			height: 20px;
-			border: 2px solid #000;
-			border-radius: 50%;
-		}
+		position: absolute;
+		top: 7px;
+		left: 1px;
+
+		width: 15px;
+		height: 2px;
+
+		background-color: #000;
+	}
+	&__option input[type='checkbox']:checked + .filter__cross::before,
+	&__option input[type='radio']:checked + .filter__circle::before {
+		transform: rotate(45deg);
+	}
+	&__option input[type='checkbox']:checked + .filter__cross::after,
+	&__option input[type='radio']:checked + .filter__circle::after {
+		transform: rotate(-45deg);
 	}
 
-	&__input {
-		&__checkbox {}
-		&__radio {}
-	}
-	&__button {}
 }
+
+
+
+
 
 .catalog {
 	&__goods {
@@ -374,21 +421,26 @@ button {
 
 .pagination {
 	display: flex;
-	&__item {
-		width: 43px;
-		height: 43px;
-		margin: 0px 7px 0px 0px;
+	&__item a{
+		display: inline-block;
+
+		padding: 10px 19px;
+		margin: 0px 5px 0px 0px;
 
 		background-color: #000;
-
-		text-align: center;
-		padding: 10px 0px 0px 0px;
-		&__current {
+	}
+	&__item {
+		&__current a {
 			background-color: #fff;
-
+			color: #000;
+				
 		}
-		&__current>a{
-			color: #000;			
+		&__current {
+			.button:hover,
+			.button:focus,
+			.button:active {
+			  background-color: #fff;
+			}	
 		}
 	}
 }

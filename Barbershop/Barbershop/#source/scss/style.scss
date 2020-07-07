@@ -11,6 +11,8 @@
 @import url(normalize.css);
 
 ////////////////////////
+//////////////////Стили для js///////////////////
+
 
 /////////Стили по умолчанию/////////
 
@@ -35,7 +37,7 @@ body {
 	text-transform: uppercase;
 
 	background-color: #000000;
-	background-image: url("../../img/background.jpg");
+	background-image: url("../img/background.jpg");
 	background-position: top center;
 	background-repeat: no-repeat;
 }
@@ -181,7 +183,7 @@ button {
 		top: 30px;
 		left: 21px;
 
-		background: url('../../img/icons/login.svg') 0 0 no-repeat;
+		background: url('../img/icons/login.svg') 0 0 no-repeat;
 		width: 16px;
 		height: 16px;
 
@@ -255,7 +257,7 @@ button {
 	}
 	&__row {
 		background-color: #f8f5f2;
-		background-image: url('../../img/index/stick.png'), url('../../img/texture.jpg');
+		background-image: url('../img/index/stick.png'), url('../img/texture.jpg');
 		background-position: center, 0 0;
 		background-repeat: no-repeat, repeat;
 		
@@ -373,6 +375,10 @@ button {
 		font: inherit;
 		padding: 8px 0px 7px 15px;
 	}
+	&__field:focus,
+	&__field:active {
+		border: 2px solid #663d15;
+	}
 	&__button {
 		margin: 10px 0px 0px 0px;
 		width: 100%;
@@ -458,7 +464,6 @@ button {
 
 
 .popup {
-	margin: 0px 0px 50px 50px;
 	&__sign-in {
 		padding: 50px 80px 58px;
 		width: 460px;
@@ -466,12 +471,19 @@ button {
 
 		background-color: #f8f5f2;
 		color: #000;
-		background-image: url('../../img/texture.jpg');
+		background-image: url('../img/texture.jpg');
 		box-shadow: 0px 30px 50px 0px rgba(0, 1, 1, 0.75);
 	}
-	&__button {}
 }
 .sign-in {
+	display: none;
+
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 2;
+
+	transform: translate(-50%, -50%);
 	&__title {
 		margin: 0px 0px 25px 0px;
 	}
@@ -482,6 +494,13 @@ button {
 		width: 100%;
 	}
 }
+
+//Появление модального окна входа
+// .modal-show {
+// 	display: block;
+// }
+
+
 .input {
 	&__data {
 		margin: 0px 0px 10px 0px;
@@ -489,11 +508,25 @@ button {
 
 	&__field {
 		width: 100%;
-		padding: 8px 0px 8px 14px;
+		padding: 8px 40px 8px 14px;
 
 		border: 2px solid #000;
 
 		font: inherit;
+	}
+	&__field-login {
+		background-image: url('../img/icons/user.svg');
+		background-position: 270px center;
+		background-repeat: no-repeat;
+	}
+	&__field-password {
+		background-image: url('../img/icons/lock.svg');
+		background-position: 270px center;
+		background-repeat: no-repeat;
+	}
+	&__field:focus,
+	&__field:active {
+		border: 2px solid #663d15;
 	}
 	&__function {
 		display: flex;
@@ -501,22 +534,75 @@ button {
 
 		margin: 0px 0px 15px 0px;
 	}
-	&__remember {}
+	&__remember {
+		position: relative;
+	}
 	&__forget {
 		color: #000;
 		text-decoration: underline;
+	}
+	&__forget:hover,
+	&__forget:focus {
+		color: #663d15;
 	}
 	&__button {
 		width: 100%;
 	}
 }
+
+
 .input input::-webkit-input-placeholder { 
 	color: #000;
+	font: inherit;
  }
 
 
 .remember {
-	&__cross {}
+	&__cross {
+		
+	}
+	&__label {
+		position: relative;
+
+		padding: 0px 0px 0px 35px;
+
+		cursor: pointer;
+	}
+	&__label:hover,
+	&__label:focus, {
+		color: #663d15;
+	}
+}
+.remember input[type='checkbox'] + .remember__cross {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 21px;
+	height: 21px;
+	border: 2px solid #000;
+}
+.remember input[type='checkbox']:focus + .remember__cross {
+	border-color: #663d15;
+}
+.remember input[type='checkbox']:checked + .remember__cross::before,
+.remember input[type='checkbox']:checked + .remember__cross::after {
+	content: '';
+
+	position: absolute;
+	top: 7px;
+	left: 1px;
+
+	width: 15px;
+	height: 2px;
+
+	background-color: #000;
+}
+.remember input[type='checkbox']:checked + .remember__cross::before {
+	transform: rotate(45deg);
+}
+.remember input[type='checkbox']:checked + .remember__cross::after {
+	transform: rotate(-45deg);
 }
 .button {
 }
@@ -535,9 +621,46 @@ button {
 		background-color: #fff;
 		box-shadow: 0px 30px 50px 0px rgba(0, 1, 1, 0.75);
 	}
-	&__button {}
+	&__button {
+		position: absolute;
+		top: 9px;
+		right: -33px;
+
+		width: 20px;
+		height: 20px;
+		background-color: transparent;
+		border: 0;
+
+		cursor: pointer;	
+	}
+	&__button::before, &__button::after,{
+		content: '';
+
+		position: absolute;
+		top: 7px;
+		left: 1px;
+
+		width: 19px;
+		height: 3px;
+		background-color: #d0d0d0;
+	}
+
+	&__button::before {
+		transform: rotate(45deg);
+	}
+	&__button::after {
+		transform: rotate(-45deg);
+	}
 }
 .map {
+	display: none;
+	
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 2;
+
+	transform: translate(-50%, -50%);
 	&__image {
 		max-width: 766px;
 		max-height: 560px;
@@ -545,9 +668,25 @@ button {
 
 	}
 }
-.visually-hidden {
+//Появление модального окна с картой
+
+
+
+.modal-show {
+	display: block;
 }
+.modal-overlay {
+	display: none;
 
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
 
+	width: 100%;
+	height: 100%;
+
+	background-color: rgba(0, 0, 0, 0.5);
+	}
 
 ///////////////////////////////////////////////////////////

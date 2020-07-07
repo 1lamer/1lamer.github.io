@@ -131,7 +131,7 @@ button {
   position: absolute;
   top: 30px;
   left: 21px;
-  background: url("../../img/icons/login.svg") 0 0 no-repeat;
+  background: url("../img/icons/login.svg") 0 0 no-repeat;
   width: 16px;
   height: 16px;
   opacity: 0.3;
@@ -146,7 +146,7 @@ button {
 .main {
   padding: 130px 0px 50px 0px;
   background-color: #f8f5f2;
-  background-image: url("../../img/texture.jpg");
+  background-image: url("../img/texture.jpg");
   color: #000;
 }
 .main__title {
@@ -185,6 +185,9 @@ button {
   color: #aba9a7;
 }
 
+.filter {
+  max-width: 220px;
+}
 .filter legend {
   font-size: 24px;
   margin: 0px 0px 30px 0px;
@@ -195,32 +198,49 @@ button {
 .filter fieldset:not(:last-child) {
   margin: 0px 0px 45px 0px;
 }
+.filter__option {
+  position: relative;
+  padding: 0px 10px 0px 45px;
+}
 .filter__option:not(:last-child) {
   margin: 0px 0px 12px 0px;
 }
-.filter__option > label {
-  position: relative;
-  display: inline-block;
-  padding: 0px 0px 0px 43px;
-  margin: 2px 0px 0px 0px;
+.filter__option > label:hover {
+  color: #663d15;
 }
-.filter__option > label::before {
-  content: "";
+.filter__select {
+  cursor: pointer;
+}
+.filter__option input[type=checkbox] + .filter__cross, .filter__option input[type=radio] + .filter__circle {
   position: absolute;
+  top: 0;
   left: 0;
-  width: 20px;
-  height: 20px;
+  width: 21px;
+  height: 21px;
   border: 2px solid #000;
 }
-.filter fieldset:nth-child(2) label::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  border: 2px solid #000;
+.filter__option input[type=radio] + .filter__circle {
   border-radius: 50%;
 }
+.filter__option input[type=checkbox]:hover + .filter__cross, .filter__option input[type=radio]:hover + .filter__circle {
+  border-color: #663d15;
+}
+.filter__option input[type=checkbox]:checked + .filter__cross::before, .filter__option input[type=radio]:checked + .filter__circle::before, .filter__option input[type=checkbox]:checked + .filter__cross::after, .filter__option input[type=radio]:checked + .filter__circle::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 1px;
+  width: 15px;
+  height: 2px;
+  background-color: #000;
+}
+.filter__option input[type=checkbox]:checked + .filter__cross::before, .filter__option input[type=radio]:checked + .filter__circle::before {
+  transform: rotate(45deg);
+}
+.filter__option input[type=checkbox]:checked + .filter__cross::after, .filter__option input[type=radio]:checked + .filter__circle::after {
+  transform: rotate(-45deg);
+}
+
 .catalog__goods {
   display: flex;
   flex-wrap: wrap;
@@ -272,19 +292,20 @@ button {
 .pagination {
   display: flex;
 }
-.pagination__item {
-  width: 43px;
-  height: 43px;
-  margin: 0px 7px 0px 0px;
+.pagination__item a {
+  display: inline-block;
+  padding: 10px 19px;
+  margin: 0px 5px 0px 0px;
   background-color: #000;
-  text-align: center;
-  padding: 10px 0px 0px 0px;
 }
-.pagination__item__current {
+.pagination__item__current a {
   background-color: #fff;
-}
-.pagination__item__current > a {
   color: #000;
+}
+.pagination__item__current .button:hover,
+.pagination__item__current .button:focus,
+.pagination__item__current .button:active {
+  background-color: #fff;
 }
 
 .footer {

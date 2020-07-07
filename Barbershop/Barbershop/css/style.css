@@ -18,7 +18,7 @@ body {
   color: #f7f4f1;
   text-transform: uppercase;
   background-color: #000000;
-  background-image: url("../../img/background.jpg");
+  background-image: url("../img/background.jpg");
   background-position: top center;
   background-repeat: no-repeat;
 }
@@ -126,7 +126,7 @@ button {
   position: absolute;
   top: 30px;
   left: 21px;
-  background: url("../../img/icons/login.svg") 0 0 no-repeat;
+  background: url("../img/icons/login.svg") 0 0 no-repeat;
   width: 16px;
   height: 16px;
   opacity: 0.3;
@@ -177,7 +177,7 @@ button {
 }
 .main__row {
   background-color: #f8f5f2;
-  background-image: url("../../img/index/stick.png"), url("../../img/texture.jpg");
+  background-image: url("../img/index/stick.png"), url("../img/texture.jpg");
   background-position: center, 0 0;
   background-repeat: no-repeat, repeat;
   padding: 55px 80px 50px 80px;
@@ -264,6 +264,9 @@ button {
   font: inherit;
   padding: 8px 0px 7px 15px;
 }
+.form__field:focus, .form__field:active {
+  border: 2px solid #663d15;
+}
 .form__button {
   margin: 10px 0px 0px 0px;
   width: 100%;
@@ -316,17 +319,23 @@ button {
   display: block;
   margin: 0px 0px 15px 0px;
 }
-.popup {
-  margin: 0px 0px 50px 50px;
-}
 .popup__sign-in {
   padding: 50px 80px 58px;
   width: 460px;
   height: 385px;
   background-color: #f8f5f2;
   color: #000;
-  background-image: url("../../img/texture.jpg");
+  background-image: url("../img/texture.jpg");
   box-shadow: 0px 30px 50px 0px rgba(0, 1, 1, 0.75);
+}
+
+.sign-in {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
 }
 .sign-in__title {
   margin: 0px 0px 25px 0px;
@@ -343,18 +352,37 @@ button {
 }
 .input__field {
   width: 100%;
-  padding: 8px 0px 8px 14px;
+  padding: 8px 40px 8px 14px;
   border: 2px solid #000;
   font: inherit;
+}
+.input__field-login {
+  background-image: url("../img/icons/user.svg");
+  background-position: 270px center;
+  background-repeat: no-repeat;
+}
+.input__field-password {
+  background-image: url("../img/icons/lock.svg");
+  background-position: 270px center;
+  background-repeat: no-repeat;
+}
+.input__field:focus, .input__field:active {
+  border: 2px solid #663d15;
 }
 .input__function {
   display: flex;
   justify-content: space-between;
   margin: 0px 0px 15px 0px;
 }
+.input__remember {
+  position: relative;
+}
 .input__forget {
   color: #000;
   text-decoration: underline;
+}
+.input__forget:hover, .input__forget:focus {
+  color: #663d15;
 }
 .input__button {
   width: 100%;
@@ -362,6 +390,48 @@ button {
 
 .input input::-webkit-input-placeholder {
   color: #000;
+  font: inherit;
+}
+
+.remember__label {
+  position: relative;
+  padding: 0px 0px 0px 35px;
+  cursor: pointer;
+}
+.remember__label:hover, .remember__label:focus {
+  color: #663d15;
+}
+
+.remember input[type=checkbox] + .remember__cross {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 21px;
+  height: 21px;
+  border: 2px solid #000;
+}
+
+.remember input[type=checkbox]:focus + .remember__cross {
+  border-color: #663d15;
+}
+
+.remember input[type=checkbox]:checked + .remember__cross::before,
+.remember input[type=checkbox]:checked + .remember__cross::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 1px;
+  width: 15px;
+  height: 2px;
+  background-color: #000;
+}
+
+.remember input[type=checkbox]:checked + .remember__cross::before {
+  transform: rotate(45deg);
+}
+
+.remember input[type=checkbox]:checked + .remember__cross::after {
+  transform: rotate(-45deg);
 }
 
 .popup__map {
@@ -371,7 +441,56 @@ button {
   background-color: #fff;
   box-shadow: 0px 30px 50px 0px rgba(0, 1, 1, 0.75);
 }
+.popup__button {
+  position: absolute;
+  top: 9px;
+  right: -33px;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+.popup__button::before, .popup__button::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 1px;
+  width: 19px;
+  height: 3px;
+  background-color: #d0d0d0;
+}
+.popup__button::before {
+  transform: rotate(45deg);
+}
+.popup__button::after {
+  transform: rotate(-45deg);
+}
+
+.map {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+}
 .map__image {
   max-width: 766px;
   max-height: 560px;
+}
+
+.modal-show {
+  display: block;
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
