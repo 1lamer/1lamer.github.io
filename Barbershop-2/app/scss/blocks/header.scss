@@ -1,0 +1,592 @@
+////////////////////Переменные и миксины/////////////////////
+@import "variables.scss";
+
+//////////////////////////////////////////////////////////////
+
+
+
+
+//////////////////////////Файл header//////////////////////
+.header {
+	display: flex;
+	flex-direction: column;
+
+	&__logo {
+		height:85px;
+		padding: 30px 0px 0px 0px;
+		
+		text-align: center;
+		background-color: #000000;
+	}
+
+	&__logo img {
+		height: 30px;
+		width: 226px;
+
+	}
+}
+
+@media (min-width: $tablet-width) {
+
+	.header {
+		background-color: #000000;
+
+		&__logo {
+			order: 2;
+			
+			height: 400px;
+			width: 100%;
+			padding: 40px 0px 0px 0px;
+
+			background-image: url("../img/index/back-tablet.jpg") ;
+			background-position: center 0;
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+
+			@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+				background-image: url("../img/index/back-tablet-2x.jpg");
+			}
+		}
+
+		&__logo img {
+			display: block;
+			
+			margin: 0 auto;
+			width: 370px;
+			height: auto;
+
+		}
+	}
+}
+
+
+@media (min-width: $desktop-width) {
+
+	.header {
+
+		&__logo {
+			height: 648px;
+			padding: 55px 0px 0px 0px;
+
+
+			background-image: url("../img/index/back-desktop.jpg");
+
+			@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+				background-image: url("../img/index/back-desktop-2x.jpg");
+			}
+		}
+	}	
+}
+///////////////////////////////////////////////////////////
+
+
+///////////////Файл header-form///////////////////////////
+
+@media (min-width: $tablet-width) {
+
+	.header-form {
+
+		&__logo {
+			position: relative;
+			
+			height: 213px;
+
+			background-size: cover;
+
+			&::after {
+				content: "";
+
+				position: absolute;
+				z-index: 2;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				
+				padding-top: 5%;
+
+			    background: linear-gradient(to right top, #f8f5f2 48.5%, transparent 50%) left / 50.025% 100% no-repeat,
+				linear-gradient(to left top, #f8f5f2 48.5%, transparent 50%) right / 50.025% 100% no-repeat;
+			}
+		}
+	}
+}
+
+
+@media (min-width: $desktop-width) {
+
+	.header-form {
+
+		&__logo {
+			height: 305px;
+		}
+	}	
+}
+
+/////////////////////////////////////////////////////////
+
+
+///////////////Файл main-nav/////////////////////////////
+
+.main-nav {
+	position: relative;
+
+	width: 320px;
+	min-height: 50px;
+	margin: 0 auto;
+
+	background-color: #826550;
+
+	&__toggle {
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 2;
+
+		width: 70px;
+		height: 50px;
+
+		cursor: pointer;
+
+		background-color: #6a4d38;
+
+		&:hover, 
+		&:active {
+			background-color: #624530;
+		}
+	}
+
+	&__wrapper {
+		
+	}
+
+	&__list {}
+}
+
+// Вырисовываем кнопку открытия меню
+
+.main-nav--closed {
+
+	.main-nav__toggle {
+		&::before {
+			content: "";
+
+			position: absolute;
+			top: 15px;
+			right: 17px;
+
+			width: 36px;
+			height: 2px;
+
+			background-color: #ffffff;
+			box-shadow: 0 8px 0 #ffffff, 
+						0 16px 0 #ffffff;
+		}
+
+		&:active::before {
+			background-color: rgba(255, 255, 255, 0.3);
+			box-shadow: 0 8px 0 rgba(255, 255, 255, 0.3),
+						0 16px 0 rgba(255, 255, 255, 0.3);
+		}
+	}
+}
+//
+
+// Вырисовываем кнопку закрытия меню
+
+.main-nav--open {
+
+	.main-nav__toggle {
+		top: 0;
+		left: 0;
+
+		&::before,
+		&::after {
+			content: "";
+
+			position: absolute;
+			top: 24px;
+			right: 18px;
+
+			width: 36px;
+			height: 2px;
+
+			background-color: #ffffff;
+		}
+
+		&::before {
+			transform: rotate(45deg);
+		}
+
+		&::after {
+			transform: rotate(-45deg);
+		}
+
+		&:active::before,
+		&:active::after {
+			background-color: rgba(255, 255, 255, 0.3);
+		}
+	}
+}	
+//
+
+
+
+//Стили для механизма открытия/закрытия меню
+@media (max-width: $mobile-width-only) {
+
+	.main-nav--closed {
+
+		.site-list__item {
+			display: none;
+
+			&--active {
+				display: block;
+				text-align: center;
+
+				a {
+					border: none;
+				}
+			}
+		}
+
+		.user-list__item {
+			display: none;
+		}
+	}
+	.main-nav--open {
+		position: relative;
+
+		.main-nav__wrapper {
+			position: absolute;
+			z-index: 10;
+			top: 0;
+			right: 0;
+
+			width: 250px;
+		
+			&::before {
+				content: "";
+
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 2;
+
+				width: 8px;
+				height: 100%;
+
+				box-shadow: inset 4px 0 7px -2px rgba(0, 0, 0, 0.3);
+			}
+		}	
+	}
+
+	// Состояние меню при незагруженном js
+	.main-nav--nojs {
+
+		.main-nav__toggle {
+			display: none;
+		}
+
+		.main-nav__wrapper {
+			position: static;
+			width: 100%;
+		}
+
+		.site-list__item {
+			display: block;
+
+			&--active {
+				text-align: left;
+			}
+		}
+
+		.user-list__item {
+			display: block;
+		}
+	}
+	//
+}
+//
+
+@media (min-width: $tablet-width) {
+
+	.main-nav {
+		width: auto;
+		margin: 0;
+
+		background-color: #000000;
+
+		&__toggle {
+			display:none;
+		}
+
+		&__wrapper {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+
+			width: 640px;
+			margin: 0 auto;
+		}
+	}	
+}
+
+
+@media (min-width: $desktop-width) {
+
+	.main-nav {
+
+		&__wrapper {
+			width: 960px;
+		}
+	}	
+}
+
+/////////////////////////////////////////////////////////
+
+
+//////////////////Файл site-list///////////////////////
+.site-list {
+
+	font-weight: 700;
+	line-height: 24px;
+	text-transform: uppercase;
+
+	a {
+		display: block;
+		padding: 13px 21px;
+
+		background-color: #826550;
+		border-top: #886e5b;
+		border-bottom: 1px solid #71543f;
+	}
+
+	a[href]:hover {
+		background-color: #755a46;
+		border-top-color: #755a46;
+	}
+
+	a[href]:active {
+		color: rgba(255, 255, 255, 0.3);
+
+		background-color: #6a4d38;
+		border-top-color: #6a4d38;
+	}
+
+
+	&__item {}
+	&__item--active {}
+}
+
+
+@media (min-width: $tablet-width) {
+
+	.site-list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+
+		width: 570px;
+	
+		&__item {
+			margin-right: 32px;
+			
+			&:last-child {
+				margin-right: 0;
+			}
+
+			a {
+				padding: 22px 0;
+
+				background-color: #000000;
+				border: none;
+			}
+
+			a[href]:hover {
+				background-color: #000000;
+				color: #826550;
+			}
+
+			a[href]:active {
+				color: rgba(255, 255, 255, 0.3);
+			}
+		}
+
+		&__item--active {
+			position: relative;
+
+			&::after {
+				content: "";
+
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				
+				// width: 100%;
+				height: 3px;
+
+				background-color: #826550;
+			}
+		}
+	}	
+}
+
+
+@media (min-width: $desktop-width) {
+
+	.site-list {
+		width: 780px;
+
+		&__item {
+				margin-right: 0;
+			a {
+				padding: 25px 32px;
+			}
+
+			a[href]:hover {
+				background-color: #ffffff;
+				color: #000000;
+			}
+
+			a[href]:active {
+				color: rgba(0, 0, 0, 0.3);
+			}
+		}
+		&__item--active {
+
+			&::after {
+				left: 30px;
+				right: 30px;
+			}
+		}
+	}	
+}
+
+
+////////////////////////////////////////////////////////
+
+
+///////////////////////Файл user-list//////////////////////
+
+.user-list {
+	font-weight: 400;
+	line-height: 24px;
+
+	a {
+		display: block;
+		padding: 15px 48px;
+
+		background-color: #6a4d38;
+	}
+
+	a[href]:hover {
+		background-color: #755a46;
+		border-top-color: #755a46;
+	}
+
+	a[href]:active {
+		color: rgba(255, 255, 255, 0.3);
+		
+		background-color: #6a4d38;
+		border-top-color: #6a4d38;
+	}
+
+	&__item {}
+
+	&__login {
+		position: relative;
+	}
+
+	&__login-icon {
+		position: absolute;
+		top: 19px;
+		left: 19px;
+
+		width: 16px;
+		height: 16px;
+		 
+		opacity: 0.3;
+		fill: #ffffff;	
+	}
+}
+
+@media (min-width: $tablet-width) {
+
+	.user-list {
+		width: 60px;
+
+		a {
+			background-color: #000000;
+			border: none;
+
+			font-size: 0;
+		}
+
+		a[href]:hover {
+			background-color: #000000;
+
+			.user-list__login-icon {
+				opacity: 1;
+				fill: #826550;	
+			}
+		}
+
+		a[href]:active {
+			background-color: #000000;
+
+			.user-list__login-icon {
+				opacity: 0.3;
+				fill: #ffffff;
+			}
+		}
+
+		&__login-icon {
+			top: 26px;
+			left: 8px;
+		}
+	}	
+}
+
+
+@media (min-width: $desktop-width) {
+
+	.user-list {
+		width: auto;
+		max-width: 160px;
+
+		a {
+			padding: 25px 22px 25px 61px;
+
+			font-size: 18px;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+
+		a[href]:hover {
+			background-color: #ffffff;
+			
+			color: #000000;
+
+			.user-list__login-icon {
+				fill: #000000;
+			}
+		}
+
+		a[href]:active {
+			opacity: 1;
+			color: rgba(0, 0, 0, 0.3);
+
+			.user-list__login-icon {
+				opacity: 0.1;
+			}
+		}
+
+		&__login-icon {
+			top: 28px;
+			left: 26px;
+		}
+	}		
+}
+
+////////////////////////////////////////////////////////////

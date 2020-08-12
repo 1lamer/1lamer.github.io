@@ -1,0 +1,322 @@
+
+
+///////////////////файл footer///////////////////////////////////
+
+.footer {
+
+	&__wrapper {
+		width: 320px;
+		margin: 0 auto;
+		padding: 35px 20px 22px;
+	}
+
+	&__contacts {
+		margin: 0px 0px 23px 0px;
+	}
+
+	&__social {
+		margin: 0px 0px 35px 0px;
+	}
+
+	&__copyrigth {}
+}
+
+
+@media (min-width: $tablet-width) {
+
+	.footer {
+
+		&__wrapper {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+
+			width: 640px;
+			padding: 55px 0 60px;
+		}
+
+		&__contacts {
+			margin: 0px 0px 45px 0px;
+		}
+
+		&__social {
+			order: 3;
+
+			width: 640px;
+		}
+	}	
+}
+
+@media (min-width: $desktop-width) {
+
+	.footer {
+
+		&__wrapper {
+			justify-content: initial;
+
+			width: 960px;
+		}
+
+		&__contacts {
+			margin-right: 85px;
+		}
+	
+		&__social {
+			align-self: flex-start;
+
+			width: 162px;
+			margin-right: 233px;
+		}
+
+		&__copyrigth {
+			order: 3;
+		}
+	}	
+}
+
+
+////////////////////////////////////////////////////////////////////
+
+
+
+
+///////////////////////////файл contacts////////////////////////////
+
+.contacts {
+
+	&__title {
+		display: block;
+
+		margin: 0px 0px 10px 0px;
+		line-height: 27px;
+		text-align: center;
+	}
+
+	&__text {
+		line-height: 27px;
+		text-align: center;
+	}
+
+	&__phone {
+		padding: 12px 70px;
+		margin: 18px 0px 0px 0px;
+
+		border-color: #3f3f3f;
+
+		&:hover {
+			border-color: #545454;
+	 	}
+
+	 	&:active {
+	 		//Увиличиваем padding, тобы кнопка не съезжала при исчезнувших рамках
+	 		padding: 13px 70px;
+
+	 		border: none;
+	 		background-color: #252525;
+
+	 		color: rgba(255, 255, 255, 0.3);
+	 	}
+	}
+
+	&__phone--mobbile {
+		display: none;
+	}
+}
+
+@media (min-width: $tablet-width) {
+
+	.contacts {
+
+		&__title {
+			line-height: 22px;
+			text-align: left;
+			text-transform: uppercase;
+		}
+
+		&__text {
+			line-height: 27px;
+			text-align: left;
+		}
+
+		&__phone {
+			padding: 0;
+			margin: 0;
+
+			border: none;
+			
+			font-size: 18px;
+			font-weight: 400;
+			text-transform: initial;
+
+			&:hover {
+				border: none;
+				text-decoration: underline;
+		 	}
+
+		 	&:active {
+		 		//Увиличиваем padding, тобы кнопка не съезжала при исчезнувших рамках
+		 		padding: 0;
+
+		 		background-color: none;
+
+		 		color: rgba(255, 255, 255, 0.3);
+		 		
+		 	}
+		}
+
+		&__phone--mobbile {
+			display: inline;
+		}
+	}
+}
+
+@media (min-width: $desktop-width) {
+
+}
+////////////////////////////////////////////////////////////////////
+
+
+//////////////////////////////////файл social////////////////////////
+.social {
+
+	&__title {
+		display: none;
+	}
+
+	&__list {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__item {
+		border: 1px solid #3f3f3f;
+
+		&:hover {
+			border-color: #545454;
+	 	}
+
+	 	&:active {
+	 		border: none;
+	 		background-color: #252525;
+
+	 		color: rgba(255, 255, 255, 0.3);
+	 	}
+	}
+
+	&__link {
+		display: block;
+		width: 106px;
+		height: 101px;
+
+		&:active {
+	 		//Увиличиваем ширину, тобы кнопка не съезжала при исчезнувших рамках
+	 		width: 108px;
+
+			opacity: 0.3;
+	 	}
+	}
+
+	&__link--vkontakte {
+		background: url('../img/icons/vkontacte-big.png') center no-repeat;
+	}
+
+	&__link--facebook {
+		background: url('../img/icons/facebook-big.png') center no-repeat;
+	}
+
+	&__link--instagram {
+		background: url('../img/icons/instagram-big.png') center no-repeat;
+	}
+}
+
+@media (min-width: $tablet-width) {
+
+	.social {
+
+		&__link {
+			width: 214px;
+
+			&:active {
+		 		//Увиличиваем ширину, тобы кнопка не съезжала при исчезнувших рамках
+		 		width: 216px;
+	 		}
+		}
+	}
+}
+
+@media (min-width: $desktop-width) {
+
+	.social {
+
+		&__title {
+			display: block;
+
+			margin-bottom: 15px;
+
+			text-align: center;
+		}
+
+		&__item {
+			margin-right: 6px;
+		}
+
+		&__link {
+			width: 50px;
+			height: 50px;
+
+			&:active {
+		 		//Увиличиваем ширину, тобы кнопка не съезжала при исчезнувших рамках
+		 		width: 52px;
+	 		}
+		}
+
+		&__link--vkontakte {
+			background: url('../img/icons/vkontakte.png') center no-repeat;
+		}
+
+		&__link--facebook {
+			background: url('../img/icons/facebook.png') center no-repeat;
+		}
+
+		&__link--instagram {
+			background: url('../img/icons/instagram.png') center no-repeat;
+		}
+	}
+}
+
+//////////////////////////////////////////////////////////////////
+
+
+///////////////////////////файл copyright/////////////////////////
+.copyright {
+
+	&__text {
+		display: block;
+
+		margin: 0px 0px 15px 0px;
+
+		text-align: center;
+	}
+
+	&__link {
+		border: 1px solid #3f3f3f;
+
+		&:hover {
+			border-color: #545454;
+	 	}
+
+	 	&:active {
+	 		//Увиличиваем padding, тобы кнопка не съезжала при исчезнувших рамках
+	 		padding: 13px 31px;
+
+	 		border: none;
+	 		background-color: #252525;
+	 		
+	 		color: rgba(255, 255, 255, 0.3);
+	 	}
+	}
+}
+
+
+///////////////////////////////////////////////////////////////////////

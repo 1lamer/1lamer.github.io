@@ -1,0 +1,347 @@
+////////////Стилизация модального окна для взода в лк///////////////
+
+
+
+
+.modal {
+	position: absolute;
+	top: 135px;
+	left: 50%;
+
+	transform: translate(-50%);
+
+	box-shadow: 0px 30px 50px 0px rgba(0, 0, 0, 0.75);
+
+	&__close {
+
+	}
+}
+
+
+.sign-in {
+	display: none;
+
+	&__wrapper {
+		width: 320px;
+		padding: 30px 20px 37px;
+
+		background-color: #f8f5f2;
+
+		color: #000000;
+	}
+
+	&__title {
+		margin: 0px 0px 15px 0px;
+
+		font-size: 30px;
+		line-height: 30px;
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	&__invite {
+		margin: 0px 0px 24px 0px;
+
+		line-height: 27px;
+		text-align: center;
+	}
+
+	&__input {}
+}
+
+
+
+.input {
+	
+	&__data {
+		margin: 0px 0px 5px 0px;
+	}
+
+	&__data:nth-child(2) {
+		margin: 0px 0px 35px 0px;
+	}
+
+	&__field {
+		width: 100%;
+		padding: 14px 34px 14px 17px;
+
+		border: 1px solid #e5ddd5;
+
+	}
+
+	input::-webkit-input-placeholder,
+	input::-moz-placeholder { 
+		font: inherit;
+	 }
+
+
+	&__field-login {
+		background: url('../img/icons/user.png') 246px center no-repeat;
+		background-color: #ffffff;
+	}
+
+	&__field-password {
+		background: url('../img/icons/locked.png') 246px center no-repeat;
+		background-color: #ffffff;
+	}
+
+	&__function {
+		display: flex;
+		justify-content: space-between;
+
+		margin: 0px 0px 32px 0px;
+	}
+
+	&__remember {}
+
+	&__forget {
+		color: #000000;
+		text-decoration: underline;
+
+		&:hover {
+			opacity: 0.6;
+		}
+
+		&:active {
+			opacity: 0.3;
+		}	
+	}
+
+	&__buttons {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__button {
+		width: 130px;
+		padding: 14px 42px;
+
+		background-color: #826550;
+
+		color: #ffffff;
+
+		&:hover {
+			background-color: #6a4d38;
+		}
+
+		&:active {
+			color: rgba(255, 255, 255, 0.3);
+		}
+
+		span {
+			display: none;
+		}
+	}
+}
+
+
+.remember {
+	position: relative;
+
+	&__cross {}
+
+	&__label {
+		position: relative;	
+
+		padding: 0px 0px 0px 47px;
+
+		cursor: pointer;
+
+		&:hover {
+			opacity: 0.6;
+		}	
+	}
+
+	input[type='checkbox'] + .remember__cross {
+		position: absolute;
+		top: -7px;
+		left: 0;
+
+		width: 33px;
+		height: 33px;
+
+		border: 1px solid #e5ddd5;
+		background-color: #ffffff;
+	}
+
+	input[type='checkbox']:focus + .remember__cross {
+		border-color: #d5c9bd;
+	}
+
+	input[type='checkbox']:checked + .remember__cross::before,
+	input[type='checkbox']:checked + .remember__cross::after {
+		content: '';
+
+		position: absolute;
+		top: 15px;
+		left: 3.5px;
+
+		width: 25px;
+		height: 2px;
+
+		background-color: #000000;
+	}
+
+	input[type='checkbox']:checked + .remember__cross::before {
+		transform: rotate(45deg);
+	}
+
+	input[type='checkbox']:checked + .remember__cross::after {
+		transform: rotate(-45deg);
+	}
+}
+
+.modal-close {
+	width: 130px;
+	padding: 14px 33px;
+	
+	background-color: transparent;
+
+	&:hover {
+		border-color: #d5c9bd;
+	}
+
+	&:active {
+		background-color: #d5c9bd;
+		color: rgba(0, 0, 0, 0.3);
+	}
+}
+
+
+
+
+@media (min-width: $tablet-width) {
+
+	.modal {
+		top: 129px;
+	}
+
+	.sign-in {
+
+		&__wrapper {
+			width: 461px;
+			padding: 55px 70px 57px;
+		}
+
+		&__title {
+			margin: 0px 0px 17px 0px;
+
+			font-size: 40px;
+		}
+
+		&__invite {
+			margin: 0px 0px 24px 0px;
+		}
+	}
+
+
+
+	.input {
+		
+		&__data {
+			margin: 0px 0px 6px 0px;
+		}
+
+		&__data:nth-child(2) {
+			margin: 0px 0px 35px 0px;
+		}
+
+		&__field {
+			width: 100%;
+			padding: 24px 50px 24px 25px;
+		}
+
+		&__field-login {
+			background-position: 278px;
+		}
+
+		&__field-password {
+			background-position: 278px;
+		}
+
+		&__function {
+			margin: 0px 0px 37px 0px;
+		}
+
+		&__button {
+			width: 100%;
+
+			span {
+				display: inline;
+			}
+		}
+	}
+
+
+	.remember {
+		position: relative;
+
+		&__cross {}
+
+		&__label {
+			position: relative;	
+
+			padding: 0px 0px 0px 47px;
+
+			cursor: pointer;
+
+			&:hover {
+				opacity: 0.6;
+			}	
+		}
+	}
+
+	.modal-close {
+		position: absolute;
+		top: 60px;
+		right: -102px;
+		
+		width: 26px;
+		height: 26px;
+		padding: 0;
+
+		border: none;
+
+		font-size: 0;
+
+		&::before, &::after {
+			content: "";
+
+			position: absolute;
+			top: 11px;
+			left: -5px;
+
+			width: 36px;
+			height: 2px;
+
+			background-color: #ffffff;
+		}
+
+		&::before {
+			transform: rotate(45deg);
+		}
+
+		&::after {
+			transform: rotate(-45deg);
+		}
+	}
+
+}
+
+.modal-show {
+	display: block;
+}
+
+.modal-overlay {
+	display: none;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+
+	width: 100%;
+	height: 100%;
+
+	background-color: rgba(0, 0, 0, 0.5);
+}

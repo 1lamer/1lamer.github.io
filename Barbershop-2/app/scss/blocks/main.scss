@@ -1,0 +1,1028 @@
+
+////////////////////Переменные и миксины/////////////////////
+@import "variables.scss";
+
+//////////////////////////////////////////////////////////////
+
+
+///////////файл main////////////////////////
+.main {
+}
+
+@media (min-width: $tablet-width) {
+	.main {
+		// background-color: $bg-darkgrey;
+	}
+}
+
+@media (min-width: $desktop-width) {
+	
+}
+
+
+///////////////////////////////////////////////
+
+
+//////////////////////файл stats//////////////
+.stats {
+
+	&__wrapper {
+		width: 320px;
+		margin: 0 auto;
+	}
+	
+	&__header {
+		padding: 28px 40px 25px 36px;
+		background-color: #ffffff;
+
+		color: #000000;
+		// text-align: center;
+	}
+
+	&__slogan {
+		display: block;
+
+		margin: 0px 0px 17px 0px;
+
+		font-size: 30px;
+		font-weight: 700;
+		text-transform: uppercase;
+		line-height: 30px;
+		text-align: center;
+	}
+
+	&__intro {
+		font-size: 20px;
+		line-height: 27px;
+		text-align: center;
+	}
+
+	&__legend {
+		display: block;
+
+		font-size: 20px;
+		line-height: 27px;
+		
+		sup {
+			top: 0.01em;
+
+			font-size: 90%;	
+		}
+	}
+
+	&__legend--bottom {
+		padding: 15px 0px 15px 0px;
+
+		background-color: #242424;
+
+		text-align: center;
+		color: rgba(255, 255, 255, 0.3);
+	}
+
+	&__legend--top {
+		display: none;
+	}
+	
+	&__list {
+		width: 100%;
+		border-collapse: collapse;
+
+		tr {
+			background-color: #404040;
+
+			color: #ffffff;
+
+			&:nth-child(2) {
+				background-color: #4e4e4e;
+			}
+
+			&:nth-child(3) {
+				background-color: #353535;
+			}
+
+			&:nth-child(4) {
+				background-color: #404040;
+			}
+		}
+	}
+
+	&__value,
+	&__area {
+		width: 50%;
+		padding: 20px;
+	}
+
+	&__value {
+		padding-right: 0;
+
+		font-size: 40px;
+		line-height: 18px;
+		font-weight: 700;
+
+		sup {
+			font-size: 60%;
+			font-weight: 400;
+		}
+	}
+
+	&__area {
+		padding-left: 0;
+
+		text-align: right;
+	}
+}
+
+
+
+@media (min-width: $tablet-width) {
+
+	.stats {
+
+		background-color: #353535;
+
+		&__wrapper {
+			display: flex;
+			flex-direction: column;
+
+			width: 640px;
+			margin-top: -185px;
+
+			background-color: #353535;
+		}
+
+		&__header {
+			position: relative;
+
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+
+			padding: 30px 80px 30px 40px;
+
+			&::before {
+				content: "";
+
+				position: absolute;
+				top: 27px;
+				left: -15px;
+
+				border: 15px solid transparent;
+				border-bottom-color: #ffffff;
+				transform: rotate(45deg);
+			}
+		}
+
+		&__slogan {
+			display: block;
+			
+			width: 240px;
+			margin: 0px 0px 18px 0px;
+			
+			text-align: left;
+			font-size: 40px;
+			font-weight: 700;
+			text-transform: none;
+			line-height: 40px;
+		}
+
+		&__intro {
+			margin: 7px 0px 0px 0px;
+			width: 212px;
+
+			text-align: left;
+		}	
+
+		&__legend--top {
+			display: block;
+			width: 240px;
+
+			color: rgba(0, 0, 0, 0.3);
+		}
+
+		&__legend--bottom {
+			display: none;
+		}
+
+		&__list tbody{
+			display: flex;
+			flex-wrap: wrap;
+
+			tr {
+				flex: 1 0 50%;
+
+				padding: 25px 35px;
+			}
+		}
+
+		&__value,
+		&__area {
+			display: block;
+			padding: 0;
+			width: auto;
+		}
+
+		&__value {
+			margin: 0px 0px 7px 0px;
+
+			font-size: 72px;
+			line-height: 72px;
+		}
+
+		&__area {
+			font-size: 20px;
+			line-height: 27px;
+			text-align: left;
+
+			br {
+				display: none;
+			}
+		}
+	}
+}
+
+@media (min-width: $desktop-width) {
+
+	.stats {
+
+		&__wrapper {
+			flex-direction: row;
+			width: 960px;
+			margin-top: -160px;
+		}
+	
+
+		&__header {
+			flex-shrink: 0;
+
+			display: block;
+			width: 320px;
+
+			&::before {
+				top: 22px;
+			}
+		}
+
+		&__slogan {
+			margin: 0px 0px 42px 0px;
+		}
+
+		&__intro {
+			margin: 0px 0px 32px 0px;
+		}
+
+		&__list {
+			display: flex;
+			
+			width: 640px;
+		}
+	}
+}
+///////////////////////////////////////////////////////////////
+
+
+////////////////////////Файл slider///////////////////////////////
+
+
+.slider {
+
+	&__list {}
+
+	&__item {
+		display: none;
+	}
+
+	&__item--current {
+		display: block;
+	}
+
+	&__toggles {
+		display: flex;
+		justify-content: space-between;
+
+		width: 75px;
+		margin: 0 auto;
+	}
+
+	&__toggle {
+		width: 8px;
+		height: 8px;
+
+		border: 1px solid #ffffff;
+		background-color: transparent;
+
+		transform: rotate(45deg);
+
+		font-size: 0;
+	}
+
+	&__toggle--current {
+		background-color: #ffffff;
+	}
+}
+
+@media (min-width: $tablet-width) {
+
+}
+
+@media (min-width: $desktop-width) {
+	
+}
+
+/////////////////////////////////////////////////////////////////////
+
+///////////////////////////Файл advantages//////////////////////
+
+.advantages {
+	position: relative;
+	width: 320px;
+	margin: 0 auto;
+
+	&::after {
+		content: "";
+
+		position: absolute;
+		z-index: 2;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		
+		padding-top: 11%;
+
+	    background: linear-gradient(to right top, #ffffff 48.5%, #242424 50%) left / 50.025% 100% no-repeat,
+		linear-gradient(to left top, #ffffff 48.5%, #242424 50%) right / 50.025% 100% no-repeat;
+	}
+
+	&__wrapper {
+		width: 320px;
+		margin: 0 auto;
+		padding: 0px 0px 45px 0px;
+
+		background-color: #242424;
+	}
+
+	&__list {
+		background-color: #242424;
+	}
+
+	&__item {
+		position: relative;
+		
+		background-color: #242424;
+
+		padding: 150px 44px 0;
+	}
+
+	&__item--fast {
+		background: url('../img/icons/advantage-1.svg') center 25px no-repeat;
+	}
+
+	&__item--cool {
+		background: url('../img/icons/advantage-2.svg') center 25px no-repeat;
+	}
+
+	&__item--expensive {
+		background: url('../img/icons/advantage-3.svg') center 25px no-repeat;
+	}
+
+	&__title {
+		margin: 0px 0px 15px 0px;
+
+		font-size: 30px;
+		line-height: 30px;
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	&__description {
+		margin: 0px 0px 30px 0px;
+
+		font-size: 20px;
+		line-height: 27px;
+		text-align: center;
+	}
+}
+
+
+
+
+
+@media (min-width: $tablet-width) {
+
+	.advantages {
+		width: 100%;	
+		background-color: #353535;
+
+		&::after {
+			padding-top: 5%;
+
+			background: linear-gradient(to right top, #ffffff 48.5%, #353535 50%) left / 50.025% 100% no-repeat,
+			linear-gradient(to left top, #ffffff 48.5%, #353535 50%) right / 50.025% 100% no-repeat;
+		}
+
+		&__wrapper {
+			width: 640px;
+
+			padding-bottom: 50px;
+
+			background-color: #353535;
+		}
+
+		&__item {
+			display: block;
+
+			padding: 45px 30px 5px 160px;
+
+			background-color: #353535;
+		}
+
+		&__item--fast {
+			background-position: 31px center;
+		}
+
+		&__item--cool {
+			background-position: 31px center;
+		}
+
+		&__item--expensive {
+			background-position: 31px center;
+		}
+
+		&__title {
+			text-align: left;
+		}
+
+		&__description {
+			text-align: left;
+		}
+
+		&__toggles {
+			display: none;
+		}
+	}	
+}
+
+@media (min-width: $desktop-width) {
+
+	.advantages {
+
+		&__wrapper {
+			width: 960px;
+			padding-bottom: 60px;
+		}
+
+		&__list {
+			position: relative;
+
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&__item {
+			width: 320px;
+			padding: 200px 40px 10px;
+		}
+
+		&__item--fast {
+			background-position: center 79px;
+		}
+
+		&__item--cool {
+			background-position: center 79px;
+		}
+
+		&__item--expensive {
+			background-position: center 79px;
+		}
+
+		&__title {
+			text-align: center;
+		}
+
+		&__description {
+			text-align: center;
+		}
+	}	
+}
+
+
+//////////////////////////////////////////////////////////////////
+
+
+////////////////////////////Файл news///////////////////////////
+.news {
+
+	&__wrapper {
+		width: 320px;
+		margin: 0 auto;
+		padding: 65px 18px 30px;
+
+		background-color: #ffffff;
+
+		color: #000000;
+	}
+
+	&__title {
+		margin: 0px 0px 30px 0px;
+		font-size: 30px;
+		line-height: 30px;
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	&__list {
+		position: relative;
+
+		margin: 0px 0px 20px 0px;
+
+		&::after {
+			content: "";
+
+			position: absolute;
+			bottom: -100px;
+			left: 0;
+
+			height: 1px;
+			width: 100%;
+
+			background-color: #e5ddd5;
+		}
+	}
+
+	&__item {
+		position: relative;
+
+		display: none;
+		padding: 0px 0px 0px 70px;
+		margin: 0px 0px 35px 0px;
+
+		// background: url('../img/icons/field.svg') 0 10px no-repeat;
+	}
+
+	&__item:nth-child(1) {
+
+		&::after {
+			content: "";
+
+			 position: absolute;
+			 bottom: -17px;
+			 left: 0;
+
+			 width: 100%;
+			 height: 1px;
+
+			 background-color: #e5ddd5;
+		}
+	}
+
+	&__item:nth-child(2) {
+		margin: 0;
+	}
+
+	&__item:nth-child(1),
+	&__item:nth-child(2) {
+		display: block;
+	}
+
+	&__link {
+		color: #000000;
+
+		&:hover {
+			color: #826550;
+			text-decoration: underline;
+
+			.news__field-icon {
+				fill: #826550;
+			}
+		}
+
+		&:active {
+			color: #6a4d38;
+			text-decoration: underline;
+
+			.news__field-icon {
+				fill: #6a4d38;
+			}
+
+			.news__data {
+				opacity: 0.3;
+			}
+		}
+	}
+
+	&__field-icon {
+		position: absolute;
+		top: 10px;
+		left: 0;
+	}
+
+	&__data {
+		position: absolute;
+		top: 20px;
+		left: 0;
+
+		width: 50px;
+		
+		font-size: 16px;
+		line-height: 18px;
+		text-align: center;
+		color: #ffffff;
+		
+	}
+
+	&__day {
+		display: block;
+
+		font-size: 30px;
+	}
+
+	&__text {
+		font-size: 18px;
+		line-height: 27px;
+	}
+
+	&__show-all {
+		margin: 0 auto;
+		color: #000000;
+
+		&:hover {
+			border-color: #d5c9bd;
+	 	}
+
+	 	&:active {
+	 		background-color: #d5c9bd;
+	 		color: rgba(0, 0, 0, 0.3);
+	 	}
+	}
+}
+
+@media (min-width: $tablet-width) {
+
+	.news {
+		background-color: #ffffff;
+
+		&__wrapper {
+			display: flex;
+			justify-content:space-between;
+			align-items: flex-start;
+			flex-wrap: wrap;
+
+			width: 640px;
+			padding: 45px 0px 30px;
+		}
+
+		&__title {
+			flex-grow: 1;
+
+			margin: 10px 0 60px;
+
+			font-size: 40px;
+			line-height: 30px;
+			text-transform: uppercase;
+			text-align: left;
+		}
+
+		&__list {
+			order: 3;
+
+			display: flex;
+			justify-content: space-between;
+
+			&::after {
+				bottom: 0;
+			}
+		}
+
+		&__item {
+			padding: 0px 40px 0px 70px;
+			width: 320px;
+
+			&::after {
+				display: none;
+			}
+		}
+
+		&__text {
+
+			span {
+				display: none;
+			}
+		}
+	}	
+}
+
+@media (min-width: $desktop-width) {
+
+	.news {
+
+		&__wrapper {
+			width: 960px;
+			padding: 55px 0 30px;
+		}
+
+		&__title {
+			margin-left: 70px;
+		}
+
+		&__list {
+			display: flex;
+			justify-content: space-between;
+
+			&::after {
+				bottom: -3px;
+			}
+		}
+
+		&__item {
+			display: block;
+		}
+	}	
+}
+////////////////////////////////////////////////////////////////////
+
+
+
+
+/////////////////////////////Файл reviews/////////////////////////////////////
+.reviews {
+	position: relative;
+
+	width: 320px;
+	margin: 0 auto;
+
+	&::after {
+		content: "";
+
+		position: absolute;
+		z-index: 2;
+		bottom: -34px;
+		left: 0;
+		right: 0;
+		
+		padding-top: 11%;
+
+	    background: linear-gradient(to right top, #292929 48.5%, #ffffff 50%) left / 50.03% 100% no-repeat,
+		linear-gradient(to left top, #292929 48.5%, #ffffff 50%) right / 50.03% 100% no-repeat;
+	}
+
+	&__wrapper {
+		width: 320px;
+		padding: 25px 20px 15px;
+		margin: 0 auto;
+		margin-bottom: 30px;
+
+		background-color: #ffffff;
+
+		color: #000000;
+	}
+
+	&__title {
+		margin: 0px 0px 30px 0px;
+
+		font-size: 30px;
+		line-height: 30px;
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	&__write {
+		display: none;
+
+		&:hover {
+			border-color: #d5c9bd;
+	 	}
+
+	 	&:active {
+	 		background-color: #d5c9bd;
+	 		color: rgba(0, 0, 0, 0.3);
+	 	}
+	}
+
+	&__list {
+		margin: 0px 0px 27px 0px;
+	}
+
+	&__item {
+		position: relative;
+
+		padding: 0px 0px 0px 70px;
+
+		background: url('../img/index/travis-mini.jpg') 0 10px no-repeat;
+
+		@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+			background: url('../img/index/travis-mini-2x.jpg') 0 10px no-repeat;
+			background-size: 50px auto;
+		}
+	}
+
+	// &__author-photo {
+	// 	position: absolute;
+	// 	left: 0;
+	// 	top: 10px;
+	// }
+
+	&__author-name {
+		display: block;
+		margin: 0px 0px 10px 0px;
+
+		font-size: 24px;
+		line-height: 27px;
+	}
+
+	&__text {
+		font-size: 18px;
+		line-height: 27px;
+	}
+
+	&__prev,
+	&__next {
+		display: none;
+
+		&:hover {
+			border-color: #d5c9bd;
+	 	}
+
+	 	&:active {
+	 		background-color: #d5c9bd;
+	 	}
+	}
+	
+	&__toggle {
+		border: 1px solid #353535;
+	}
+
+	&__toggle--current {
+		background-color: #000000;
+	}
+
+	&__toggles {}
+}
+
+@media (min-width: $tablet-width) {
+
+	.reviews {
+		width: 100%;
+
+		background-color: #ffffff;
+
+		&::after { display: none; }
+		
+		&__wrapper {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			align-items: center;
+
+			padding: 0;
+			padding-bottom: 60px;
+			margin-bottom: 0;
+			width: 640px;
+		}	
+
+		&__title {
+			font-size: 40px;
+			text-align: left;
+		}
+
+		&__write {
+			display: inline-block;
+			
+			margin: -30px 0px 0px 0px;
+			padding: 12px 25px;
+
+			color: #000000;
+		}
+
+		&__list {
+			display: flex;
+
+			margin: 15px 0px 0px 0px;
+		}
+
+		&__item {
+			order: 2;
+			width: 540px;
+			padding: 30px 0px 37px 140px;
+			margin: 0 auto;
+
+			border-top: 1px solid #e5ddd5;
+			border-bottom: 1px solid #e5ddd5;
+			background: url('../img/index/travis-cycle.jpg') 30px center no-repeat;
+
+			@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+				background: url('../img/index/travis-cycle-2x.jpg') 30px center no-repeat;
+				background-size: 80px auto;
+			}
+		}
+
+		&__prev,
+		&__next {
+			position: relative;
+
+			display: block;
+			width: 50px;
+			
+			border: 1px solid #e5ddd5;
+			background-color: transparent;
+
+			font-size: 0px;
+
+			&::before {
+				content: "";
+
+				position: absolute;
+				top: 73px;
+				left: 17px;
+
+				width: 0;
+				height: 0;
+
+				border-left: 6px solid transparent;
+				border-right: 6px solid transparent;
+				border-top: 12px solid #000000;
+			}
+
+			&:active {
+
+				&::before {
+					opacity: 0.3;
+				}	
+			}
+		}
+
+		&__prev {
+			order: 1;
+			
+			&::before {
+				transform: rotate(90deg);
+			}
+		}
+
+		&__next {
+			order: 3;
+
+			&::before {
+				transform: rotate(-90deg);
+			}
+		}
+
+		&__toggles {
+			
+			//Меняем значение box-sizing для того, чтобы с помощью padding избавиться от рамкок по бокам
+			box-sizing: content-box; 
+
+			position: relative;
+			top: -5px;
+
+			padding: 0 25px;
+
+			background-color: #ffffff;
+		}
+	}	
+}
+
+@media (min-width: $desktop-width) {
+
+	.reviews {
+
+		&__wrapper {
+			width: 960px;
+			padding: 0;
+		}
+
+		&__title {
+			margin: 0 0 30px 70px;
+		}
+
+		&__list {
+			margin: 17px 0px 42px 0px;
+		}
+
+		&__item {
+			width: 818px;
+			padding: 30px 80px 35px 318px;
+			margin: 0 21px;
+			
+
+			border: 1px solid #e5ddd5;
+			background: url('../img/index/travis.jpg') 0 center no-repeat;
+
+			@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+				background: url('../img/index/travis-2x.jpg') 0 center no-repeat;
+				background-size: 249px auto;
+			}
+		}
+
+		&__toggles {
+			box-sizing: border-box; 
+
+			position: static;
+
+			padding: 0;
+			margin-bottom: 46px;
+		}
+	}	
+}
+
+/////////////////////////////////////////////////////////////////////
+
+

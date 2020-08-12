@@ -1,0 +1,708 @@
+
+//////////////Подключение шрифтов/////////////////
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
+
+/////////////////////////////
+
+
+////////Подключение Normalize///////
+
+@import url(normalize.css);
+
+////////////////////////
+//////////////////Стили для js///////////////////
+
+
+/////////Стили по умолчанию/////////
+
+*,
+*:before,
+*:after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+body {
+	// //Фуллскрин
+	// height: 100%;
+	// //
+	width: 100%;
+	font-family: "PT Sans Narrow", Arial, sans-serif;
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: 700;
+	color: #f7f4f1;
+	text-transform: uppercase;
+
+	background-color: #000000;
+	background-image: url("../img/background.jpg");
+	background-position: top center;
+	background-repeat: no-repeat;
+}
+
+.wrapper {
+	// //Фуллскрин
+	// min-height: 100vh;
+	// display: flex;
+	// flex-direction: column;
+	// //
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+ul li {
+	list-style: none;
+}
+
+.visually-hidden {
+	position: absolute;
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+}
+
+.container {
+	max-width: 980px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+
+.title {
+	font-size: 30px;
+
+	margin: 0px 0px 30px 0px;
+}
+
+button {
+	text-transform: uppercase;
+}
+.button {
+	display: inline-block;
+	padding: 10px 35px;
+	
+	
+	font: inherit;
+	color: #fff;
+	background-color: #000;
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+  background-color: #663d15;
+}
+////////////////
+
+/////////Стилизация блока header///////////
+.header {
+	// //Фуллскрин
+	// min-height: 100vh;
+	// display: flex;
+	// 
+	padding: 134px 0px 75px 0px;
+	&__logo {
+		max-width: 371px;
+		max-height: 155px;
+
+		margin: 0 auto 75px;
+		// display: none;
+	}
+	&__nav {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 100;
+
+		width: 100%;
+
+		font-size: 16px;
+	}
+	&__nav:before {
+		content: '';
+		position: absolute;
+
+		background-color: #000;
+		height: 100%;
+		width: 100%;
+
+	}
+	&__features {
+
+	}
+	&__container {
+		// //Фуллскрин
+		// width: 100%;
+		// flex: 1 1 auto;
+		// //
+	}
+}
+
+.nav {
+	&__row {
+		position: relative;
+		z-index: 1;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		
+		padding: 0px 20px 0px 20px;
+		max-width: 980px;
+		margin: 0 auto;
+	}
+
+	&__menu {
+		display: flex;
+	}
+	&__item>a {
+		display: block;
+		padding: 25px 20px;
+		white-space: nowrap;
+	}
+	&__user-login {
+	}
+	&__login {
+		max-width: 140px;
+	}
+	&__login>a {
+		padding: 27px 20px 27px 50px;
+
+		position: relative;
+	}
+	&__login>a:before {
+		content: '';
+		position: absolute;
+		top: 30px;
+		left: 21px;
+
+		background: url('../img/icons/login.svg') 0 0 no-repeat;
+		width: 16px;
+		height: 16px;
+
+		opacity: 0.3;
+	}
+
+	&__login>a:hover,
+	&__login>a:focus,
+	&__item>a:hover,
+	&__item>a:focus {
+		background-color: #242424;
+	}
+
+	&__login>a:hover::before,
+	&__login>a:focus::before,
+	&__login>a:active::before {
+		opacity: 1;
+	}
+}
+
+.features {
+	&__list {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__title {
+		position: relative;
+
+		margin: 0px 0px 70px 0px;
+	}
+
+	&__description {
+		text-align: center;
+	}
+	&__item {
+		max-width: 300px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__item>h3::after {
+		content: '';
+		position: absolute;
+		left: 50%;
+		bottom: -40px;
+		margin: 0px 0px 0px -10px;
+
+		width: 20px;
+		height: 20px;
+		transform: rotate(45deg);
+
+		background-color: #fff;
+	}	
+
+}
+
+/////////////////////////////////////////
+
+////////////Стилизация блока main//////////////////
+
+
+.main {
+	color: #000000;
+	&__container {
+	}
+	&__column {
+		display: flex;
+		flex-direction: column;
+
+		margin: 0px 0px 65px 0px;
+	}
+	&__row {
+		background-color: #f8f5f2;
+		background-image: url('../img/index/stick.png'), url('../img/texture.jpg');
+		background-position: center, 0 0;
+		background-repeat: no-repeat, repeat;
+		
+		padding: 55px 80px 50px 80px;
+		margin: 0px 0px 36px 0px;
+
+		display: flex;
+		justify-content: space-between;
+		
+	}
+	&__row:last-child {
+		margin: 0px;
+	}
+}
+
+
+.news {
+	max-width: 380px;
+
+	&__title {
+	}
+	&__list {
+		margin: 0px 0px 30px 0px;
+	}
+	&__item {
+		margin: 0px 0px 20px 0px;
+
+	}
+	&__item>time>span {
+		text-transform: lowercase;
+	}
+	&__text {}
+	&__button {}
+}
+
+.gallery {
+	max-width: 380px;
+	&__title {}
+	&__content {
+		
+		margin: 0px 0px 30px 0px;
+
+		border: 7px solid #fff;
+		
+
+	}
+	&__image {
+		height: 164px;
+	}
+	&__switch {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__button {
+		flex: 1 0 auto;
+
+		margin: 0px 20px 0px 0px;
+	}
+	&__button:last-child {
+		margin: 0px;
+	}
+}
+.information {
+	max-width: 380px;
+
+	&__title {}
+	&__text {
+		margin: 0px 0px 20px 0px;
+
+	}
+	&__address {
+		margin: 0px 0px 20px 0px;
+	}
+	&__schedule {}
+	&__connect {}
+	&__button {
+		margin: 0px 20px 0px 0px;
+	}
+}
+
+.appointment {
+	max-width: 380px;
+	padding: 0px 0px 0px 90px;
+
+	&__title {}
+
+	&__info {
+		margin: 0px 0px 10px 0px;
+	}
+
+	&__form {}
+}
+
+.form {
+	max-width: 380px;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	&__item {
+		width: 140px;
+
+		margin: 0px 0px 10px 0px;
+	}
+	&__data {
+		display: block;
+		margin: 0px 0px 9px 15px;
+
+	}
+	&__field {
+		width: 140px;
+		border: 2px solid #000;
+		background-color: transparent;
+
+		font: inherit;
+		padding: 8px 0px 7px 15px;
+	}
+	&__field:focus,
+	&__field:active {
+		border: 2px solid #663d15;
+	}
+	&__button {
+		margin: 10px 0px 0px 0px;
+		width: 100%;
+	}
+}
+
+
+///////////////////////////////////////////
+
+////////Стилизация блока footer//////////////////
+
+.footer {
+	padding: 60px 0px 35px 0px;
+	background-color: #1f1f1f;
+	&__container {
+		display: flex;
+	}
+	&__info {
+		margin: 0px 100px 0px 0px;
+		white-space: nowrap;
+	}
+	&__social {
+		margin: 0px 250px 0px 0px;
+
+		text-align: center;
+	}
+	&__social>span {
+		display: block;
+		margin: 0px 0px 15px 0px;
+	}
+	&__icons {
+		display: flex;
+		justify-content: space-between;
+
+		width: 141px;
+	}
+	&__item {
+		
+	}
+	&__link {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		
+		width: 42px;
+		height: 42px;
+		background-color: #000;
+	}
+
+	&__link:hover,
+	&__link:focus,
+	&__link:active {
+		background-color: #fff;
+	}
+
+	&__link:hover path,
+	&__link:focus path,
+	&__link:active path {
+		fill: #000;
+	}
+
+	&__developer {
+		text-align: center;
+		white-space: nowrap;
+	}
+	&__developer>span {
+		display: block;
+		margin: 0px 0px 15px 0px;
+	}
+	&__button {}
+}
+.container {
+}
+
+.button {
+}
+
+////////////////////////////////////////////////
+
+
+////////////Стилизация модального окна для взода в лк///////////////
+
+
+.popup {
+	&__sign-in {
+		padding: 50px 80px 58px;
+		width: 460px;
+		height: 385px;
+
+		background-color: #f8f5f2;
+		color: #000;
+		background-image: url('../img/texture.jpg');
+		box-shadow: 0px 30px 50px 0px rgba(0, 1, 1, 0.75);
+	}
+}
+.sign-in {
+	display: none;
+
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 2;
+
+	transform: translate(-50%, -50%);
+	&__title {
+		margin: 0px 0px 25px 0px;
+	}
+	&__invite {
+		margin: 0px 0px 10px 0px;
+	}
+	&__input {
+		width: 100%;
+	}
+}
+
+//Появление модального окна входа
+// .modal-show {
+// 	display: block;
+// }
+
+
+.input {
+	
+	&__data {
+		margin: 0px 0px 10px 0px;
+	}
+
+	&__field {
+		width: 100%;
+		padding: 8px 40px 8px 14px;
+
+		border: 2px solid #000;
+
+		font: inherit;
+	}
+
+	&__field-login {
+		background-image: url('../img/icons/user.svg');
+		background-position: 270px center;
+		background-repeat: no-repeat;
+	}
+
+	&__field-password {
+		background-image: url('../img/icons/lock.svg');
+		background-position: 270px center;
+		background-repeat: no-repeat;
+	}
+
+	&__field:focus,
+	&__field:active {
+		border: 2px solid #663d15;
+	}
+
+	&__function {
+		display: flex;
+		justify-content: space-between;
+
+		margin: 0px 0px 15px 0px;
+	}
+
+	&__remember {
+		position: relative;
+	}
+
+	&__forget {
+		color: #000;
+		text-decoration: underline;
+	}
+
+	&__forget:hover,
+	&__forget:focus {
+		color: #663d15;
+	}
+
+	&__button {
+		width: 100%;
+	}
+}
+
+
+.input input::-webkit-input-placeholder { 
+	color: #000;
+	font: inherit;
+ }
+
+
+.remember {
+
+	&__cross {}
+
+	&__label {
+		position: relative;
+
+		padding: 0px 0px 0px 35px;
+
+		cursor: pointer;
+	}
+
+	&__label:hover,
+	&__label:focus, {
+		color: #663d15;
+	}
+}
+
+.remember input[type='checkbox'] + .remember__cross {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 21px;
+	height: 21px;
+	border: 2px solid #000;
+}
+
+.remember input[type='checkbox']:focus + .remember__cross {
+	border-color: #663d15;
+}
+
+.remember input[type='checkbox']:checked + .remember__cross::before,
+.remember input[type='checkbox']:checked + .remember__cross::after {
+	content: '';
+
+	position: absolute;
+	top: 7px;
+	left: 1px;
+
+	width: 15px;
+	height: 2px;
+
+	background-color: #000;
+}
+
+.remember input[type='checkbox']:checked + .remember__cross::before {
+	transform: rotate(45deg);
+}
+
+.remember input[type='checkbox']:checked + .remember__cross::after {
+	transform: rotate(-45deg);
+}
+
+.button {
+}
+
+
+/////////////////////////////////////////////////////
+
+///////////////////Стилизация модального окна с картой///////////////////////
+
+.popup {
+	&__map {
+		max-width: 780px;
+		max-height: 574px;
+		padding: 7px;
+
+		background-color: #fff;
+		box-shadow: 0px 30px 50px 0px rgba(0, 1, 1, 0.75);
+	}
+	&__button {
+		position: absolute;
+		top: 9px;
+		right: -33px;
+
+		width: 20px;
+		height: 20px;
+		background-color: transparent;
+		border: 0;
+
+		cursor: pointer;	
+	}
+	&__button::before, &__button::after,{
+		content: '';
+
+		position: absolute;
+		top: 7px;
+		left: 1px;
+
+		width: 19px;
+		height: 3px;
+		background-color: #d0d0d0;
+	}
+
+	&__button::before {
+		transform: rotate(45deg);
+	}
+	&__button::after {
+		transform: rotate(-45deg);
+	}
+}
+.map {
+	display: none;
+	
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 2;
+
+	transform: translate(-50%, -50%);
+	&__image {
+		max-width: 766px;
+		max-height: 560px;
+
+
+	}
+}
+//Появление модального окна с картой
+
+
+
+.modal-show {
+	display: block;
+}
+.modal-overlay {
+	display: none;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+
+	width: 100%;
+	height: 100%;
+
+	background-color: rgba(0, 0, 0, 0.5);
+	}
+
+///////////////////////////////////////////////////////////

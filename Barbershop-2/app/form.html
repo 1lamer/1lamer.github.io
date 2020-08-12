@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8" />
+	<title>Barbershop</title>
+	<link rel="preload" href="fonts/PTSansNarrow-Regular.woff" as="font" type="font/woff" crossorigin/>
+	<link rel="preload" href="fonts/PTSansNarrow-Bold.woff" as="font" type="font/woff" crossorigin/>
+	<link rel="stylesheet" href="css/style.min.css" />
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<body>	
+
+	@@include('./_header-form.html')
+
+	<main class="main-form">
+
+		<div class="main-form__wrapper">
+			
+			<div class="main-form__row">
+				<h1 class="main-form__title">Запись на стрижку</h1>
+				<button class="main-form__button button">На главную</button>
+			</div>
+			
+	
+			<form action="#" class="main-form__form form" method="post">
+				
+				<fieldset class="client-data">
+	
+					<h2 class="visually-hidden">Введите контактные данные</h2>
+	
+					<div class="client-data__full-name">
+						<label class="client-data__surname">
+							<span class="visually-hidden">Фамилия</span>
+							<input type="text" class="client-data__field" placeholder="Фамилия" value="" name="surname"/>
+						</label>
+		
+						<label class="client-data__name">
+							<span class="visually-hidden">Имя</span>
+							<input type="text" class="client-data__field" placeholder="Имя" value="" name="name"/>
+						</label>
+		
+						<label class="client-data__patronymic">
+							<span class="visually-hidden">Отчество</span>
+							<input type="text" class="client-data__field" placeholder="Отчество" value="" name="patronymic"/>
+						</label>
+					</div>
+	
+					<div class="client-data__contacts-info">
+						<label class="client-data__tel">
+							<span class="visually-hidden">Контактный телефон</span>
+							<input type="tel" class="client-data__field" placeholder="Контактный телефон" value="" name="tel"/>
+						</label>
+		
+						<label class="client-data__email">
+							<span class="visually-hidden">Контактный e-mail</span>
+							<input type="email" class="client-data__field" placeholder="Контактный e-mail" value="" name="email"/>
+						</label>
+					</div>
+	
+					<div class="client-data__more-info">
+						<label class="client-data__message">
+							<span class="visually-hidden">Доп. информация для мастера</span>
+							<textarea type="text" class="client-data__field client-data__field--area" placeholder="Доп. информация для мастера" value="" name="info">Доп. информация для мастера
+							</textarea>
+						</label>
+					</div>
+				</fieldset>
+	
+	
+				<fieldset class="beard-model">
+					
+					<h2 class="beard-model__title">Выберите модель бороды:</h2>
+	
+					<ul class="beard-model__list">
+						
+						<div class="beard-model__container">
+	
+							<li class="beard-model__item">
+								<input id= "admiral" type="radio" class="visually-hidden" name="beard-type" />
+		
+								<span class="beard-model__circle"></span>
+		
+								<label for="admiral" class="beard-model__select">адмирал</label>
+
+								<svg class="beard-model__beard-icon" width="52" height="49">
+									<use xlink:href="img/sprite.svg#icon-beard-1"></use>
+								</svg>
+							</li>
+		
+							<li class="beard-model__item">
+								<input id= "feller" type="radio" class="visually-hidden" name="beard-type" />
+		
+								<span class="beard-model__circle"></span>
+								
+								<label for="feller" class="beard-model__select">лесоруб</label>
+
+								<svg class="beard-model__beard-icon" width="58" height="68">
+									<use xlink:href="img/sprite.svg#icon-beard-2"></use>
+								</svg>
+							</li>
+		
+							<li class="beard-model__item">
+								<input id= "polar-explorer" type="radio" class="visually-hidden" name="beard-type" />
+		
+								<span class="beard-model__circle"></span>
+								
+								<label for="polar-explorer" class="beard-model__select">полярник</label>
+
+								<svg class="beard-model__beard-icon" width="63" height="78">
+									<use xlink:href="img/sprite.svg#icon-beard-3"></use>
+								</svg>
+							</li>
+		
+							<li class="beard-model__item">
+								<input id= "boyar" type="radio" class="visually-hidden" name="beard-type" />
+		
+								<span class="beard-model__circle"></span>
+								
+								<label for="boyar" class="beard-model__select">боярин</label>
+
+								<svg class="beard-model__beard-icon" width="57" height="97">
+									<use xlink:href="img/sprite.svg#icon-beard-4"></use>
+								</svg>
+							</li>
+		
+							<li class="beard-model__item">
+								<input id= "sage" type="radio" class="visually-hidden" name="beard-type" />
+		
+								<span class="beard-model__circle"></span>
+								
+								<label for="sage" class="beard-model__select">мудрец</label>
+
+								<svg class="beard-model__beard-icon" width="46" height="104">
+									<use xlink:href="img/sprite.svg#icon-beard-5"></use>
+								</svg>
+							</li>
+
+						</div>
+						<!-- /beard-model__container -->
+					</ul>
+				</fieldset>
+	
+	
+				<fieldset class="add-services">
+					
+					<h2 class="add-services__title">Дополнительные услуги</h2>
+	
+					<ul class="add-services__list">
+	
+						<li class="add-services__item">
+							<input id="color" type="checkbox" class="visually-hidden" name="color" />
+	
+							<span class="add-services__check"></span>
+							
+							<label for="color" class="">Подкрасить бороду</label>
+						</li>
+						<li class="add-services__item">
+							<input id="wind" type="checkbox" class="visually-hidden" name="wind" />
+	
+							<span class="add-services__check"></span>
+							
+							<label for="wind" class="">Накрутить усы</label>
+						</li>
+	
+						<li class="add-services__item">
+							<input id= "comb" type="checkbox" class="visually-hidden" name="comb" />
+	
+							<span class="add-services__check"></span>
+							
+							<label for="comb" class="">Причесать бороду</label>
+						</li>
+	
+						<li class="add-services__item">
+							<input id="trim" type="checkbox" class="visually-hidden" name="trim" />
+	
+							<span class="add-services__check"></span>
+							
+							<label for="trim" class="">Подровнять виски</label>
+						</li>
+	
+						<li class="add-services__item">
+							<input id= "remove" type="checkbox" class="visually-hidden" name="remove" />
+	
+							<span class="add-services__check"></span>
+							
+							<label for="remove" class="">Убрать седину</label>
+						</li>
+						
+	
+						<li class="add-services__item">
+							<input id= "polish" type="checkbox" class="visually-hidden" name="polish" />
+	
+							<span class="add-services__check"></span>
+							
+							<label for="polish" class="">Отполировать лысину</label>
+						</li>
+	
+					</ul>
+				</fieldset>
+				
+				<button class="form__button button">Отправить заявку</button>
+			</form>
+
+		</div>
+		<!-- /main-form__wrapper -->
+	</main>
+
+
+	@@include('./_footer.html')
+
+
+	@@include('./_sign-in.html')
+	
+
+	<!-- Подключаем jQuery -->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+	<!-- Подключаем slick -->
+	<!-- <script src="js/slick.min.js"></script> -->
+	<!-- Скрипт -->
+	<script src="js/script.min.js"></script>
+</body>
+</html>

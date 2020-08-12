@@ -1,0 +1,19 @@
+
+.slider {
+
+	&__list {}
+
+	&__item {}
+
+	&__item--current {}
+
+	&__toggles {}
+
+	&__toggle {}
+
+	&__toggle--current {}
+}
+
+@media (min-width: $tablet-width) {}
+
+@media (min-width: $desktop-width) {}

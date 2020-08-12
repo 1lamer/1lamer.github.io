@@ -1,0 +1,554 @@
+
+////////////////////Переменные и миксины/////////////////////
+@import "variables.scss";
+
+///////////////////////////////////////////////////////////////
+
+/////////////////////Файл main-works///////////////////////////
+.main-works {
+}
+
+//////////////////////////////////////////////////////////////
+
+
+
+/////////////////////Файл our-works///////////////////////////
+
+.our-works {
+	position: relative;
+
+	width: 320px;
+	margin: 0 auto;
+
+	&::after {
+		content: "";
+
+		position: absolute;
+		z-index: 2;
+		bottom: 0;
+		left: 0;
+		right: -1px;
+		
+		padding-top: 11%;
+
+	    background: linear-gradient(to right top, #353535 48.5%, transparent 50%) left / 50.025% 100% no-repeat,
+		linear-gradient(to left top, #353535 48.5%, transparent 50%) right / 50.025% 100% no-repeat;
+	}
+	
+	&__wrapper {
+		width: 320px;
+		margin: 0 auto;
+		padding: 30px 20px 70px;
+		
+
+		background-color: #f8f5f2;
+
+		color: #000000;		
+	}
+
+	&__row {
+		margin-bottom: 30px;
+	}
+
+	&__title {
+		margin-top: 0;
+
+		font-size: 30px;
+		line-height: 30px;
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	&__button { display: none; }
+
+	&__list {}
+
+	&__item {
+		border: 1px solid #e5ddd5;
+	}
+
+	&__item:not(:last-child){
+		margin-bottom: 20px;
+	}
+
+	&__item--better {
+		position: relative;
+	}
+
+	&__tag {
+		position: absolute;
+		z-index: 0;
+		left: 0;
+		bottom: 305px;
+
+		width: 176px;
+		height: 50px;
+		padding: 14px 18px;
+
+		font-size: 20px;
+		font-weight: 700;
+		color: #ffffff;
+		text-transform: uppercase;
+		text-align: center;
+
+		&::before {
+			content: "";
+
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			
+			background-color: #826550;
+			background: url('../../img/icons/tag-field.svg') 0 0 no-repeat;
+		}
+	}
+
+	&__info {
+		padding: 15px 24px 30px 24px;
+	}
+
+	&__client {
+		display: block;
+
+		margin-bottom: 13px;
+
+		font-size: 24px;
+		line-height: 27px;
+	}
+
+	&__review {
+		margin-bottom: 20px;
+			
+		line-height: 27px;
+	}
+
+	&__services {
+		display: flex;
+		flex-wrap: wrap;
+
+		margin-left: -35px;
+		margin-bottom: -25px;
+	}
+
+	&__name {
+		margin-left: 35px;
+		margin-bottom: 25px;
+
+		font-size: 16px;
+		text-transform: uppercase;
+	}
+
+	&__name--haircut {
+		padding-left: 35px;
+
+		background: url('../../img/icons/scissors.svg') 0 center no-repeat;
+	}
+
+	&__name--shaving {
+		padding-left: 44px;
+
+		background: url('../../img/icons/beard.svg') 0 center no-repeat;
+	}
+
+	&__name--moustache {
+		padding-left: 60px;
+
+		background: url('../../img/icons/moustache.svg') 0 center no-repeat;
+	}
+}
+
+
+@media (min-width: $tablet-width) {
+
+	.our-works {
+		background-color: #f8f5f2;
+		width: 100%;
+
+		&::after { padding-top: 5%; }
+		
+		&__wrapper {
+			width: $tablet-width;
+			padding: 55px 65px 100px;
+		}
+
+		&__row {
+			display: flex;
+			justify-content: space-between;
+
+			margin-bottom: 35px;
+		}
+
+		&__title {
+			margin-top: 7px;
+
+			font-size: 40px;
+			text-align: left;
+		}
+
+		&__button {
+			display: block;
+			
+			align-self: flex-start;
+
+			padding: 12px 35px;
+
+			background-color: transparent;
+
+			&:hover {
+				border-color: #d5c9bd;
+		 	}
+
+		 	&:active {
+		 		background-color: #d5c9bd;
+		 		color: rgba(0, 0, 0, 0.3);
+		 	}
+		}
+
+		&__item {
+			display: flex;
+			justify-content: space-between;
+			align-items: top;
+
+			picture { 
+				display: flex;
+				flex-shrink: 0;
+			}
+		}
+
+		&__item:not(:last-child){
+			margin-bottom: 40px;
+		}
+
+		&__tag {
+			bottom: auto;
+			top: 35px;
+
+			padding-left: 0px;
+		}
+
+		&__info {
+			display: flex;
+			flex-direction: column;
+
+			width: 320px;
+			padding: 40px 55px 45px 5px;
+		}
+
+		&__client {	margin-bottom: 25px; }
+
+		&__review {
+			flex-grow: 1;
+			margin-bottom: 0;
+		}
+	}
+}
+
+@media (min-width: $desktop-width) {
+
+	.our-works {
+
+		&::after { display: none; }
+		
+		&__wrapper {
+			width: $desktop-width;
+			padding: 55px 120px 48px;
+		}
+
+		&__row { margin-bottom: 80px; }
+
+		&__list {
+			display: flex;
+			flex-wrap: wrap;
+
+			margin-left: -39px;
+		}
+
+		&__item { 
+			flex-direction: column;
+			justify-content: initial;
+
+			margin-left: 39px;
+			max-width: 294px;
+			min-height: 541px;
+		}
+
+		&__item {
+			margin-bottom: 40px;
+		}
+
+		&__item--better { 
+			flex-direction: row;
+			flex-grow: 1;
+
+			max-width: 100%;
+			min-height: auto;
+			
+			.our-works__info { padding: 130px 100px 30px 42px; }
+		 }
+
+		 &__tag {
+			top: 25px;
+			left: auto;
+			right: 0;
+
+			padding-left: 30px;
+
+			&::before { transform: rotate(180deg); }
+		}
+
+		&__info {
+			display: flex;
+			flex-direction: column;
+			flex-grow: 1;
+
+			width: 100%;
+			padding: 30px;
+			padding-bottom: 35px;
+		}
+	}
+}
+
+
+////////////////////////////////////////////////////////////////
+
+
+
+/////////////////////Файл price-list///////////////////////////
+
+.price-list {
+	position: relative;
+
+	width: 320px;
+	margin: 0 auto;
+
+	&::after {
+		content: "";
+
+		position: absolute;
+		z-index: 2;
+		bottom: 0;
+		left: 0;
+		right: -1px;
+		
+		padding-top: 11%;
+
+	    background: linear-gradient(to right top, #292929 48.5%, transparent 50%) left / 50.025% 100% no-repeat,
+		linear-gradient(to left top, #292929 48.5%, transparent 50%) right / 50.025% 100% no-repeat;
+	}
+
+	&__wrapper {
+		width: 320px;
+		margin: 0 auto;
+		padding: 35px 20px 50px;
+		
+		background-color: #353535;
+
+		color: #ffffff;
+	}
+
+	&__title {
+		margin-top: 0;
+		margin-bottom: 10px;
+
+		font-size: 30px;
+		line-height: 30px;
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	&__table {
+		width: 100%;
+		margin-bottom: 15px;
+
+		border-spacing: 0 15px;
+
+		tbody { width: 100%; }
+	}
+
+	&__type,
+	&__price,
+	&__option {
+		font-size: 20px;
+		line-height: 27px;
+	}
+
+	&__number { display: none; }
+
+	&__type {
+		display: block;
+
+		font-weight: 700;
+	}
+
+	&__option { display: inline; }
+
+	&__price {
+		vertical-align: top;
+		text-align: right;
+	} 
+
+	&__discount {
+		display: flex;
+		align-items: center;
+
+		padding: 12px 18px;
+
+		border: 1px solid rgba(255, 255, 255, 0.1);
+
+		font-size: 20px;
+		line-height: 27px;
+	}
+
+	&__clock-icon {
+		margin-right: 35px;
+	}
+
+	&__terms {
+		display: inline-block;	
+	}
+}
+
+
+@media (min-width: $tablet-width) {
+
+	.price-list {
+		width: 100%;
+		background-color: #353535;
+
+		&::after { display: none; }
+
+		&__wrapper {
+			width: $tablet-width;
+			padding: 50px 64px 55px;
+		}
+
+		&__title {
+			margin-bottom: 50px;
+
+			font-size: 40px;
+			text-align: left;
+		}
+
+		&__table {
+			width: 100%;
+			margin-bottom: 10px;
+			
+			border: 1px solid rgba(255, 255, 255, 0.1);
+			border-collapse: collapse;
+		}
+
+		&__number,
+		&__type,
+		&__price,
+		&__option {
+			display: table-cell;
+
+			padding: 14px 0;
+			padding-left: 20px;
+
+			border: 1px solid rgba(255, 255, 255, 0.1);
+		}
+
+		&__number {
+			display: table-cell;
+			width: 71px;
+			padding: 14px 20px;
+
+			text-align: center;
+		}
+
+		&__type { width: 248px; }
+
+		&__option {
+			width: 160px;
+
+			span {display: none;}
+		}
+
+		&__price {
+			vertical-align: middle;
+			text-align: left;
+		} 
+
+		&__discount {
+			padding: 20px 28px;
+
+			font-size: 30px;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+
+		&__clock-icon {
+			flex-shrink: 0;
+
+			width: 72px;
+			height: 72px;
+			margin-right: 85px;
+		}
+
+		&__terms {
+			flex-grow: 1;
+
+			display: block;	
+
+			br { display: none; }
+		}
+	}
+}
+
+
+@media (min-width: $desktop-width) {
+
+	.price-list {
+
+			&__wrapper {
+				width: $desktop-width;
+				padding: 80px 120px 83px;
+			}
+
+			&__container {
+				display: flex;
+				justify-content: space-between;
+
+				width: 100%;
+			}
+
+			&__table {
+				width: 630px;
+				margin-bottom: 0;
+			}
+
+			&__discount {
+				flex-direction: column;
+				// justify-content: center;
+				// align-items: center;
+				width: 270px;
+				padding: 35px 65px 10px;
+
+				font-size: 20px;
+				font-weight: 400;
+				text-transform: none;
+			}
+
+			&__clock-icon {
+				width: 141px;
+				height: 141px;
+				margin-right: 0;
+				margin-bottom: 27px;
+			}
+
+			&__terms {
+				flex-grow: 1;
+
+				display: block;	
+
+				text-align: center;
+
+				br { display: block; }
+			}
+	}	
+}
+//////////////////////////////////////////////////////////////////
