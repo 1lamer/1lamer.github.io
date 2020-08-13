@@ -71,7 +71,7 @@ function styles() {
 	return src(sourceFolder + preprocessor + '/style.' + preprocessor + '') // Выбираем источник: "app/sass/main.sass" или "app/less/main.less"
 	.pipe(eval(preprocessor)()) // Преобразуем значение переменной "preprocessor" в функцию
 	.pipe(concat('style.min.css')) // Конкатенируем в файл app.min.js
-	.pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], cascade: true })) // Создадим префиксы с помощью Autoprefixer
+	.pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], cascade: true, grid: true })) // Создадим префиксы с помощью Autoprefixer
 	.pipe(cleancss( { level: { 1: { specialComments: 0 } }/* , format: 'beautify' */ ,format: 'beautify'} )) // Минифицируем стили
 	.pipe(dest(projectFolder + 'css/')) // Выгрузим результат в папку "app/css/"
 	.pipe(browserSync.stream()) // Сделаем инъекцию в браузер
