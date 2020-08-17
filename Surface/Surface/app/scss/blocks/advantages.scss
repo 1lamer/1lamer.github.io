@@ -1,0 +1,352 @@
+
+.advantages {
+
+	&__container {
+		position: relative;
+
+		padding-top: 15px;
+
+		&::before {
+			content: "";
+
+			position: absolute;
+			top: 35px;
+			left: 50%;
+
+			width: 265px;
+			height: 3px;
+
+			transform: rotate(-48deg) translate(-80%, 0);
+
+			background-color: #5e42b0;
+		}
+	}
+
+	&__title {
+		width: 320px;
+		height: 290px;
+		margin: 0 auto;
+		padding-left: 20px;
+	}
+
+	&__cross {
+		position: absolute;
+		left: 30%;
+		top: 15%;
+
+		width: 15px;
+		height: 15px;
+
+		&::before, &::after {
+			content: "";
+
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			width: 15px;
+			height: 3px;
+
+			background-color: #ded5f7;
+		}
+
+		&::before {
+			transform: rotate(90deg);
+
+			box-shadow: 10px -20px 0 #5e42b0, 
+		}
+
+
+		&::after {
+			box-shadow: 20px 10px 0 #5e42b0, 
+		}
+	}
+
+	&__slider {
+		padding-bottom: 28px;
+
+		background-color: #f5f4f9;
+	}
+
+	&__photo {
+		position: absolute;
+		top: 80px;
+		left: 50%;
+
+		transform: translate(-50%, 0);
+	}
+
+
+	&__column {
+		width: 320px;
+		margin: 0 auto;
+		padding: 75px 13px 15px;
+	}
+
+	&__number {
+		position: relative;
+
+		display: inline-block;
+
+		margin-right: 5px;
+
+		vertical-align: top;
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 30px;
+		letter-spacing: 0.05em;
+
+		&::after {
+			content: "";
+
+			position: absolute;
+			left: 0;
+			bottom: 2px;
+
+			width: 100%;
+			height: 4px;
+			
+			border-radius: 20px;
+			background-color: #5e42b0;
+		}
+	}
+
+	&__title-min {
+		display: inline-block;
+
+		margin-bottom: 15px;
+		font-size: 28px;
+		line-height: 35px;
+		letter-spacing: 0.053em;
+		color: #c1c1c1;
+	}
+
+	&__description {
+		font-size: 15px;
+		font-weight: 600;
+		line-height: 18px;
+		letter-spacing: 0.05em;
+	}
+
+	&__dots-wrapper {margin: 0 auto;}
+}
+
+@media (min-width: $tablet-width) {
+
+	.advantages {
+
+		&__container {
+			padding-top: 85px;
+
+			&::before {
+				width: 450px;
+				height: 6px;
+			}
+		}
+
+		&__container--athlets {
+
+			&::before {
+				top: -2%;
+				left: 20%;
+			}
+
+			.advantages__cross {
+				left: 14%;
+				top: 10%;
+			}
+
+		}
+
+		&__container--players {
+
+			&::before {
+				top: -5%;
+				left: 80%;
+			}
+
+			.advantages__cross {
+				left: auto;
+				left: 62%;
+				top: 15%;
+			}
+		}
+
+		&__title {
+			width: 500px;
+			height: 80px;
+			margin: 0;
+			
+			padding-left: 0;
+		}
+
+		&__title--athlets {
+			margin-left: auto;
+		}
+
+		&__title--players {
+			margin-right: auto;
+			padding-left: 50px;
+		}
+
+		&__slider {
+			padding-bottom: 0;
+
+			background-color: #ffffff;
+		}
+
+		&__photo {transform: translate(0, 0);}
+
+		&__photo--athlets {
+			top: 10%;
+			left: auto;
+			right: 60%;
+		}
+
+		&__photo--players {
+			top: 5%;
+			left: 45%;
+		}
+
+		&__item {
+			display: flex;
+			flex-direction: column;
+		}
+
+		&__item--athlets {align-items: flex-end;}
+
+
+		&__item--players {align-items: flex-start;}
+
+
+		&__item--white {background-color: #ffffff;}
+
+
+		&__item--gray {background-color: #f5f4f9;}
+
+
+		&__item--purpure {
+			background-color: #5e42b0;
+
+			.advantages__number {color: #0a0e34;}
+		}
+
+		&__item--dark-blue {
+			background-color: #090c35;
+
+			.advantages__number {color: #8765dd;}
+		}
+
+		&__item--purpure,
+		&__item--dark-blue {
+
+			.advantages__number {
+
+				&::after {background-color: #efefef;}
+			}
+
+			.advantages__description {color: #ffffff;}
+		}
+
+		&__column {
+			width: 500px;
+			margin: 0;
+		}
+
+		&__column--athlets {padding: 30px 50px 30px 0;}
+
+
+		&__column--players {padding: 30px 0px 30px 50px;}
+
+
+		&__number {	
+			margin-right: 5px;
+
+			vertical-align: super;
+			font-size: 18px;
+
+			&::after {
+				bottom: -2px;
+
+				height: 5px;
+			}
+		}
+
+		&__title-min {
+			margin-bottom: 20px;
+
+			font-size: 36px;
+			line-height: auto;
+			letter-spacing: 0.05em;
+		}
+
+		&__description {
+			font-size: 18px;
+			line-height: 28px;
+		}
+	}
+}
+
+@media (min-width: $desktop-width) {
+
+	.advantages {
+
+		&__container {
+			padding-top: 115px;
+
+			&::before {width: 700px;}
+		}
+
+		&__container--athlets {
+
+			&::before {
+				top: -10%;
+				left: 30%;
+			}
+
+			.advantages__cross {
+				left: 19%;
+				top: 13%;
+			}
+		}
+
+		&__container--players {
+
+			&::before {
+				top: -10%;
+				left: 75%;
+			}
+		}
+
+		&__title {width: 850px;}
+
+
+		&__title--players {padding-left: 320px;}
+
+
+		&__photo--athlets {
+			top: -5%;
+			right: 50%;
+		}
+
+		&__photo--players {
+			top: 0;
+			left: 42%;
+		}
+
+		&__column {width: 850px;}
+
+
+		&__column--athlets {padding: 60px 200px 60px 0;}
+
+
+		&__column--players {padding: 60px 0 60px 320px;}
+
+
+		&__description {
+			font-size: 20px;
+			line-height: auto;
+		}
+	}
+}
+

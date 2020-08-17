@@ -1,17 +1,29 @@
 
 .slider {
 
-	&__list {}
+	&__wrapper {}
 
-	&__item {}
+	&__slide {
+		display: none
+	}
 
-	&__item--current {}
+	&__slide--active {
+		display: block;
+	}
 
-	&__toggles {}
+	&__buttons {}
 
-	&__toggle {}
+	&__slide-prev {}
 
-	&__toggle--current {}
+	&__slide-next {}
+
+	&__dots-wrapper {}
+
+	&__dot {}
+
+	&__dot--active {
+		background-color: red;
+	}
 }
 
 @media (min-width: $tablet-width) {}

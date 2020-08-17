@@ -1,0 +1,60 @@
+
+////////////////////////////файл button///////////////////////////
+ .button {
+ 	display: inline-block;
+
+	padding: 10px 10px 8px 45px;
+	width: 142px;
+	height: 39px;
+
+	background-color: #5e42b0;
+	border-radius: 20px;
+
+	font-size: 8px;
+	font-weight: 300;
+	line-height: 10px;
+	text-transform: uppercase;
+
+	b {
+		font-weight: 600;
+	}
+
+	&:hover {
+		background-color: #9071ea;
+	}
+
+	&:active {
+		background-color: rgba(144, 113, 234, 0.3)
+	}
+ }
+
+ .button--google {
+	padding-left: 54px;
+ }
+
+
+@media (min-width: $tablet-width) {
+
+	 .button {
+		padding: 24px 63px 24px 104px;
+		width: 309px;
+		height: 77px;
+
+		background-color: #5e42b0;
+		border-radius: 40px;
+
+		font-size: 14px;
+		line-height: 14px;
+		letter-spacing: 0.05em;
+	 }
+
+	.button--google {
+		padding-left: 125px;
+	}
+}
+
+
+@media (min-width: $desktop-width) {}
+
+
+//////////////////////////////////////////////////////////////////

@@ -1,0 +1,172 @@
+
+.download {
+
+	&__wrapper {
+		padding: 97px 9px 127px;
+	}
+
+	&__picture {
+		width: 73px;
+		height: 78px;
+		margin: 0 auto;
+		margin-bottom: 55px;
+	}
+
+	&__promo {
+		position: relative;
+		z-index: 0;
+		
+		width: 300px;
+		margin: 0 auto;
+		margin-bottom: 70px;
+
+		font-size: 34px;
+		font-weight: 700;
+		line-height: 25px;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		text-align: center;
+		color: #ffffff;
+
+		&::before, &::after {
+			content: "";
+
+			position: absolute;
+			z-index: -1;
+
+			height: 4px;
+
+			transform: rotate(-49deg);
+
+			background-color: #9172e6;
+		}
+
+		&::before {
+			top: 20px;
+			left: -5px;
+
+			width: 90px;
+		}
+
+		&::after {
+			top: 20px;
+			left: 110px;
+
+			width: 155px;
+
+			transform: rotate(-52deg);
+		}
+	}
+
+	&__slogan {
+		font-size: 15px;
+		line-height: 15px;
+		letter-spacing: 0.05em;
+		color: #9b8ec1;
+	}
+
+	&__app-ninks {margin: 0 auto;}
+}
+
+
+@media (min-width: $tablet-width) {
+
+	.download {
+
+		&__wrapper {
+			padding: 128px 9px 129px;
+		}
+
+		&__picture {
+			width: 130px;
+			height: 137px;
+			margin-bottom: 80px;
+		}
+
+		&__promo {
+			width: 700px;
+			margin-bottom: 190px;
+
+			font-size: 80px;
+			line-height: 60px;
+			letter-spacing: 0.055em;
+
+			&::before, &::after {
+				height: 6px;
+
+				transform: rotate(-49deg);
+			}
+
+			&::before {
+				top: 60px;
+				left: -20px;
+
+				width: 205px;
+			}
+
+			&::after {
+				top: 60px;
+				left: 235px;
+
+				width: 410px;
+			}
+		}
+
+		&__slogan {
+			font-size: 36px;
+			letter-spacing: 0;
+		}
+	}
+}
+
+@media (min-width: $desktop-width) {
+
+	.download {
+
+		&__wrapper {
+			padding: 226px 129px 197px;
+		}
+
+		&__row {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: flex-end;
+			
+			margin-bottom: 155px;
+		}
+
+		&__picture {
+			margin: 0;
+			margin-right: 30px;
+		}
+
+		&__promo {
+			width: 770px;
+			margin: 0;
+			
+			font-size: 90px;
+			line-height: 50px;
+			letter-spacing: 0.05em;
+
+			&::before {
+				top: 30px;
+				left: -10px;
+			}
+
+			&::after {
+				top: 40px;
+				left: 290px;
+			}
+		}
+
+		&__slogan {
+			display: inline-block;
+
+			width: 100%;
+			
+			line-height: 40px;
+			text-align: left;
+		}
+	}
+}

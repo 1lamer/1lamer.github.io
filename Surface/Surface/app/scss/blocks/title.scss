@@ -1,0 +1,15 @@
+.title {
+	font-size: 50px;
+	font-weight: 700;
+	line-height: 60px;
+	text-transform: uppercase;
+	color: #e7e7e7;
+}
+
+@media (min-width: $tablet-width) {
+
+	.title {font-size: 90px;}
+
+}
+
+@media (min-width: $desktop-width) {}

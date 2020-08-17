@@ -1,0 +1,174 @@
+
+
+.opportunities {
+
+	&__wrapper {
+		width: 320px;
+		margin: 0 auto;
+	}
+
+	&__container {
+		position: relative;
+
+		padding: 25px 20px 80px 19px;
+	}
+
+	&__number {
+		position: absolute;
+		top: -65px;
+
+		padding: 17px 28px;
+
+		background-color: #5e42b0;
+
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 35px;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		color: #ffffff;
+
+		&::after {
+			content: "";
+
+			position: absolute;
+			left: 50%;
+			top: 50%;
+
+			width: 18px;
+			height: 4px;
+
+			transform: translate(-50%, 10px);
+			
+			border-radius: 20px;
+			background-color: #8f7bc8;
+		}
+	}
+
+	&__title {
+		margin-bottom: 10px;
+
+		font-size: 28px;
+		line-height: 35px;
+		letter-spacing: 0.05em;
+	}
+
+	&__description {
+		position: relative;
+
+		font-size: 16px;
+		line-height: 20px;
+		letter-spacing: 0.05em;
+
+		&::after {
+			content: "";
+
+			position: absolute;
+			left: 0;
+			bottom: -25px;
+
+			width: 24px;
+			height: 4px;
+			
+			border-radius: 20px;
+			background-color: #5e42b0;
+		}
+	}
+}
+
+
+@media (min-width: $tablet-width) {
+
+	.opportunities {
+
+		&__wrapper {width: $tablet-width;}
+
+		&__container {padding: 85px 75px 100px 33px;}
+
+		&__number {
+			top: -85px;
+			left: 35px;
+
+			padding: 35px 45px 45px;
+
+			font-size: 24px;
+
+			&::after {
+				width: 22px;
+				height: 5px;
+			}
+		}
+
+		&__title {
+			margin-bottom: 30px;
+
+			font-size: 90px;
+			line-height: 100px;
+			letter-spacing: 0;
+		}
+
+		&__description {
+			font-size: 24px;
+			line-height: 28px;
+
+			&::after {
+				bottom: -35px;
+
+				height: 5px;
+			}
+		}
+	}
+}
+
+@media (min-width: $desktop-width) {
+
+	.opportunities {
+
+		&__wrapper {width: 100%;}
+
+		&__item {display: flex;}
+
+
+		&__item:nth-child(2){
+			
+			.opportunities__picture {order: 2;}
+
+			.opportunities__container {padding: 260px 125px 120px 180px;}
+
+			.opportunities__number {
+				left: auto;
+				right: 0;
+
+				transform: translate(50%, 0);
+			}
+		}
+
+
+		&__picture {width: 50%;}
+
+		&__photo {height: 100%;}
+
+		&__container {
+			width: 50%;
+			padding: 260px 180px 120px 125px;
+		}
+
+		&__number {
+			top: 212px;
+			left: 0;
+
+			padding: 55px 70px 65px;
+
+			transform: translate(-50%, 0);
+		}
+
+		&__title {margin-bottom: 115px;}
+
+		&__description {
+			font-size: 24px;
+			line-height: 28px;
+
+			&::after {bottom: -115px;}
+		}
+	}
+}

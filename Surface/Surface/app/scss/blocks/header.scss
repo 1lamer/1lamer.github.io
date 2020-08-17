@@ -1,0 +1,253 @@
+////////////////////Переменные и миксины/////////////////////
+@import "variables.scss";
+
+//////////////////////////////////////////////////////////////
+
+
+
+
+//////////////////////////Файл header//////////////////////
+.header {
+	background-color: $bg-purpure;
+	background: url('../../img/football-bg-desktop.jpg') center no-repeat;
+	background-size: cover;
+
+	&__wrapper {
+		width: 320px;
+		padding: 40px 8px 10px;
+		margin: 0 auto;
+
+		background-image: url("");
+
+		color: #ffffff;
+	}
+
+	&__container {
+		margin-bottom: 130px;
+
+		text-align: center;
+	}
+
+	&__logo {}
+
+	&__logo-icon {
+		width: 137px;
+		height: 24px;
+	}
+
+	&__attention {
+		display: none;
+	}
+
+	&__promo {
+		margin-bottom: 110px;
+
+		font-size: 32px;
+		font-weight: 700;
+		letter-spacing: 0.05em;
+		line-height: 40px;
+		text-transform: uppercase;
+
+		b:nth-child(1) {
+			position: relative;
+			z-index: 0;
+
+			display: block;
+
+			margin-bottom: 10px;
+
+			&::before {
+				content: "";
+
+				position: absolute;
+				z-index: -1;
+				top: 60px;
+				left: 40px;
+
+				width: 220px;
+				height: 4px;
+
+				transform: rotate(-52deg);
+
+				background-color: #5e42b0;
+			}
+		}
+
+		b:nth-child(2) {
+			position: relative;
+			z-index: 1;
+
+			display: block;
+
+			width: 246px;
+			margin-left: auto;
+		}
+	}
+
+	&__app-links {
+		margin-bottom: 43px;
+	}
+
+	&__kinds-sport {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+
+	&__item {
+		min-width: 100px;
+		margin-bottom: 8px;
+
+		font-size: 12px;
+		font-weight: 300;
+		text-transform: uppercase;
+		text-align: center;
+		color: #9071ea;
+	}
+}
+
+
+@media (min-width: $tablet-width) {
+
+	.header {
+		background-image: url('../../img/football-bg-tablet.jpg');
+
+		&__wrapper {
+			width: $tablet-width;
+			padding: 55px 18px 91px;
+		}
+
+		&__container {
+			display: flex;
+			justify-content: space-between;
+
+			margin-bottom: 175px;
+
+			text-align: left;
+		}
+
+		&__logo-icon {
+			width: 193px;
+			height: 33px;
+		}
+
+		&__attention {
+			display: block;
+
+			font-size: 14px;
+			font-weight: 300;
+			line-height: 35px;
+			letter-spacing: 0.05em;
+			text-transform: uppercase;
+		}
+
+		&__promo {
+			margin-bottom: 165px;
+			padding: 0 60px 0 70px;
+
+			font-size: 64px;
+			line-height: 75px;
+
+			b:nth-child(1) {
+				margin-bottom: 5px;
+
+				&::before {
+					top: 115px;
+					left: 100px;
+
+					width: 400px;
+					height: 7px;
+				}
+			}
+
+			b:nth-child(2) {width: 490px;}
+		}
+
+		&__column {
+			display: flex;
+			flex-direction: column;
+
+		}
+
+		&__app-links {
+			order: 2;
+			
+			margin: 0 auto;
+			margin-bottom: 0;
+		}
+
+		&__kinds-sport {
+			justify-content: space-around;
+
+			margin-bottom: 110px;
+		}
+
+		&__item {
+			width: auto;
+			margin-bottom: 0;
+
+			font-size: 16px;
+			letter-spacing: 0.05em;
+		}
+	}
+}
+
+
+@media (min-width: $desktop-width) {
+
+	.header {
+		background-image: url('../../img/football-bg-desktop.jpg');
+
+		&__wrapper {
+			width: $desktop-width;
+			padding: 55px 0 110px;
+		}
+
+		&__container {
+			margin-bottom: 290px;
+		}
+
+		&__promo {
+			margin-bottom: 10px;
+			padding: 0;
+
+			font-size: 90px;
+			line-height: 90px;
+
+			b:nth-child(1) {
+				z-index: 1;
+				margin-bottom: 5px;
+
+				&::before {
+					top: 75px;
+					left: 325px;
+				}
+			}
+
+			b:nth-child(2) {
+				z-index: 0;
+
+				width: 1175px;
+
+				text-align: right;
+			}
+		}
+
+		&__kinds-sport {
+			justify-content: normal;
+			align-self: flex-end;
+
+			margin-bottom: 180px;
+		}
+
+		&__item {
+			margin-left: 20px;
+
+			font-size: 14px;
+		}
+	}
+}
+///////////////////////////////////////////////////////////
+
+
+

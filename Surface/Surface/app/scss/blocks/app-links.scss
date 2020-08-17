@@ -1,0 +1,51 @@
+.app-links {
+	display: flex;
+	justify-content: space-around;
+
+	width: 300px;
+
+	&__button {
+		background-repeat: no-repeat;
+		background-size: 15px 17px;
+		background-position: 20px 10px;
+	}
+
+	&__button--apple {
+		background-image: url('../../img/icons/apple.png');
+	}
+
+	&__button--google {
+		background-image: url('../../img/icons/googlePlay.png');
+		background-position: 30px 10px;
+	}
+}
+
+
+@media (min-width: $tablet-width) {
+	
+	.app-links {
+		justify-content: space-between;
+
+		width: 655px;
+
+		&__button {
+			background-size: 36px 39px;
+			background-position: 43px 15px;
+		}
+
+		&__button--apple {
+			background-image: url('../../img/icons/apple.png');
+		}
+
+		&__button--google {
+			background-image: url('../../img/icons/googlePlay.png');
+			background-position: 65px 17px;
+		}
+	}
+}
+
+
+@media (min-width: $desktop-width) {
+	
+	.app-links {width: 672px;}
+}
