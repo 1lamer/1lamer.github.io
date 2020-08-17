@@ -9,7 +9,7 @@
 //////////////////////////Файл header//////////////////////
 .header {
 	background-color: $bg-purpure;
-	background: url('../../img/football-bg-desktop.jpg') center no-repeat;
+	background: url('../img/football-bg-desktop.jpg') center no-repeat;
 	background-size: cover;
 
 	&__wrapper {
@@ -110,7 +110,7 @@
 @media (min-width: $tablet-width) {
 
 	.header {
-		background-image: url('../../img/football-bg-tablet.jpg');
+		background-image: url('../img/football-bg-tablet.jpg');
 
 		&__wrapper {
 			width: $tablet-width;
@@ -196,7 +196,7 @@
 @media (min-width: $desktop-width) {
 
 	.header {
-		background-image: url('../../img/football-bg-desktop.jpg');
+		background-image: url('../img/football-bg-desktop.jpg');
 
 		&__wrapper {
 			width: $desktop-width;

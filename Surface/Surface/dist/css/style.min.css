@@ -282,10 +282,10 @@ fieldset {
   background-position: 20px 10px
 }
 .app-links__button--apple {
-  background-image: url(../../img/icons/apple.png)
+  background-image: url(../img/icons/apple.png)
 }
 .app-links__button--google {
-  background-image: url(../../img/icons/googlePlay.png);
+  background-image: url(../img/icons/googlePlay.png);
   background-position: 30px 10px
 }
 @media (min-width:768px) {
@@ -300,10 +300,10 @@ fieldset {
     background-position: 43px 15px
   }
   .app-links__button--apple {
-    background-image: url(../../img/icons/apple.png)
+    background-image: url(../img/icons/apple.png)
   }
   .app-links__button--google {
-    background-image: url(../../img/icons/googlePlay.png);
+    background-image: url(../img/icons/googlePlay.png);
     background-position: 65px 17px
   }
 }
@@ -345,7 +345,7 @@ fieldset {
 }
 .header {
   background-color: #191c3f;
-  background: url(../../img/football-bg-desktop.jpg) center no-repeat;
+  background: url(../img/football-bg-desktop.jpg) center no-repeat;
   background-size: cover
 }
 .header__wrapper {
@@ -423,7 +423,7 @@ fieldset {
 }
 @media (min-width:768px) {
   .header {
-    background-image: url(../../img/football-bg-tablet.jpg)
+    background-image: url(../img/football-bg-tablet.jpg)
   }
   .header__wrapper {
     width: 768px;
@@ -499,7 +499,7 @@ fieldset {
 }
 @media (min-width:1540px) {
   .header {
-    background-image: url(../../img/football-bg-desktop.jpg)
+    background-image: url(../img/football-bg-desktop.jpg)
   }
   .header__wrapper {
     width: 1540px;
@@ -964,17 +964,17 @@ fieldset {
 }
 .footer {
   background-color: #0a0e34;
-  background: url(../../img/stadium-bg-mobile.jpg) center no-repeat;
+  background: url(../img/stadium-bg-mobile.jpg) center no-repeat;
   background-size: cover
 }
 @media (min-width:768px) {
   .footer {
-    background-image: url(../../img/stadium-bg-tablet.jpg)
+    background-image: url(../img/stadium-bg-tablet.jpg)
   }
 }
 @media (min-width:1540px) {
   .footer {
-    background-image: url(../../img/stadium-bg-desktop.jpg)
+    background-image: url(../img/stadium-bg-desktop.jpg)
   }
 }
 .download__wrapper {

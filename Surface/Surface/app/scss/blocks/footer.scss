@@ -4,7 +4,7 @@
 
 .footer {
 	background-color: #0a0e34;
-	background: url('../../img/stadium-bg-mobile.jpg') center no-repeat;
+	background: url('../img/stadium-bg-mobile.jpg') center no-repeat;
 	background-size: cover;
 }
 
@@ -12,13 +12,13 @@
 @media (min-width: $tablet-width) {
 
 	.footer {
-		background-image: url('../../img/stadium-bg-tablet.jpg');
+		background-image: url('../img/stadium-bg-tablet.jpg');
 	}
 }
 
 @media (min-width: $desktop-width) {
 	.footer {
-		background-image: url('../../img/stadium-bg-desktop.jpg');
+		background-image: url('../img/stadium-bg-desktop.jpg');
 	}
 }
 
