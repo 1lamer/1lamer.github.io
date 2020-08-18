@@ -4,7 +4,9 @@
 	&__wrapper {}
 
 	&__slide {
-		display: none
+		display: none;
+
+		min-height: 230px;
 	}
 
 	&__slide--active {
@@ -45,7 +47,11 @@
 
 		.slider {
 
-		&__slide {display: block;}
+		&__slide {
+			display: block;
+
+			min-height: auto;
+		}
 
 		&__dots-wrapper {display: none;}
 	}	

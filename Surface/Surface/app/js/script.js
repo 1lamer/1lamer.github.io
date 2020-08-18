@@ -72,39 +72,65 @@
 
 
 
+//Code for Athlets
+const slidesAthlets = document.querySelectorAll('.slider__slide--athlets');
+const dotsAthlets = document.querySelectorAll('.slider__dot--athlets');
 
-// const slides = document.querySelectorAll('.slider__slide');
-// const dots = document.querySelectorAll('.slider__dot');
+let index = 0;
 
-// let index = 0;
+const activeSlide = n => {
+	// console.log(n);
+	for(slide of slidesAthlets) {
+		slide.classList.remove('slider__slide--active');
+	}
+	slidesAthlets[n].classList.add('slider__slide--active');
+}
 
-// const activeSlide = n => {
-// 	// console.log(n);
-// 	for(slide of slides) {
-// 		slide.classList.remove('slider__slide--active');
-// 	}
-// 	slides[n].classList.add('slider__slide--active');
-// }
+const activeDot = n => {
+	// console.log(n);
+	for(dot of dotsAthlets) {
+		dot.classList.remove('slider__dot--active');
+	}
+	dotsAthlets[n].classList.add('slider__dot--active');
+}
 
-// const activeDot = n => {
-// 	// console.log(n);
-// 	for(dot of dots) {
-// 		dot.classList.remove('slider__dot--active');
-// 	}
-// 	dots[n].classList.add('slider__dot--active');
-// }
-
-// const prepareCurrentSlide = ind => {
-// 	activeSlide(index);
-// 	activeDot(index);
-// }
+const prepareCurrentSlide = ind => {
+	activeSlide(index);
+	activeDot(index);
+}
 
 
+//Code for Players
+const slidesPlayers = document.querySelectorAll('.slider__slide--players');
+const dotsPlayers = document.querySelectorAll('.slider__dot--players');
+
+let indexPlayers = 0;
+
+const activeSlidePlayers = nPlayers => {
+	// console.log(n);
+	for(slidePlayers of slidesPlayers) {
+		slidePlayers.classList.remove('slider__slide--active');
+	}
+	slidesPlayers[nPlayers].classList.add('slider__slide--active');
+}
+
+const activeDotPlayers = nPlayers => {
+	// console.log(n);
+	for(dotPlayers of dotsPlayers) {
+		dotPlayers.classList.remove('slider__dot--active');
+	}
+	dotsPlayers[nPlayers].classList.add('slider__dot--active');
+}
+
+const prepareCurrentSlidePlayers = indPlayers => {
+	activeSlidePlayers(indexPlayers);
+	activeDotPlayers(indexPlayers);
+}
 
 
 
 // const nextSlide = () => {
-// 	if(index == slides.length -1) {
+// 	if(index == slidesAthlets.length -1) {
 // 		index = 0;
 // 		prepareCurrentSlide(index);
 // 	} else {
@@ -115,7 +141,7 @@
 
 // const prevSlide = () => {
 // 	if(index == 0) {
-// 		index = slides.length -1;
+// 		index = slidesAthlets.length -1;
 // 		prepareCurrentSlide(index);
 // 	} else {
 // 		index--;
@@ -124,15 +150,21 @@
 // }
 
 
+//Code for Athlets
+dotsAthlets.forEach((item, indexDot) => {
+	item.addEventListener('click', () => {
+		index = indexDot;
+		prepareCurrentSlide(index);
+	})	
+});
 
-// dots.forEach((item, indexDot) => {
-// 	item.addEventListener('click', () => {
-// 		index = indexDot;
-// 		prepareCurrentSlide(index);
-// 	})	
-// });
-
-
+//Code for Players
+dotsPlayers.forEach((itemPlayers, indexDotPlayers) => {
+	itemPlayers.addEventListener('click', () => {
+		indexPlayers = indexDotPlayers;
+		prepareCurrentSlidePlayers(indexPlayers);
+	})	
+});
 
 
 // next.addEventListener('click', nextSlide);

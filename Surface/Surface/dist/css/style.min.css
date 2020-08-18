@@ -313,7 +313,8 @@ fieldset {
   }
 }
 .slider__slide {
-  display: none
+  display: none;
+  min-height: 230px
 }
 .slider__slide--active {
   display: block
@@ -337,7 +338,8 @@ fieldset {
 }
 @media (min-width:768px) {
   .slider__slide {
-    display: block
+    display: block;
+    min-height: auto
   }
   .slider__dots-wrapper {
     display: none
