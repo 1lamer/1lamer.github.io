@@ -1,0 +1,107 @@
+
+////////////////////Переменные и миксины/////////////////////
+@import "variables.scss";
+@import "mixins.scss";
+
+//////////////////////////////////////////////////////////////
+
+
+////////////////////Подключение шрифтов///////////////////////////////
+
+@font-face {
+	font-family: "Lato";
+	src: url('../fonts/Lato-Thin.woff') format('woff');
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Lato";
+	src: url('../fonts/Lato-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Lato";
+	src: url('../fonts/Lato-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Lato";
+	src: url('../fonts/Lato-Bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+// @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+//////////////////////////////////////////////////////////////////////...
+
+
+///////////////////////Стили по умолчанию/////////////////////////////////
+
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: inherit;
+}
+
+::selection {
+	background-color: $color-primary;
+
+	color: $color-white;
+}
+
+html {
+	font-size: 62.5%;
+
+	@include respond(big-desktop) {
+		font-size: 75%;
+	}
+
+	@include respond(tab-land) {
+		font-size: 56.25%;
+	}
+
+	@include respond(tab-port) {
+		font-size: 50%;
+	}
+}
+
+body {
+	box-sizing: border-box;
+
+	font-family: "Lato", sans-serif;
+	font-weight: 400;
+	line-height: 1.7;
+	color: $color-grey-dark;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul li {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+fieldset {
+	padding: 0;
+}
+
+
+/////////////////////////////////////////////////////////////

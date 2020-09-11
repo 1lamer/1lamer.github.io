@@ -1,0 +1,120 @@
+
+////////////////////////////File button///////////////////////////
+ .button {
+ 	position: relative;
+
+ 	display: inline-block;
+
+	padding: 1.5rem 3.9rem;
+
+	border-radius: 10rem;
+
+	cursor: pointer;
+
+	font-size: $default-font-size;
+	text-transform: uppercase;
+	color: $color-grey-dark;
+
+	transition: all 0.2s;
+
+	&:hover {
+		box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+
+		transform: translateY(-0.3rem);
+
+		&::after {
+			opacity: 0;
+
+			transform: scaleX(1.4) scaleY(1.6);
+		}
+	}
+
+	&:active,
+	&:focus {
+		outline: none;
+
+		box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+
+		transform: translateY(-0.1rem);
+	}
+
+	&::after {
+		content: "";
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+
+		display: inline-block;
+
+		height: 100%;
+		width: 100%;
+
+		border-radius: 10rem;
+
+		transition: all 0.4s;
+	}
+
+	 &--animated {
+		animation: 0.5s moveInBottom ease-out 0.75s;
+		animation-fill-mode: backwards;
+
+		@keyframes moveInBottom {
+			0% {
+				transform: translateY(3rem);
+
+				opacity: 0;
+			}
+
+			100% {
+				transform: translateY(0);
+
+				opacity: 1;
+			}
+		}
+	 }
+
+	  &--white {
+	 	background-color: #fff;
+
+	 	&::after {
+	 		background-color: #fff;
+	 	}
+	 }
+
+	 &--green {
+	 	background-color: $color-primary;
+
+	 	color: $color-white;
+
+	 	&::after {
+	 		background-color: $color-primary;
+	 	}
+	 }
+
+	 &--rectangle {
+	 	padding: 0.3rem;
+
+	 	border-radius: 0;
+	 	border-bottom: 1px solid $color-primary;
+
+	 	color: $color-primary;
+	 	text-transform: none;
+
+	 	&:hover {
+	 		background-color: $color-primary;
+
+	 		color: #ffffff;
+	 	}
+	 }
+ }
+
+	
+	
+@media (min-width: $tablet-width) {}
+
+@media (min-width: $desktop-width) {}
+
+
+//////////////////////////////////////////////////////////////////

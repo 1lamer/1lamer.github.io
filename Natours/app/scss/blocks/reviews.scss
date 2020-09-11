@@ -1,0 +1,145 @@
+
+.reviews {
+
+	&__bg-video {}
+
+	&__wrapper {
+		position: relative;
+		
+		padding: 15rem 0;
+
+		text-align: center;
+
+		@include respond(tab-port) {
+			padding: 10rem 0;
+		}
+	}
+
+	&__container {}
+
+	&__title-2 {}
+
+	&__story {
+		width: 75%;
+		margin: 0 auto;
+		padding: 6rem;
+		padding-left: 9rem;
+
+		border-radius: 0.3rem;
+
+		background-color: rgba($color-white, 0.6);
+
+		box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
+
+		font-size: 1.6rem;
+		color: $color-grey-dark;
+
+		transform: skew(-12deg);
+
+		&:not(:last-child) {
+			margin-bottom: 8rem;
+		}
+
+		&:hover .reviews__caption {
+			opacity: 1;
+
+			transform: translate(-50%, -50%);
+		}
+
+		&:hover .reviews__image {
+			filter: blur(3px) brightness(80%);
+
+			transform: translateX(-4rem) scale(1);
+		}
+
+		@include respond(tab-port) {
+			width: 100%;
+			padding: 4rem;
+			padding-left: 7rem;
+		}
+
+		@include respond(phone) {
+			transform: skew(0);
+		}
+	}
+
+	&__shape {
+		position: relative;
+
+		width: 15rem;
+		height: 15rem;
+
+		border-radius: 50%;
+
+		background-color: #777;
+		overflow: hidden;
+
+		float: left;
+
+		transform: translate(-3rem) skew(12deg);
+
+		@supports (clip-path: polygon(0 0)) {
+			border-radius: none;
+
+			shape-outside: circle(50% at 50% 50%);
+
+			clip-path: circle(50% at 50% 50%);
+		}
+
+		@include respond(phone) {
+			transform: translate(-3rem) skew(0);
+		}	
+	}
+
+	&__image {
+		max-width: initial;
+		height: 100%;
+
+		// border: none;
+
+		transform: translateX(-4rem) scale(1.5);
+		transition: all 0.5s;
+		backface-visibility: hidden;
+	}
+
+	&__caption {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+
+		opacity: 0;
+
+		transform: translate(-50%, 20%);
+
+		font-size: 1.7rem;
+		text-align: center;
+		color: $color-white;
+		text-transform: uppercase;
+
+		transition: all 0.5s;
+		backface-visibility: hidden;
+	}
+
+	&__box {
+		transform: skew(12deg);
+		text-align: left;
+
+		@include respond(phone) {
+			transform: skew(0);
+		}
+	}
+
+	&__impression {
+		display: block;
+
+		margin-bottom: 1.5rem;
+
+		text-transform: uppercase;
+	}
+
+	&__text {}
+
+	&__button {}
+}
+
+

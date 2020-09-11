@@ -1,0 +1,163 @@
+////////////////////Variables and mixins/////////////////////
+@import "variables.scss";
+
+//////////////////////////////////////////////////////////////
+
+
+
+
+//////////////////////////File header//////////////////////
+.header {
+
+	&__wrapper {
+		position: relative;
+
+		height: 85vh;
+		
+		background-image: 
+			linear-gradient(
+				to right bottom,
+				rgba($color-primary-light, 0.8),
+				rgba($color-primary-dark, 0.8)
+			), 
+			url("../img/hero-small.jpg")
+		;
+		background-size: cover;
+		background-position: top;
+		
+		clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+		@supports (clip-path: polygon(0 0)) {
+			height: 95vh;
+
+			clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+		}
+
+		@include respond(phone) {
+			clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+		}
+
+		@media only screen and (min-resolution: 144dpi) and (min-width: 37.5em),
+				only screen and(min-width: 2000px) {
+			background-image: 
+			linear-gradient(
+				to right bottom,
+				rgba($color-primary-light, 0.8),
+				rgba($color-primary-dark, 0.8)
+			), 
+			url("../img/hero.jpg");
+		}
+	}
+		
+	&__row {}
+
+	&__logo {
+		position: absolute;
+		top: 4rem;
+		left: 4rem;
+	}
+
+	&__logo-image {
+		height: 4.2rem;
+	}
+
+	&__container {
+		position: absolute;
+		top: 40%;
+		left: 50%;
+
+		transform: translate(-50%, -50%);
+
+		text-align: center;
+	}
+
+	&__title {
+		margin-bottom: 6rem;
+
+		backface-visibility: hidden;
+
+		color: #fff;
+	}
+
+	&__main-title {
+		display: block;
+
+		font-size: 6rem;
+		font-weight: 400;
+		letter-spacing: 3.5rem;
+
+		animation: moveInLeft 1s ease-out;
+
+		@include respond(phone) {
+			font-size: 5rem;
+			letter-spacing: 1rem;
+		}
+	}
+
+	&__sub-title {
+		display: block;
+
+		font-size: 2rem;
+		font-weight: 700;
+		letter-spacing: 1.75rem;
+
+		animation: moveInRight 1s ease-out;
+
+		@include respond(phone) {
+			letter-spacing: 0.5rem;
+		}
+	}
+
+	@keyframes moveInLeft {
+		0% {
+			transform: translateX(-10rem);
+
+			opacity: 0;
+		}
+		
+		80% {
+			transform: translateX(1rem);
+		}
+
+		100% {
+			transform: translateX(0);
+
+			opacity: 1;
+		}
+	}
+
+	@keyframes moveInRight {
+		0% {
+			transform: translateX(10rem);
+
+			opacity: 0;
+		}
+		
+		80% {
+			transform: translateX(-1rem);
+		}
+
+		100% {
+			transform: translateX(0);
+
+			opacity: 1;
+		}
+	}
+
+	&__button {}
+}
+
+
+
+.logo {}
+
+
+
+@media (min-width: $tablet-width) {}
+
+
+@media (min-width: $desktop-width) {}
+///////////////////////////////////////////////////////////
+
+
+

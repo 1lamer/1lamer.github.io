@@ -1,0 +1,9 @@
+.wrapper {
+	padding: 3rem;
+
+	@include respond(tab-port) {
+		padding: 0;
+	}
+}
+
+
