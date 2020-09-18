@@ -1,0 +1,45 @@
+.header {
+	height: 7rem;
+
+	border-bottom: var(--line);
+
+	background-color: #fff;
+
+	font-size: 1.4rem;
+
+	@include respond(small-width) {
+		height: 11rem;
+	}
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		height: 100%;
+
+		@include respond(small-width) {
+			flex-wrap: wrap;
+			align-content: space-around;
+
+			height: 11rem;
+		}
+	}
+
+	&__logo {}
+
+	&__search {
+		flex: 0 0 40%;
+	}
+
+	&__user-nav {}
+}
+
+@media (min-width: $tablet-width) {}
+
+
+@media (min-width: $desktop-width) {}
+///////////////////////////////////////////////////////////
+
+
+

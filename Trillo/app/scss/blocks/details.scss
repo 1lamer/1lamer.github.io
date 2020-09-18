@@ -1,0 +1,19 @@
+.details {
+	display: flex;
+
+	padding: 4.5rem;
+
+	border-bottom: var(--line);
+
+	background-color: var(--color-grey-light-1);
+
+	font-size: 1.4rem;
+
+	@include respond(tab-port) {
+		padding: 3rem;
+	}
+
+	@include respond(medium-width) {
+		flex-direction: column;
+	}			
+}

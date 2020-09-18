@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Trillo</title>
+	<!-- <link rel="preload" href="fonts/.woff2" as="font" type="font/woff2" crossorigin/> -->
+	<link rel="stylesheet" href="css/style.min.css" />
+	<link rel="stylesheet" href="img/font-icon/icon-font.css" />
+	<link rel="shortcut icon" tyoe="image/png" href="img/" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+	<div class="wrapper">
+
+		<div class="container">
+		
+			@@include('./_header.html')
+			
+			<main class="main">
+				
+				<nav class="sidebar">
+					<ul class="sidebar__nav-list nav-list">
+						<li class="nav-list__item nav-list__item--active">
+							<a href="#" class="nav-list__link">
+								<svg class="nav-list__link-icon" height="30px" width="30px">
+									<use xlink:href="img/sprite.svg#icon-home"></use>
+								</svg>
+								<span class="nav-list__link-name">Hotel</span>
+							</a>
+						</li>
+						<li class="nav-list__item">
+							<a href="#" class="nav-list__link">
+								<svg class="nav-list__link-icon" height="30px" width="30px">
+									<use xlink:href="img/sprite.svg#icon-aircraft-take-off"></use>
+								</svg>
+								<span class="nav-list__link-name">Flight</span>
+							</a>
+						</li>
+						<li class="nav-list__item">
+							<a href="#" class="nav-list__link">
+								<svg class="nav-list__link-icon" height="30px" width="30px">
+									<use xlink:href="img/sprite.svg#icon-key"></use>
+								</svg>
+								<span class="nav-list__link-name">Car rental</span>
+							</a>
+						</li>
+						<li class="nav-list__item">
+							<a href="#" class="nav-list__link">
+								<svg class="nav-list__link-icon" height="30px" width="30px">
+									<use xlink:href="img/sprite.svg#icon-map"></use>
+								</svg>
+								<span class="nav-list__link-name">Tours</span>
+							</a>
+						</li>
+					</ul>
+
+					<p class="copyright">
+						&copy; 2017 by trillo. All rights reserved.
+					</p>
+				</nav>
+
+				<section class="hotel-view">
+					<div class="gallery">
+						<figure class="gallery__item">
+							<img src="img/hotel-1.jpg" alt="Photo of hotel 1" class="gallery__photo">
+						</figure>
+						<figure class="gallery__item">
+							<img src="img/hotel-2.jpg" alt="Photo of hotel 2" class="gallery__photo">
+						</figure>
+						<figure class="gallery__item">
+							<img src="img/hotel-3.jpg" alt="Photo of hotel 3" class="gallery__photo">
+						</figure>
+					</div>
+					<!-- /gallery -->
+
+					<div class="overview">
+
+						<h1 class="overview__title">
+							Hotel las palmas
+						</h1>
+
+						<div class="overview__stars">
+							<svg class="overview__icon-star" height="30px" width="30px">
+								<use xlink:href="img/sprite.svg#icon-star"></use>
+							</svg>
+
+							<svg class="overview__icon-star" height="30px" width="30px">
+								<use xlink:href="img/sprite.svg#icon-star"></use>
+							</svg>
+
+							<svg class="overview__icon-star" height="30px" width="30px">
+								<use xlink:href="img/sprite.svg#icon-star"></use>
+							</svg>
+
+							<svg class="overview__icon-star" height="30px" width="30px">
+								<use xlink:href="img/sprite.svg#icon-star"></use>
+							</svg>
+
+							<svg class="overview__icon-star" height="30px" width="30px">
+								<use xlink:href="img/sprite.svg#icon-star"></use>
+							</svg>
+						</div>
+						<!-- /overview__stars -->
+
+						<div class="overview__location">
+							<svg class="overview__icon-location" height="30px" width="30px">
+								<use xlink:href="img/sprite.svg#icon-location-pin"></use>
+							</svg>
+							<a class="overview__button button button--rectangle">Albufeira, Portugal</a>
+						</div>
+						<!-- /overview__location -->
+
+						<div class="overview__rating">
+							<span class="overview__rating-average">8.6</span>
+							<span class="overview__rating-count">429 votes</span>
+						</div>
+						<!-- /overview__rating -->
+					</div>
+					<!-- /overview -->
+
+					<div class="details">
+
+						<div class="description">
+
+							<p class="description__text">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi nisi dignissimos debitis ratione sapiente saepe. Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate.
+							</p>
+							<!-- /description__text -->
+
+							<p class="description__text">
+								Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate delectus, inventore iure aliquid aliquam.
+							</p>
+							<!-- /description__text -->
+
+							<ul class="description__pros-list">
+								<li class="description__pros-item">Close to the beach</li>
+								<li class="description__pros-item">Breakfast included</li>
+								<li class="description__pros-item">Free airport shuttle</li>
+								<li class="description__pros-item">Free wifi in all rooms</li>
+								<li class="description__pros-item">Air conditioning and heating</li>
+								<li class="description__pros-item">Pets allowed</li>
+								<li class="description__pros-item">We speak all languages</li>
+								<li class="description__pros-item">Perfect for families</li>
+							</ul>
+
+							<div class="description__recommended">
+								<p class="description__recommended-count">
+									Lucy and 3 other friends recommend this hotel.
+								</p>
+
+								<div class="description__users">
+									<img src="img/user-3.jpg" alt="Photo of useer 1" class="description__user-image">
+									<img src="img/user-4.jpg" alt="Photo of useer 2" class="description__user-image">
+									<img src="img/user-5.jpg" alt="Photo of useer 3" class="description__user-image">
+									<img src="img/user-6.jpg" alt="Photo of useer 4" class="description__user-image">
+								</div>
+							</div>
+							<!-- /description__recommended -->
+						</div>
+						<!-- /description -->
+
+						<div class="user-reviews">
+							
+							<figure class="review">
+								<blockquote class="review__quote">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga doloremque architecto dicta animi, totam, itaque officia ex.
+								</blockquote>
+								<!-- /review__quot -->
+
+								<figcaption class="review__user">
+									<img src="img/user-1.jpg" alt="Photo of user 1" class="review__photo">
+
+									<p class="review__user-info">
+										<span class="review__user-name">Nick Smith</span>
+										<span class="review__user-date">Feb 23rd, 2020</span>
+									</p>
+
+									<span class="review__rating">7.8</span>
+
+								</figcaption>
+								<!-- /review__user -->
+							</figure>
+							<!-- /review -->
+
+							<figure class="review">
+								<blockquote class="review__quote">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga doloremque architecto dicta animi, totam, itaque officia ex.
+								</blockquote>
+								<!-- /review__quot -->
+
+								<figcaption class="review__user">
+									<img src="img/user-2.jpg" alt="Photo of user 2" class="review__photo">
+
+									<p class="review__user-info">
+										<span class="review__user-name">Mary Thomas</span>
+										<span class="review__user-date">Sept 13th, 2020</span>
+									</p>
+
+									<span class="review__rating">9.3</span>
+
+								</figcaption>
+								<!-- /review__user -->
+							</figure>
+							<!-- /review -->
+
+							<a href="#" class="user-reviews__button button button--rectangle">Show all <span>&rarr;</span></a>
+						</div>
+						<!-- /user-reviews -->
+					</div>
+					<!-- /details -->
+
+					<div class="cta">
+						<h2 class="cta__title">Good news! We have 4 free rooms for your selected dates!</h2>
+ 
+						<a href="#" class="cta__button button button--ellipse">
+							<span class="button--ellipse-visible">Book now</span>
+							<span class="button--ellipse-invisible">Only 4 rooms left</span>
+						</a>
+					</div>
+					<!-- /cta -->
+				</section>
+				<!-- /hotel-view -->
+			</main>
+		</div>
+		<!-- /container -->
+
+		<!-- @@include('./_footer.html')
+
+		@@include('./_popup.html')	 -->	
+
+		<!-- @@include('./_sign-in.html') -->
+
+	</div>
+	<!-- /wrapper -->
+	
+
+	<!-- Подключаем jQuery -->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+	<!-- Подключаем slick -->
+	<!-- <script src="js/slick.min.js"></script> -->
+	<!-- Скрипт -->
+	<script src="js/script.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+
+////////////////////////////File button///////////////////////////
+ .button {
+ 	display: inline-block;
+
+ 	cursor: pointer;
+
+ 	&--rectangle {
+		padding-bottom: 0.2rem;
+
+	 	border-bottom: 1px solid currentColor;
+
+	 	background-color: transparent;
+
+	 	font-size: inherit;
+	 	color: var(--color-primary);
+
+		transition: all 0.2s;
+
+		span {
+			margin-left: 3px;
+
+			transition: margin-left 0.2s;
+		}
+
+	 	&:hover {
+	 		color: var(--color-grey-dark-1);
+
+	 		span {
+	 			margin-left: 8px;
+	 		}
+	 	}
+
+		&:active,
+		&:focus {
+			outline: none;
+
+			animation: pulsate 1s infinite;
+		}
+
+		@keyframes pulsate {
+			0% {
+				transform: scale(1);
+				box-shadow: none;
+			}
+
+			50% {
+				transform: scale(1.05);
+				box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25);
+			}
+
+			100% {
+				transform: scale(1);
+				box-shadow: none;
+			}
+		}
+	}
+
+	&--ellipse {
+		position: relative;
+
+		border-radius: 100px;
+
+		background-image: linear-gradient(to right, 
+							var(--color-primary-light), 
+							var(--color-primary-dark));
+
+		overflow: hidden;
+
+		font-size: 1.5rem;
+		font-weight: 300;
+		text-transform: uppercase;
+		color: #fff;
+
+		&:hover {
+			background-image: linear-gradient(to left, 
+							var(--color-primary-light), 
+							var(--color-primary-dark));
+		}
+
+		&:focus {
+			outline: none;
+
+			animation: pulsate 1s infinite;
+		}
+
+		&:hover &-visible {
+			transform: translateY(100%);
+			
+		}
+
+		&:hover &-invisible{
+			top: 0;
+		}
+
+		& > * {
+			display: inline-block;
+
+			width: 100%;
+			height: 100%;
+
+			transition: all 0.2s;
+		}
+
+		&-visible {
+			padding: 2rem 7.5rem;
+		}
+
+		&-invisible {
+			position: absolute;
+			top: -100%;
+			left: 0;
+
+			padding: 2rem 0;
+		}
+	}
+ }
+
+	
+	
+@media (min-width: $tablet-width) {}
+
+@media (min-width: $desktop-width) {}
+
+
+//////////////////////////////////////////////////////////////////

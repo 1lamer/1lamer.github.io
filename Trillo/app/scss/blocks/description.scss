@@ -1,0 +1,110 @@
+.description {
+	flex: 0 0 60%;
+
+	margin-right: 4.5rem;
+	padding: 3rem;
+
+	background-color: #fff;
+	box-shadow: var(--shadow-light);
+
+	@include respond(tab-port) {
+		margin-right: 3rem;
+		padding: 2rem;
+	}
+
+	@include respond(medium-width) {
+		margin-right: 0;
+		margin-bottom: 3rem;
+	}		
+
+	&__text {
+
+		&:not(:last-of-type) {
+			margin-bottom: 2rem;
+		}
+	}
+
+	&__pros-list {
+		display: flex;
+		flex-wrap: wrap;
+
+		padding: 3rem 0;
+		margin: 3rem 0;
+
+		border-top: var(--line);
+		border-bottom: var(--line);
+	}
+
+	&__pros-item {
+		position: relative;
+
+		flex: 0 0 50%;
+
+		margin-bottom: 0.7rem;
+		padding-left: 1.5rem;
+
+		&:before {
+			content: "";
+
+			position: absolute;
+			left: 0;
+			top: 5px;
+
+			display: inline-block;
+
+			width: 1rem;
+			height: 1rem;
+			margin-right: 0.7rem;
+
+			//OLDER BROWSERS
+			//background-image: url("../img/chevron-thin-right.svg");
+			//background-size: cover;
+
+			//NEWER BROWSERS - MASKS
+			background-color: var(--color-primary);
+			mask-image: url("../img/chevron-thin-right.svg");
+			mask-size: cover;
+		}
+	}
+
+	&__recommended {
+		display: flex;
+		align-items: center;
+
+		font-size: 1.3rem;
+		color: var(--color-grey-dark-3);
+
+		@include respond(smallest-width) {
+			flex-direction: column;
+		}
+	}
+
+	&__recommended-count {
+		margin-right: auto;
+
+		@include respond(smallest-width) {
+			margin: 0 auto;
+			margin-bottom: 2rem;
+		}
+	}
+
+	&__users {
+		display: flex;
+	}
+
+	&__user-image {
+		box-sizing: content-box;
+
+		width: 4rem;
+		height: 4rem;
+
+		border-radius: 50%;
+		border: 3px solid #fff;
+
+		&:not(:last-child) {
+			margin-right: -2rem;
+		}
+	}
+}
+
+	

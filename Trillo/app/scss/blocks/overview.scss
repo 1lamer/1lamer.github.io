@@ -1,0 +1,104 @@
+.overview {
+	display: flex;
+	align-items: center;
+
+	border-bottom: 1px solid var(--color-grey-light-2);
+
+	@include respond(smallest-width) {
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+
+	&__title {
+		padding: 1.5rem 3rem; 
+		margin: 0;
+
+		font-size: 2.25rem;
+		font-weight: 300;
+		letter-spacing: 0.1rem;
+		text-transform: uppercase;
+
+		@include respond(medium-width) {
+			padding: 1.25rem 2rem;
+
+			font-size: 1.8rem;
+		}
+
+		@include respond(smallest-width) {
+			flex: 0 0 100%;
+
+			text-align: center;
+		}
+	}
+
+	&__stars {
+		display: flex;
+
+		margin-right: auto;
+
+		@include respond(smallest-width) {
+			margin-right: 0;
+		}
+	}
+
+	&__icon-star,
+	&__icon-location {
+		width: 1.75rem;
+		height: 1.75rem;
+
+		fill: var(--color-primary);
+	}
+
+	&__icon-location {
+		margin-right: 0.5rem;
+	}
+
+	&__location {
+		display: flex;
+		align-items: center;
+
+		font-size: 1.2rem;
+	}
+
+	&__button {}
+
+	&__rating {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		align-self: stretch;
+
+		margin-left: 3rem;
+		padding: 0 2.25rem;
+
+		background-color: var(--color-primary);
+
+		color: #fff;
+
+		@include respond(medium-width) {
+			padding: 0 1.5rem;
+		}
+	}
+
+	&__rating-average {
+		margin-bottom: -3px;
+		
+		font-size: 2.25rem;
+		font-weight: 300;
+
+		@include respond(medium-width) {
+			font-size: 1.5rem;
+		}
+	}
+
+	&__rating-count {
+		font-size: 0.8rem;
+		text-transform: uppercase;
+
+		@include respond(medium-width) {
+			font-size: 0.5rem;
+		}
+	}
+}
+

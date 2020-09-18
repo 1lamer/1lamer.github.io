@@ -1,0 +1,47 @@
+.sidebar {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex: 0 0 20%;
+
+	background-color: var(--color-grey-dark-1);
+
+	
+
+	&__nav-list {
+		margin-top: 3.5rem;
+
+		@include respond(tab-port) {
+			display: flex;
+
+			margin: 0;
+
+			.nav-list__item:not(last-child) {
+				width: 100%;
+				margin: 0;
+			}
+
+			.nav-list__link {
+				justify-content: center;
+
+				padding: 2rem;
+			}
+		}
+
+		@include respond(medium-width) {
+
+			.nav-list__link {
+				flex-direction: column;
+
+				padding: 1.5rem 0.5rem;
+			}
+
+			.nav-list__link-icon {
+				width: 1.5rem;
+				height: 1.5rem;
+				margin-right: 0;
+				margin-bottom: 0.7rem;	
+			}					
+		}
+	}
+}
