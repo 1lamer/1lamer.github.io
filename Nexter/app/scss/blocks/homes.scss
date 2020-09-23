@@ -1,0 +1,16 @@
+.homes {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+	grid-gap: 7rem;	
+	grid-column: center-start / center-end;
+
+	margin: 15rem 0;
+
+	@include respond(bp-small) {
+		margin: 10rem 0;
+	}
+
+	&__home-card {
+		background-color: var(--color-grey-light-1);
+	}
+}

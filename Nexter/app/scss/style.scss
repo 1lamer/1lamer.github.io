@@ -1,0 +1,40 @@
+//Подключение normilize
+@import "normalize.scss";
+
+/////////////////Подключение стилей блоков/////////////////////
+
+@import "scaffolding.scss";
+@import "variables.scss";
+@import "mixins.scss";
+
+
+@import "blocks/visually-hidden.scss";
+@import "blocks/grid.scss";
+
+@import "blocks/button.scss";
+
+@import "blocks/title.scss";
+
+@import "blocks/margin.scss";
+
+@import "blocks/wrapper.scss";
+
+@import "blocks/sidebar-nav.scss";
+
+@import "blocks/header.scss";
+@import "blocks/logo";
+
+@import "blocks/realtors.scss";
+
+@import "blocks/features.scss";
+
+@import "blocks/story.scss";
+
+@import "blocks/homes.scss";
+@import "blocks/home-card.scss";
+
+@import "blocks/gallery.scss";
+
+@import "blocks/footer.scss";
+
+

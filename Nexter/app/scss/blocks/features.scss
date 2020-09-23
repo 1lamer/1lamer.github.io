@@ -1,0 +1,43 @@
+
+.features {
+	grid-column: center-start / center-end;
+	display: grid;
+	align-items: start;
+	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+	grid-gap: 6rem;
+	
+	margin: 15rem 0;
+
+	@include respond(bp-small) {
+		margin: 10rem 0;
+	}
+
+	&__feature {
+		display: grid;
+		grid-template-columns: min-content 1fr;
+		grid-row-gap: 1.5rem;
+		grid-column-gap: 2.5rem;
+	}
+
+	&__icon {
+		grid-row: 1 / span 2;
+
+		width: 4.5rem;
+		height: 4.5rem;
+
+		fill: var(--color-primary);
+
+		transform: translateY(-1rem);
+	}
+
+	&__title {
+		@extend %title;
+		font-size: 1.9rem;
+		text-transform: none;
+		color: var(--color-grey-dark-1);
+	}
+
+	&__text {
+		font-size: 1.7rem;
+	}	
+}
