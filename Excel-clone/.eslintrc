@@ -1,0 +1,32 @@
+{
+	"parser": "babel-eslint",
+	"env": {
+		"es6": true,
+		"browser": true,
+		"node": true,
+		"jest/globals": true
+	},
+	"rules": {
+		"semi": "off",
+		"arrow-parens": "off",
+		"comma-dangle": "off",
+		"require-jsdoc": "off",
+		"linebreak-style": ["error", "windows"],
+		"no-tabs": "off",
+		"spaced-comment": "off",
+		"indent": "off",
+		"eol-last": "off",
+		"padded-blocks": "off",
+		"no-trailing-spaces": "off",
+		"max-len": "off",
+		"operator-linebreak": "off",
+		"no-mixed-spaces-and-tabs": "off",
+		"no-undef": "off",
+		"no-unused-vars": "off",
+		"no-multiple-empty-lines": "off",
+		"no-debugger": "off",
+		"no-invalid-this": "off",
+	},
+	"plugins": ["jest"],
+	"extends": ["eslint:recommended", "google"],
+}
